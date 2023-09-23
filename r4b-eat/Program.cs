@@ -1,5 +1,5 @@
-﻿namespace r4b_eat;
-
+namespace r4b_eat;
+//niggaaaaaa
 public class Program
 {
     public static void Main(string[] args)
