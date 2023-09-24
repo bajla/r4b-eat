@@ -8,27 +8,26 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\x\\.nuget\\packages\\": {}
+    "/Users/eliostante/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\x\\Documents\\GitHub\\r4b-eat\\r4b-eat\\r4b-eat.csproj",
+      "projectUniqueName": "/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/r4b-eat.csproj",
       "projectName": "r4b-eat",
-      "projectPath": "C:\\Users\\x\\Documents\\GitHub\\r4b-eat\\r4b-eat\\r4b-eat.csproj",
-      "packagesPath": "C:\\Users\\x\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\x\\Documents\\GitHub\\r4b-eat\\r4b-eat\\obj\\",
+      "projectPath": "/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/r4b-eat.csproj",
+      "packagesPath": "/Users/eliostante/.nuget/packages/",
+      "outputPath": "/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\x\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/eliostante/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+        "/usr/local/share/dotnet/library-packs": {},
+        "/usr/local/share/dotnet/sdk/7.0.307/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -65,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.307/RuntimeIdentifierGraph.json"
       }
     }
   }
