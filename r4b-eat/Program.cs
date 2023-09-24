@@ -1,3 +1,7 @@
+using MySqlConnector;
+using r4b_eat.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace r4b_eat;
 //niggaaaaaa
 public class Program
@@ -8,6 +12,14 @@ public class Program
 
         // Add services to the container.
         builder.Services.AddControllersWithViews();
+
+        builder.Services.AddDbContext<ApplicationDbContext>(options =>
+        {
+            var connectionString = builder.Configuration.GetConnectionString("Default");
+            options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+        });
+
+        
 
         var app = builder.Build();
 

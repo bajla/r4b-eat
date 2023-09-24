@@ -1,4 +1,5 @@
-﻿@{
+﻿@model uporabnikiEntity
+@{
     ViewData["Title"] = "Home Page";
 }
 <br>
@@ -10,13 +11,19 @@
 <br>
 <br>
 <div class="contact-us">
-    <form>
-        <input placeholder="Ime" required="" type="text" />
-        <input placeholder="Priimek" required="" type="text" />
-        <input name="customerEmail" placeholder="Email" type="email" />
-        <input type="password" placeholder="Geslo" required />
+    <form method="post" asp-action="Registration">
 
-        <button type="button">Registracija</button>
+        
+        <input asp-for="ime" placeholder="Ime" required="" type="text" />
+
+        <input asp-for="priimek" placeholder="Priimek" required="" type="text" />
+
+        <input asp-for="email" name="email" placeholder="Email" type="email" />
+
+        <input asp-for="starost" name="customerEmail" placeholder="Datum rojstva" type="date" />
+
+        <input asp-for="geslo" type="password" placeholder="Geslo" required />
+
+        <button type="submit">Registracija</button>
     </form>
 </div>
-
