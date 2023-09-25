@@ -11,7 +11,7 @@ namespace r4b_eat.Models
         public string priimek { get; set; }
 		public DateOnly starost { get; set; }
         public string email { get; set; }
-        public string pravice { get; set; }
+        public string? pravice { get; set; }
 		public string geslo { get; set; }
     }
 }

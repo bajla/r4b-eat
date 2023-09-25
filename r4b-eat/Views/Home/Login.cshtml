@@ -1,4 +1,6 @@
-﻿@{
+﻿
+@model loginModel
+@{
     ViewData["Title"] = "Home Page";
 }
 <br>
@@ -11,8 +13,9 @@
 <br>
 <div class="contact-us">
     <form>
-        <input name="customerEmail" placeholder="Email" type="email" />
-        <input type="password" placeholder="Geslo" required />
+        <div asp-validation-summary="All"></div>
+        <input asp-for="email" name="customerEmail" placeholder="Email" type="email" />
+        <input asp-for="geslo" type="password" placeholder="Geslo" required />
         <button type="button">Prijava</button>
     </form>
 </div>
