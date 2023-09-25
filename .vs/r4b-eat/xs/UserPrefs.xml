@@ -1,18 +1,32 @@
 ﻿<Properties StartupConfiguration="{5BCC328F-B04F-4AEE-930E-AC16CFDF0204}|https">
-  <MonoDevelop.Ide.Workbench ActiveDocument="r4b-eat/Views/Home/Login.cshtml">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="r4b-eat/Views/Shared/_Layout.cshtml">
     <Files>
-      <File FileName="r4b-eat/Views/Home/Login.cshtml" Line="1" Column="1" />
+      <File FileName="r4b-eat/Views/Home/Login.cshtml" Line="5" Column="5" />
       <File FileName="r4b-eat/Views/Home/Index.cshtml" Line="1" Column="1" />
+      <File FileName="r4b-eat/Views/Home/Privacy.cshtml" Line="1" Column="1" />
+      <File FileName="r4b-eat/Views/Home/Registration.cshtml" Line="1" Column="1" />
+      <File FileName="r4b-eat/Views/_ViewImports.cshtml" Line="1" Column="1" />
+      <File FileName="r4b-eat/Views/Shared/_ValidationScriptsPartial.cshtml" Line="1" Column="1" />
+      <File FileName="r4b-eat/Views/Shared/_Layout.cshtml" Line="13" Column="47" />
+      <File FileName="r4b-eat/wwwroot/css/site.css" Line="32" Column="12" />
+      <File FileName="r4b-eat/wwwroot/js/site.js" Line="1" Column="1" />
+      <File FileName="r4b-eat/Controllers/HomeController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="r4b-eat">
+          <Node name="r4b-eat" expanded="True">
             <Node name="r4b-eat" expanded="True">
+              <Node name="Controllers" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True">
-                  <Node name="Login.cshtml" selected="True" />
-                </Node>
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -20,11 +34,8 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.r4b-eat PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
