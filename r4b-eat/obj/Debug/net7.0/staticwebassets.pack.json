@@ -5,12 +5,24 @@
       "PackagePath": "staticwebassets/r4b-eat.bundle.scp.css"
     },
     {
+      "Id": "/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/.DS_Store",
+      "PackagePath": "staticwebassets/.DS_Store"
+    },
+    {
       "Id": "/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },
     {
       "Id": "/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/img/ker.jpg",
+      "PackagePath": "staticwebassets/img/ker.jpg"
+    },
+    {
+      "Id": "/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/img/noodles.png",
+      "PackagePath": "staticwebassets/img/noodles.png"
     },
     {
       "Id": "/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/js/site.js",

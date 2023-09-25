@@ -2,8 +2,17 @@
  
 }
 
+.text-center{
+   
+   
+}
+.profilePic{
+    width: 30px;
+    margin-right:10px
+}
+
 li{
-    border:1px solid black;
+   
     font-size:20px;
 }
 
@@ -27,6 +36,15 @@ header{
     padding:10px;
    
    
+}
+.homeMain {
+    margin-top: 110px;
+    margin-left: 110px;
+    
+}
+.pict{
+    width:600px;
+
 }
 
 #containers{
@@ -53,6 +71,7 @@ body {
     height: 100%;
     display: grid;   
     margin-bottom: 60px;
+    
 }
 
 .contact-us {
@@ -83,6 +102,7 @@ input {
     }
 
 .usDescription {
+    
     position: absolute;
     bottom: 0px;
     left:0px;
@@ -91,15 +111,26 @@ input {
     padding: 20px;
     border:2px solid black;
     width:100%;
-   
+    text-align:center;
 }
 .footNaslov{
     text-align:center;
     border:2px solid black;
     font-size:25px;
 }
+table{
+    text-align:center;
+    justify-content:center;
+    align-items:center;
+    alight-content:center;
+}
+tr{
+    text-align:center;
+    align-items:center;
+}
+
 td{
-    border:2px dotted black;
+   
     padding: 15px;
     text-align:center;
     width:100px;

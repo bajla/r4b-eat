@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "++7E3lxhgetSOEPX3q6N9LDtxEEJRLmpfk2PBjL1Za4=",
+  "Hash": "mw8pCROoZbyAht7o3S8jbapmvRr43ehWc7tYHs2Y35g=",
   "Source": "r4b-eat",
   "BasePath": "_content/r4b-eat",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/obj/Debug/net7.0/scopedcss/projectbundle/r4b-eat.bundle.scp.css"
     },
     {
+      "Identity": "/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/.DS_Store",
+      "SourceId": "r4b-eat",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/",
+      "BasePath": "_content/r4b-eat",
+      "RelativePath": ".DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/.DS_Store"
+    },
+    {
       "Identity": "/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/css/site.css",
       "SourceId": "r4b-eat",
       "SourceType": "Discovered",
@@ -83,6 +100,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/img/ker.jpg",
+      "SourceId": "r4b-eat",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/",
+      "BasePath": "_content/r4b-eat",
+      "RelativePath": "img/ker.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/ker.jpg"
+    },
+    {
+      "Identity": "/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/img/noodles.png",
+      "SourceId": "r4b-eat",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/",
+      "BasePath": "_content/r4b-eat",
+      "RelativePath": "img/noodles.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/noodles.png"
     },
     {
       "Identity": "/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/js/site.js",
