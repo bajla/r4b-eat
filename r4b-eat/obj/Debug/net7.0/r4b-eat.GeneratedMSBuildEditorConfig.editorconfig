@@ -16,8 +16,8 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/Views/Dashboard/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGFzaGJvYXJkL0luZGV4LmNzaHRtbA==
+[/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/Views/Home/Index.cshtml]
