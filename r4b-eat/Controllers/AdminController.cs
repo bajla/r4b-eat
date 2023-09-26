@@ -24,7 +24,14 @@ namespace r4b_eat.Controllers
 
         public IActionResult Index()
         {
-            return View();
+
+            if (HttpContext.Session.GetString("userId") != null)
+            {
+                return View();
+            }
+
+            return RedirectToAction("Index", "Home");
+            
         }
 
         public IActionResult Privacy()
