@@ -27,6 +27,12 @@ namespace r4b_eat.Controllers
             return View();
         }
 
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+
     }
 }
 

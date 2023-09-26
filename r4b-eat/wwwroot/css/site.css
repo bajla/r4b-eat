@@ -10,7 +10,9 @@
     width: 30px;
     margin-right:10px
 }
-
+.prijavab{
+    margin-top:20px;
+}
 li{
    
     font-size:20px;
@@ -79,6 +81,7 @@ body {
     padding: 50px 100px;
     border: 2px solid black;
     box-shadow: 15px 15px 1px #ffa580, 15px 15px 1px 2px black;
+    margin-bottom:250px;
 }
 
 input {
