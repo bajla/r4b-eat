@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mw8pCROoZbyAht7o3S8jbapmvRr43ehWc7tYHs2Y35g=",
+  "Hash": "BLoU27i0SozJYuyv4WUIj7mHMjYXYEhlbGtRM9xD5zo=",
   "Source": "r4b-eat",
   "BasePath": "_content/r4b-eat",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/.DS_Store"
+    },
+    {
+      "Identity": "/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/css/Admin.css",
+      "SourceId": "r4b-eat",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/",
+      "BasePath": "_content/r4b-eat",
+      "RelativePath": "css/Admin.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/Admin.css"
     },
     {
       "Identity": "/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/css/site.css",

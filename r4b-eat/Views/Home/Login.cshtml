@@ -11,10 +11,11 @@
 <br>
 <div class="contact-us">
     <form method="post" asp-action="Login">
+        
         <div asp-validation-summary="All"></div>
         <input asp-for="email" name="email" placeholder="Email" type="email" />
         <input asp-for="geslo" name="geslo" type="password" placeholder="Geslo" required />
         <button type="submit">Prijava</button>
-        <button type="submit" class="prijavab"><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Registration">Registriraj se tukaj</a></button>
+        <button type="submit" class="prijavab"><a id="loginb" class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Registration">Registriraj se tukaj</a></button>
     </form>
 </div>
