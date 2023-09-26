@@ -12,10 +12,10 @@
 <br>
 <br>
 <div class="contact-us">
-    <form>
+    <form method="post" asp-action="Login" >
         <div asp-validation-summary="All"></div>
-        <input asp-for="email" name="customerEmail" placeholder="Email" type="email" />
-        <input asp-for="geslo" type="password" placeholder="Geslo" required />
-        <button type="button">Prijava</button>
+        <input asp-for="email" name="email" placeholder="Email" type="email" />
+        <input asp-for="geslo" name="geslo" type="password" placeholder="Geslo" required />
+        <button type="submit">Prijava</button>
     </form>
 </div>

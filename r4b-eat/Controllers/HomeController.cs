@@ -49,10 +49,12 @@ public class HomeController : Controller
                 if (PasswordHelper.VerifyPassword(login.geslo, result[0].geslo))
                 {
                     HttpContext.Session.SetString("userId", result[0].id_uporabnika.ToString());
+                    return RedirectToAction("Index");
                 }
                 
             }
         }
+
         return View();
     }
 
