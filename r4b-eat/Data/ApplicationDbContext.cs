@@ -12,6 +12,7 @@ namespace r4b_eat.Data
 		}
 
 		public DbSet<uporabnikiEntity> uporabniki { get; set; }
+		public DbSet<predmetiEntity> predmeti { get; set; }
 	}
 }
 
