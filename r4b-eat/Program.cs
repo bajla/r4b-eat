@@ -1,5 +1,9 @@
-﻿namespace r4b_eat;
+using MySqlConnector;
+using r4b_eat.Data;
+using Microsoft.EntityFrameworkCore;
 
+namespace r4b_eat;
+//niggaaaaaa
 public class Program
 {
     public static void Main(string[] args)
@@ -8,6 +12,20 @@ public class Program
 
         // Add services to the container.
         builder.Services.AddControllersWithViews();
+
+        builder.Services.AddDbContext<ApplicationDbContext>(options =>
+        {
+            var connectionString = builder.Configuration.GetConnectionString("Default");
+            options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+        });
+
+        builder.Services.AddDistributedMemoryCache();
+        builder.Services.AddSession(options =>
+        {
+            options.IdleTimeout = TimeSpan.FromSeconds(10);
+            options.Cookie.HttpOnly = true;
+            options.Cookie.IsEssential = true;
+        });
 
         var app = builder.Build();
 
@@ -25,6 +43,8 @@ public class Program
         app.UseRouting();
 
         app.UseAuthorization();
+
+        app.UseSession();
 
         app.MapControllerRoute(
             name: "default",
