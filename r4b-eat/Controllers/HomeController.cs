@@ -49,6 +49,7 @@ public class HomeController : Controller
                 if (PasswordHelper.VerifyPassword(login.geslo, result[0].geslo))
                 {
                     HttpContext.Session.SetString("userId", result[0].id_uporabnika.ToString());
+                    HttpContext.Session.SetString("userRights", result[0].pravice.ToString());
                     return RedirectToAction("Index");
                 }
                 

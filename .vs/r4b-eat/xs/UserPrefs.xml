@@ -1,36 +1,41 @@
 ﻿<Properties StartupConfiguration="{5BCC328F-B04F-4AEE-930E-AC16CFDF0204}|https">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.r4b-eat PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="r4b-eat/Data/ApplicationDbContext.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="r4b-eat/Views/Home/Registration.cshtml">
     <Files>
       <File FileName="r4b-eat/Controllers/HomeController.cs" Line="1" Column="1" />
       <File FileName="r4b-eat/appsettings.json" />
       <File FileName="r4b-eat/Program.cs" />
-      <File FileName="r4b-eat/Views/Home/Login.cshtml" />
-      <File FileName="r4b-eat/Views/Shared/_Layout.cshtml" />
-      <File FileName="r4b-eat/Models/uporabnikiEntity.cs" Line="17" Column="1" />
-      <File FileName="r4b-eat/Data/ApplicationDbContext.cs" Line="16" Column="3" />
-      <File FileName="r4b-eat/Views/_ViewStart.cshtml" Line="21" Column="1" />
-      <File FileName="r4b-eat/Views/Home/Registration.cshtml" Line="30" Column="1" />
+      <File FileName="r4b-eat/Views/Home/Login.cshtml" Line="10" Column="1" />
+      <File FileName="r4b-eat/Views/Shared/_Layout.cshtml" Line="25" Column="29" />
+      <File FileName="r4b-eat/Models/uporabnikiEntity.cs" />
+      <File FileName="r4b-eat/Data/ApplicationDbContext.cs" />
+      <File FileName="r4b-eat/Views/_ViewStart.cshtml" Line="20" Column="1" />
+      <File FileName="r4b-eat/Views/Home/Registration.cshtml" Line="32" Column="1" />
       <File FileName="r4b-eat/Views/_ViewImports.cshtml" />
       <File FileName="r4b-eat/Views/Shared/_ValidationScriptsPartial.cshtml" />
-      <File FileName="r4b-eat/Views/Shared/_Layout1.cshtml" />
-      <File FileName="r4b-eat/Views/Admin/Privacy.cshtml" />
-      <File FileName="r4b-eat/Views/Admin/Index.cshtml" />
-      <File FileName="r4b-eat/wwwroot/css/site.css" />
-      <File FileName="r4b-eat/Models/predmetiEntity.cs" Line="12" Column="46" />
+      <File FileName="r4b-eat/Views/Shared/_Layout1.cshtml" Line="1" Column="1" />
+      <File FileName="r4b-eat/Controllers/AdminController.cs" Line="30" Column="10" />
+      <File FileName="r4b-eat/Views/Admin/Privacy.cshtml" Line="1" Column="1" />
+      <File FileName="r4b-eat/Views/Admin/Index.cshtml" Line="1" Column="1" />
+      <File FileName="r4b-eat/wwwroot/css/site.css" Line="84" Column="21" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="r4b-eat">
-            <Node name="r4b-eat" expanded="True">
+          <Node name="r4b-eat" expanded="True">
+            <Node name="r4b-eat">
               <Node name="Controllers" expanded="True" />
-              <Node name="Data" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Dashboard" expanded="True" />
-                <Node name="Home" expanded="True" />
+                <Node name="Admin" expanded="True" />
+                <Node name="Home" expanded="True">
+                  <Node name="Registration.cshtml" selected="True" />
+                </Node>
                 <Node name="Shared" expanded="True" />
               </Node>
             </Node>
@@ -39,9 +44,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.r4b-eat PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
