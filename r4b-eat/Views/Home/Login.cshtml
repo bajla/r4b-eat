@@ -4,18 +4,17 @@
     ViewData["Title"] = "Home Page";
 }
 <br>
-<br>
-<br>
-<br>
+
 
 <h1 class="text-center">Prijava</h1>
-<br>
+
 <br>
 <div class="contact-us">
-    <form method="post" asp-action="Login" >
+    <form method="post" asp-action="Login">
         <div asp-validation-summary="All"></div>
         <input asp-for="email" name="email" placeholder="Email" type="email" />
         <input asp-for="geslo" name="geslo" type="password" placeholder="Geslo" required />
         <button type="submit">Prijava</button>
+        <button type="submit" class="prijavab"><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Registration">Registriraj se tukaj</a></button>
     </form>
 </div>
