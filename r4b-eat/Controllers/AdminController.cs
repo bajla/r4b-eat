@@ -32,11 +32,25 @@ namespace r4b_eat.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Ucitelji()
         {
             return View();
         }
 
+        public IActionResult Ucenci()
+        {
+            return View();
+        }
+
+        public IActionResult Naloge()
+        {
+            return View();
+        }
+
+        public IActionResult Gradiva()
+        {
+            return View();
+        }
 
     }
 }
