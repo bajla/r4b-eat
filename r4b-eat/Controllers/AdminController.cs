@@ -22,6 +22,11 @@ namespace r4b_eat.Controllers
             _db = db;
         }
 
+        public IActionResult Predmeti()
+        {
+            return View();
+        }
+
         public IActionResult Index()
         {
             return View();
