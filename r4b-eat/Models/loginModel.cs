@@ -18,10 +18,9 @@ namespace r4b_eat.Models
 
     public class predmetiDisplayModel
     {
-        public int id_poucevanja { get; set; }
-        public string ime { get; set; }
-        public string priimek { get; set; }
+        public List<string> ime { get; set; }
         public string predmet { get; set; }
+        public string opis { get; set; }
     }
 
 }
