@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using Microsoft.AspNetCore.Mvc;
 using r4b_eat.Data;
 using System.Diagnostics;
@@ -22,6 +22,16 @@ namespace r4b_eat.Controllers
             _db = db;
         }
 
+        public IActionResult PredmetiAdd()
+        {
+            return View();
+        }
+         
+        public IActionResult Predmeti()
+        {
+            return View();
+        }
+
         public IActionResult Index()
         {
 
@@ -34,7 +44,7 @@ namespace r4b_eat.Controllers
             
         }
 
-        public IActionResult Privacy()
+        public IActionResult Ucitelji()
         {
             return View();
         }
@@ -59,6 +69,20 @@ namespace r4b_eat.Controllers
             return View();
         }
 
+        public IActionResult Ucenci()
+        {
+            return View();
+        }
+
+        public IActionResult Naloge()
+        {
+            return View();
+        }
+
+        public IActionResult Gradiva()
+        {
+            return View();
+        }
 
     }
 }
