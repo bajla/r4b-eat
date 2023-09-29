@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
+      "Id": "/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/img/.DS_Store",
+      "PackagePath": "staticwebassets/img/.DS_Store"
+    },
+    {
       "Id": "/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/img/ker.jpg",
       "PackagePath": "staticwebassets/img/ker.jpg"
     },
