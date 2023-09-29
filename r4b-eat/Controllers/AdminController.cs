@@ -39,6 +39,26 @@ namespace r4b_eat.Controllers
             return View();
         }
 
+        public IActionResult Predmeti()
+        {
+            var query = from poucevanje in _db.poucevanje
+                        join uporabnik in _db.uporabniki on poucevanje.id_uporabnika equals uporabnik.id_uporabnika
+                        join predmet in _db.predmeti on poucevanje.id_predmeta equals predmet.id_predmeta
+                        where uporabnik.pravice == "u"
+                        select new
+                        {
+                            poucevanje.id_poucevanje,
+                            uporabnik.ime,
+                            uporabnik.priimek,
+                            predmet.predmet
+                        };
+
+            var result = query.ToList();
+
+
+            return View();
+        }
+
 
     }
 }

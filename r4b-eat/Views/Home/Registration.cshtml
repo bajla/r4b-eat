@@ -8,6 +8,8 @@
 <div class="contact-us">
     <form style="margin-top:100px;" method="post" asp-action="Registration">
 
+        <div asp-validation-summary="All"></div>
+
         <input asp-for="ime" placeholder="Ime" required="" type="text" />
 
         <input asp-for="priimek" placeholder="Priimek" required="" type="text" />
