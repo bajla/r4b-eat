@@ -13,6 +13,8 @@ namespace r4b_eat.Models
         public string email { get; set; }
         public string? pravice { get; set; }
 		public string geslo { get; set; }
+
+		public ICollection<poucevanjeEntity>? poucevanjeEntity { get; set; }
     }
 }
 

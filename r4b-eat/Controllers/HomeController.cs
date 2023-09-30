@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using r4b_eat.Models;
 using r4b_eat.Data;
 using MySqlConnector;
-using System.Security.Cryptography;
 using r4b_eat.Services;
 using Microsoft.AspNetCore.Http;
+
 
 
 namespace r4b_eat.Controllers;
@@ -23,6 +23,24 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+
+        var query = from poucevanje in _db.poucevanje
+                    join uporabnik in _db.uporabniki on poucevanje.id_uporabnika equals uporabnik.id_uporabnika
+                    join predmet in _db.predmeti on poucevanje.id_predmeta equals predmet.id_predmeta
+                    where uporabnik.pravice == "c"
+                    select new
+                    {
+                        poucevanje.id_poucevanje,
+                        uporabnik.ime,
+                        uporabnik.priimek,
+                        predmet.predmet
+                    };
+
+        var result = query.ToList();
+
+
+
+        Console.WriteLine(result[0].priimek);
         return View();
     }
 
@@ -50,9 +68,9 @@ public class HomeController : Controller
                 {
                     HttpContext.Session.SetString("userId", result[0].id_uporabnika.ToString());
                     HttpContext.Session.SetString("userRights", result[0].pravice.ToString());
-                    return RedirectToAction("Index");
+                    return RedirectToAction("Index", "Admin");
                 }
-                
+
             }
         }
 
@@ -70,7 +88,7 @@ public class HomeController : Controller
     [HttpPost]
     public IActionResult Registration(uporabnikiEntity uporabnik)
     {
-        uporabnik.pravice = "u";
+        uporabnik.pravice = "c";
         if (ModelState.IsValid)
         {
             if (_db.uporabniki.Any(s=> s.email == uporabnik.email) == false)
@@ -87,6 +105,8 @@ public class HomeController : Controller
         }
         return View();
     }
+
+
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

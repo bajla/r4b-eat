@@ -15,5 +15,13 @@ namespace r4b_eat.Models
         [Display(Name = "Geslo")]
         public string geslo { get; set; }
     }
+
+    public class predmetiDisplayModel
+    {
+        public List<string> ime { get; set; }
+        public string predmet { get; set; }
+        public string opis { get; set; }
+    }
+
 }
 
