@@ -1,49 +1,94 @@
-﻿<a asp-area="" asp-controller="Admin" asp-action="PredmetiAdd">  <i id="plus" class="gg-add"></i>  </a>
-<div class="container mx-auto mt-4">
+﻿
+<a asp-area="" asp-controller="Admin" asp-action="PredmetiAdd">  <i id="plus" class="gg-add"></i>  </a>
+
+<div class="container py-5">
     <div class="row">
+        <div class="col-lg-7 mx-auto bg-white rounded shadow">
 
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
+            <!-- Fixed header table-->
+            <div class="table-responsive">
+                <table class="table table-fixed">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="col-3">PROFESORJI</th>
+                            <th scope="col" class="col-3">IME</th>
+                            <th scope="col" class="col-3">PRIIMEK</th>
+                            <th scope="col" class="col-3">E-MAIL</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="col-3">1</th>
+                            <td class="col-3">Mark</td>
+                            <td class="col-3">Otto</td>
+                            <td class="col-3">mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="col-3">2</th>
+                            <td class="col-3">Jacob</td>
+                            <td class="col-3">Thornton</td>
 
-                <div class="card-body">
-                    <h5 class="card-title">Bostjan Resinovic</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">3 Predmeti</h6>
-                    <p class="card-text">Telefonska stevilka: 018 184 640</p>
-                    <p class="card-text">Email: resinovic@gmail.com</p>
-                    <p class="card-text">Pac karkoli ko pride</p>
-                    <a class="btn mr-2"><i class="fas fa-link"></i>Uredi</a>
-                    <a class="btn "><i class="fab fa-github"></i>Izbrisi</a>
-                </div>
-            </div>
-        </div>
+                            <td class="col-3">fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="col-3">3</th>
+                            <td class="col-3">Larry</td>
+                            <td class="col-3">Thornton</td>
+                            <td class="col-3">twitter</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="col-3">4</th>
+                            <td class="col-3">Martin</td>
+                            <td class="col-3">Williams</td>
+                            <td class="col-3">Marty</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="col-3">5</th>
+                            <td colspan="2" class="col-3">Sam</td>
+                            <td colspan="2" class="col-3">Pascal</td>
+                            <td class="col-3">sam</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="col-3">6</th>
+                            <td class="col-3">John</td>
+                            <td class="col-3">Green</td>
+                            <td class="col-3">john</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="col-3">7</th>
+                            <td colspan="2" class="col-3">David</td>
+                            <td colspan="2" class="col-3">Bowie</td>
+                            <td class="col-3">david</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="col-3">8</th>
+                            <td class="col-3">Pedro</td>
+                            <td class="col-3">Rodriguez</td>
+                            <td class="col-3">rod</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="col-3">5</th>
+                            <td colspan="2" class="col-3">Sam</td>
+                            <td colspan="2" class="col-3">Pascal</td>
+                            <td class="col-3">am</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="col-3">10</th>
+                            <td class="col-3">Jacob</td>
+                            <td class="col-3">Thornton</td>
+                            <td class="col-3">fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="col-3">11</th>
+                            <td colspan="2" class="col-6">Larry the Bird</td>
+                            <td class="col-3">twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button style="margin-bottom:5px;" class="button">UREDI</button>
+            </div><!-- End -->
 
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-                <i class="fa fa-female" aria-hidden="false"></i>
-                <div class="card-body">
-                    <h5 class="card-title">Lubej Bostjan</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">2 Predmeta</h6>
-                    <p class="card-text">Telefonska stevilka: 0149 432 93</p>
-                    <p class="card-text">Email: lubej@gmail.com</p>
-                    <p class="card-text">Pac karkoli ko pride</p>
-                    <a class="btn mr-2"><i class="fas fa-link"></i>Uredi</a>
-                    <a class="btn "><i class="fab fa-github"></i>Izbrisi</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-
-                <div class="card-body">
-                    <h5 class="card-title">Tjasa Verdev</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">1 Predmet</h6>
-                    <p class="card-text">Telefonska stevilka: 019 432 293</p>
-                    <p class="card-text">Email: Verdev@gmail.com</p>
-                    <p class="card-text">Pac karkoli ko pride</p>
-                    <a class="btn mr-2"><i class="fas fa-link"></i>Uredi</a>
-                    <a class="btn "><i class="fab fa-github"></i>Izbrisi</a>
-                </div>
-            </div>
         </div>
     </div>
- </div>
+</div>
