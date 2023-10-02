@@ -1,10 +1,12 @@
-﻿    using System;
+﻿using System;
 using Microsoft.AspNetCore.Mvc;
 using r4b_eat.Data;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using r4b_eat.Models;
 using r4b_eat.Data;
+
+
 
 namespace r4b_eat.Controllers
 {
@@ -26,7 +28,12 @@ namespace r4b_eat.Controllers
         {
             return View();
         }
-         
+
+        public IActionResult Profil()
+        {
+            return View();
+        }
+
         public IActionResult Index()
         {
 

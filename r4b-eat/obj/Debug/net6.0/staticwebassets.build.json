@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7XgCC9QxmZ9SzgR0AUtap2xt2q+OPIU35QpOpduEa6Y=",
+  "Hash": "bAXo8CQIMTbKiY4SiK4FyorzaWMXZbsyn1AJbOCj1zw=",
   "Source": "r4b-eat",
   "BasePath": "_content/r4b-eat",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/Admin.css"
+    },
+    {
+      "Identity": "/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/css/Dijak.css",
+      "SourceId": "r4b-eat",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/",
+      "BasePath": "_content/r4b-eat",
+      "RelativePath": "css/Dijak.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/Dijak.css"
     },
     {
       "Identity": "/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/css/site.css",

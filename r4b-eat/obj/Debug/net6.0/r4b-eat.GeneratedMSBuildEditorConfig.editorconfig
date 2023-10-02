@@ -36,12 +36,32 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vUHJlZG1ldGlBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/Views/Admin/Profil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vUHJvZmlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/Views/Admin/Ucenci.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vVWNlbmNpLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/Views/Admin/Ucitelji.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vVWNpdGVsamkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/Views/All/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWxsL1Byb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/Views/Dijak/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlqYWsvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/Views/Dijak/Predmeti.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlqYWsvUHJlZG1ldGkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/Views/Dijak/Profil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlqYWsvUHJvZmlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/Views/Home/Index.cshtml]
@@ -79,3 +99,7 @@ build_metadata.AdditionalFiles.CssScope = b-50oqjpqi55
 [/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/Views/Shared/_Layout1.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQxLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = b-xde0zg2wl8
+
+[/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/Views/Shared/_Layout2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-e6qavhv9gl
