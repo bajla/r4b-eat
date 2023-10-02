@@ -40,7 +40,7 @@ public class HomeController : Controller
 
 
 
-        Console.WriteLine(result[0].priimek);
+        //Console.WriteLine(result[0].priimek);
         return View();
     }
 
