@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - r4b_eat</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/Admin.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Dijak.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/r4b_eat.styles.css" asp-append-version="true" />
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/box.css' rel='stylesheet'>
 
@@ -28,43 +28,22 @@
 
         <ul style="text-align:center; margin-top:13px; " class="nav flex-column bg-white mb-0">
             <li class="nav-item">
-                <a class="nav-link text-dark font-italic" asp-area="" asp-controller="Admin" asp-action="Predmeti">
+                <a class="nav-link text-dark font-italic" asp-area="" asp-controller="Dijak" asp-action="Profil">
                     <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
                     <!-- <i class="gg-box"></i> -->
+                    Profil
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark font-italic" asp-area="" asp-controller="Dijak" asp-action="Predmeti">
+                    <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
                     Predmeti
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark font-italic" asp-area="" asp-controller="Admin" asp-action="Ucitelji">
-                    <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
-                    Ucitelji
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark font-italic" asp-area="" asp-controller="Admin" asp-action="Ucenci">
-                    <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
-                    Ucenci
-                </a>
-            </li>
+            
         </ul>
 
-        <p style="text-align: center; font-size: 20px; border-bottom: 1px solid black; border-top: 1px solid black; margin-top: 13px; " class="text-blakc font-weight-bold text-uppercase px-3 small py-4 mb-0">Druga</p>
-
-        <ul style="text-align:center; margin-top:13px;" class="nav flex-column bg-white mb-0">
-            <li class="nav-item">
-                <a class="nav-link text-dark font-italic" asp-area="" asp-controller="Admin" asp-action="Naloge">
-                    <i class="fa fa-area-chart mr-3 text-primary fa-fw"></i>
-                    Naloge
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark font-italic" asp-area="" asp-controller="Admin" asp-action="Gradiva">
-                    <i class="fa fa-bar-chart mr-3 text-primary fa-fw"></i>
-                    Gradiva
-                </a>
-            </li>
-
-        </ul>
+       
     </div>
     <!-- End vertical navbar -->
     <!-- Page content holder -->
