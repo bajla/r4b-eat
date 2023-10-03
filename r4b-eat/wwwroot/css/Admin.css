@@ -1056,3 +1056,9 @@ body {
 .valid-feedback {
     color: #2acc80;
 }
+/* date picker */
+
+.form-floating > .bi-calendar-date + .datepicker_input + label {
+    padding-left: 3.5rem;
+    z-index: 3;
+}
