@@ -1,4 +1,4 @@
-﻿
+﻿@model List<ucenciDisplayModel>
 <a asp-area="" asp-controller="Admin" asp-action="PredmetiAdd">  <i id="plus" class="gg-add"></i>  </a>
 
 <div class="container py-5">
@@ -18,174 +18,18 @@
                         </tr>
                     </thead>
                     <tbody>
+
+                        @foreach (var item in Model)
+                            {
                         <tr>
                             <th scope="row" class="col-3">1</th>
-                            <td class="col-3">Mark</td>
-                            <td class="col-3">Otto</td>
-                            <td class="col-3">mdo</td>
+                            <td class="col-3">@item.ime</td>
+                            <td class="col-3">@item.priimek</td>
+                            <td class="col-3">@item.email</td>
                             <td> <button>Uredi</button></td>
                         </tr>
-                        <tr>
-                            <th scope="row" class="col-3">2</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-3">fat</td>
-                            <td> <button>Uredi</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-3">3</th>
-                            <td class="col-3">Larry</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-3">twitter</td>
-                            <td> <button>Uredi</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-3">4</th>
-                            <td class="col-3">Martin</td>
-                            <td class="col-3">Williams</td>
-                            <td class="col-3">Marty</td>
-                            <td> <button>Uredi</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-3">5</th>
-                            <td class="col-3">Sam</td>
-                            <td class="col-3">Pascal</td>
-                            <td class="col-3">sam</td>
-                            <td> <button>Uredi</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-3">6</th>
-                            <td class="col-3">John</td>
-                            <td class="col-3">Green</td>
-                            <td class="col-3">john</td>
-                            <td> <button>Uredi</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-3">7</th>
-                            <td class="col-3">David</td>
-                            <td class="col-3">Bowie</td>
-                            <td class="col-3">david</td>
-                            <td> <button>Uredi</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-3">8</th>
-                            <td class="col-3">Pedro</td>
-                            <td class="col-3">Rodriguez</td>
-                            <td class="col-3">rod</td>
-                            <td> <button>Uredi</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-3">5</th>
-                            <td class="col-3">Sam</td>
-                            <td class="col-3">Pascal</td>
-                            <td class="col-3">am</td>
-                            <td> <button>Uredi</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-3">10</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-3">fat</td>
-                            <td> <button>Uredi</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-3">10</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-3">fat</td>
-                            <td> <button>Uredi</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-3">10</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-3">fat</td>
-                            <td> <button>Uredi</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-3">10</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-3">fat</td>
-                            <td> <button>Uredi</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-3">10</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-3">fat</td>
-                            <td> <button>Uredi</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-3">10</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-3">fat</td>
-                            <td> <button>Uredi</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-3">10</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-3">fat</td>
-                            <td> <button>Uredi</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-3">10</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-3">fat</td>
-                            <td> <button>Uredi</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-3">10</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-3">fat</td>
-                            <td> <button>Uredi</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-3">10</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-3">fat</td>
-                            <td> <button>Uredi</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-3">10</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-3">fat</td>
-                            <td> <button>Uredi</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-3">10</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-3">fat</td>
-                            <td> <button>Uredi</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-3">10</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-3">fat</td>
-                            <td> <button>Uredi</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-3">10</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-3">fat</td>
-                            <td> <button>Uredi</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-3">10</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-3">fat</td>
-                            <td> <button>Uredi</button></td>
-                        </tr>
+
+                            }
 
                     </tbody>
                 </table>
