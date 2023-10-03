@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/Views/Admin/AddUporabnik.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vQWRkVXBvcmFibmlrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/Views/Admin/Gradiva.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vR3JhZGl2YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -30,10 +34,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/Views/Admin/Predmeti.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vUHJlZG1ldGkuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/Views/Admin/PredmetiAdd.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vUHJlZG1ldGlBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/Views/Admin/Profil.cshtml]

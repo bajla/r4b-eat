@@ -1,0 +1,60 @@
+﻿<div class="form-body">
+    <div class="row">
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <h3>DODAJ UPORABNIKA</h3>
+                    <p>Izpolni vsa polja!</p>
+                    <form class="requires-validation" novalidate>
+
+                        <div class="col-md-12">
+                            <input class="form-control" type="text" name="name" placeholder="FIRST NAME" required>
+                            <div class="valid-feedback">Username field is valid!</div>
+                            <div class="invalid-feedback">Username field cannot be blank!</div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <input class="form-control" type="text" name="name" placeholder="LAST NAME" required>
+                            <div class="valid-feedback">Username field is valid!</div>
+                            <div class="invalid-feedback">Username field cannot be blank!</div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <input class="form-control" type="text" name="name" placeholder="Datum Rojstva" required>
+                            <div class="valid-feedback">Username field is valid!</div>
+                            <div class="invalid-feedback">Username field cannot be blank!</div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <input class="form-control" type="email" name="email" placeholder="E-mail Address" required>
+                            <div class="valid-feedback">Email field is valid!</div>
+                            <div class="invalid-feedback">Email field cannot be blank!</div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <select class="form-select mt-3" required>
+                                <option selected disabled value="">Pravice</option>
+                                <option value="jweb">DIJAK</option>
+                                <option value="sweb">PROFESOR</option>
+
+                            </select>
+                            <div class="valid-feedback">You selected a position!</div>
+                            <div class="invalid-feedback">Please select a position!</div>
+                        </div>
+
+
+                        <div class="col-md-12">
+                            <input class="form-control" type="password" name="password" placeholder="Password" required>
+                            <div class="valid-feedback">Geslo je vredu</div>
+                            <div class="invalid-feedback">Geslo ne sme biti prazno</div>
+                        </div>
+
+                        <div style="margin:30px;" class="form-button mt-3">
+                            <button id="submit" type="submit" class="btn btn-primary">Dodaj!</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
