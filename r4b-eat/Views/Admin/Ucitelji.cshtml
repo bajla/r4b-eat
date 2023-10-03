@@ -1,6 +1,5 @@
 ﻿
-<a asp-area="" asp-controller="Admin" asp-action="PredmetiAdd">  <i id="plus" class="gg-add"></i>  </a>
-
+<a asp-area="" asp-controller="Admin" asp-action="AddUporabnik">  <i id="plus" class="gg-add"></i>  </a>
 
 <div class="container py-5">
     <div class="row">
@@ -11,11 +10,13 @@
                 <table class="table table">
                     <thead>
                         <tr>
-                            <th scope="col" class="col-3">PROFESORJI</th>
+                            <th scope="col" class="col-3">DIJAKI</th>
                             <th scope="col" class="col-3">IME</th>
                             <th scope="col" class="col-3">PRIIMEK</th>
                             <th scope="col" class="col-3">E-MAIL</th>
-                            <th scope="col" class="col-3 fancy-btn open">UREDI</th>
+                            <th scope="col" class="col-3">PREDMETI</th>
+                            <th scope="col" class="col-3">UREDI</th>
+                            <th scope="col" class="col-3">ODSTRANI</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -30,12 +31,64 @@
                             </tr>
 
                         }
+                        <tr>
+                            <th scope="row" class="col-3">1</th>
+                            <td class="col-3">Mark</td>
+                            <td class="col-3">Otto</td>
+                            <td class="col-3">mdo</td>
+                            <td class="col-3">
+                                <a href="#myModal" class="trigger-btn" data-toggle="modal">Predmeti</a>
+                            </td>
+                            <td> <button>Uredi</button></td>
+                            <td> <button>Odstrani</button></td>
 
+                        </tr>
+                        <tr>
+                            <th scope="row" class="col-3">1</th>
+                            <td class="col-3">Mark</td>
+                            <td class="col-3">Otto</td>
+                            <td class="col-3">mdo</td>
+                            <td class="col-3">
+                                <a href="#myModal" class="trigger-btn" data-toggle="modal">Predmeti</a>
+                            </td>
+                            <td> <button>Uredi</button></td>
+                            <td> <button>Odstrani</button></td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row" class="col-3">1</th>
+                            <td class="col-3">Mark</td>
+                            <td class="col-3">Otto</td>
+                            <td class="col-3">mdo</td>
+                            <td class="col-3">
+                                <a href="#myModal" class="trigger-btn" data-toggle="modal">Predmeti</a>
+                            </td>
+                            <td> <button>Uredi</button></td>
+                            <td> <button>Odstrani</button></td>
+
+                        </tr>
                     </tbody>
                 </table>
 
             </div><!-- End -->
 
+        </div>
+    </div>
+</div>
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog modal-confirm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="icon-box">
+                    <i class="material-icons">&#xE876;</i>
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body text-center">
+                <h4>Great!</h4>
+                <p>Your account has been created successfully.</p>
+                <button class="btn btn-success" data-dismiss="modal"><span>Start Exploring</span> <i class="material-icons">&#xE5C8;</i></button>
+            </div>
         </div>
     </div>
 </div>

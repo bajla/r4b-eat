@@ -34,6 +34,11 @@ namespace r4b_eat.Controllers
             return View();
         }
 
+        public IActionResult AddUporabnik()
+        {
+            return View();
+        }
+
         public IActionResult Index()
         {
 

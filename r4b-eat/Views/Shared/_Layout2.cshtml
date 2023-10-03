@@ -17,33 +17,33 @@
             <div class="media d-flex align-items-center">
                 <img src="https://bootstrapious.com/i/snippets/sn-v-nav/avatar.png" alt="..." width="65" class="mr-3 rounded-circle img-thumbnail shadow-sm">
                 <div class="media-body">
-                    <h4 class="m-0">EAT Admini</h4>
-                    <p class="font-weight-light text-muted mb-0">Admin</p>
-                    <a asp-area="" asp-controller="All" asp-action="Profile">Profil</a>
+                    <h4 class="m-0">EAT Dijaki</h4>
+                    <p class="font-weight-light text-muted mb-0">Dijak</p>
+                    <!--<a class="nav-link text-dark font-italic" asp-area="" asp-controller="All" asp-action="Profile"> </a>-->
+
                 </div>
-            </div>
         </div>
 
-        <p style="text-align:center; font-size:20px; border-bottom:1px solid black;" class="text-black font-weight-bold text-uppercase px-3 small pb-4 mb-0">Glavno</p>
+        <p style="text-align:center; font-size:20px; border-bottom:1px solid black;" class="text-black font-weight-bold text-uppercase px-3 small pb-4 mb-0">Nadzorna plosca</p>
 
         <ul style="text-align:center; margin-top:13px; " class="nav flex-column bg-white mb-0">
             <li class="nav-item">
-                <a class="nav-link text-dark font-italic" asp-area="" asp-controller="Dijak" asp-action="Profil">
+                <a class="nav-link text-dark font-italic" asp-area="" asp-controller="Dijak" asp-action="Predmeti">
                     <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
                     <!-- <i class="gg-box"></i> -->
-                    Profil
+                    Predmeti
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark font-italic" asp-area="" asp-controller="Dijak" asp-action="Predmeti">
+                <a class="nav-link text-dark font-italic" asp-area="" asp-controller="All" asp-action="Profile">
                     <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
-                    Predmeti
+                    Odjava
                 </a>
             </li>
             
         </ul>
 
-       
+        
     </div>
     <!-- End vertical navbar -->
     <!-- Page content holder -->
@@ -52,7 +52,7 @@
             @RenderBody()
         </main>
     </div>
-    
+
     <!-- End demo content -->
 
 
