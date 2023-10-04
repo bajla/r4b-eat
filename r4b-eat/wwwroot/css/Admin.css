@@ -34,7 +34,9 @@
         top: 4px;
         left: 8px
     }
-.text-center{œ;
+.text-center{ text-align:center;
+              align-items:center;
+              justify-content:center;
    
    
 }
