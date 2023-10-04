@@ -1,6 +1,10 @@
 ﻿@model List<ucenciDisplayModel>
 
-﻿
+@{
+
+    int modal = 0;
+
+}
 <a asp-area="" asp-controller="Admin" asp-action="AddUporabnik">  <i id="plus" class="gg-add"></i>  </a>
 
 <div class="container py-5">
@@ -24,17 +28,45 @@
                     <tbody>
 
                         @foreach (var item in Model)
-                            {
-                        <tr>
-                            <th scope="row" class="col-3">1</th>
-                            <td class="col-3">@item.ime</td>
-                            <td class="col-3">@item.priimek</td>
-                            <td class="col-3">@item.email</td>
-                            <td> <button>Uredi</button></td>
-                        </tr>
+                        {
+                            <tr>
+                                <th scope="row" class="col-3">1</th>
+                                <td class="col-3">@item.ime</td>
+                                <td class="col-3">@item.priimek</td>
+                                <td class="col-3">@item.email</td>
+                                <td class="col-3">
+                                    <a href="#myModal-@modal" class="trigger-btn" data-toggle="modal">Predmeti</a>
+                                </td>
+                                <td> <button>Uredi</button></td>
+                                <td> <button>Odstrani</button></td>
 
+                                <td>
+                                    <div id="myModal-@modal" class="modal fade">
+                                        <div class="modal-dialog modal-confirm">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                    @foreach (var i in item.predmeti)
+                                                    {
+                                                        <p>@i</p>
+
+                                                    }
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </td>
+
+
+                            </tr>
+
+                                modal++;
                             }
 
+                        <tr>
+                            <th scope="row" class="col-3">1</th>
                             <td class="col-3">Mark</td>
                             <td class="col-3">Otto</td>
                             <td class="col-3">mdo</td>
@@ -77,7 +109,7 @@
         </div>
     </div>
 </div>
-<div id="myModal" class="modal fade">
+@*<div id="myModal" class="modal fade">
     <div class="modal-dialog modal-confirm">
         <div class="modal-content">
             <div class="modal-header">
@@ -93,4 +125,4 @@
             </div>
         </div>
     </div>
-</div>
+</div>*@

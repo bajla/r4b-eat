@@ -5,6 +5,7 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using r4b_eat.Models;
 using r4b_eat.Data;
+using r4b_eat.Services;
 
 
 
@@ -30,11 +31,6 @@ namespace r4b_eat.Controllers
         }
 
         public IActionResult Profil()
-        {
-            return View();
-        }
-
-        public IActionResult AddUporabnik()
         {
             return View();
         }
@@ -283,9 +279,21 @@ namespace r4b_eat.Controllers
         {
             if (HttpContext.Session.GetString("userId") != null)
             {
-                
-                _db.uporabniki.Add(uporabnik);
-                _db.SaveChanges();
+                if (ModelState.IsValid)
+                {
+                    if (_db.uporabniki.Any(s => s.email == uporabnik.email) == false)
+                    {
+
+                        string gesloc = PasswordHelper.HashPassword(uporabnik.geslo);
+                        uporabnik.geslo = gesloc;
+
+                        _db.uporabniki.Add(uporabnik);
+                        _db.SaveChanges();
+                        return RedirectToAction("Ucenci");
+                    }
+
+                }
+                return View();
 
             }
 
