@@ -1,14 +1,26 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-<div>
-    <div class="text-center">
-        <h1 class="display-4">Profileee</h1>
-
+﻿<div class="container rounded bg-white mt-5 mb-5">
+    <div class="ContainerDijak">
+        <div style="margin-left:60px;" class="col-md-3 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://img.icons8.com/color/96/gender-neutral-user.png" alt="gender-neutral-user" /><span class="font-weight-bold">Dijak</span><span class="text-black-50">e@gmail.com</span><span> </span></div>
+        </div>
+        <div style="margin-left:100px;" class="col-md-5 border-right">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="text-right">Profile Settings</h4>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6"><label class="labels">Ime</label><input type="text" class="form-control" placeholder="Janez" value=""></div>
+                    <div class="col-md-6"><label class="labels">Priimek</label><input type="text" class="form-control" value="" placeholder="Novak"></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12"><label class="labels">Starost</label><input type="date" class="form-control" placeholder="19.5.2002" value=""></div>
+                    <div class="col-md-12"><label class="labels">Email</label><input type="text" class="form-control" placeholder="e@gmail.com" value=""></div>
+                    <div class="col-md-12"><label class="labels">Geslo</label><input type="text" class="form-control" placeholder="**********" value=""></div>
+                </div>
+               
+                <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+            </div>
+        </div>
+        
     </div>
-    <div class="homeMain">
-        <!--   <img class="pict" src="~/img/ker.jpg" />-->
-    </div>
-
-
 </div>
