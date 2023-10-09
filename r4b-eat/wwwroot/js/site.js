@@ -66,3 +66,20 @@ for (const elem of elems) {
         title: getDatePickerTitle(elem)
     });
 }
+
+//dropdown to label/div
+
+// Get references to the dropdown, button, and display area
+const dropdown = document.getElementById('dropdown');
+const showDataButton = document.getElementById('showDataButton');
+const displayData = document.getElementById('displayData');
+
+// Add a click event listener to the button
+showDataButton.addEventListener('click', function () {
+    // Get the selected option's value and text
+    const selectedValue = dropdown.value;
+    const selectedText = dropdown.options[dropdown.selectedIndex].text;
+
+    // Display the selected data in the display area
+    displayData.textContent = `Selected Value: ${selectedValue}, Selected Text: ${selectedText}`;
+});

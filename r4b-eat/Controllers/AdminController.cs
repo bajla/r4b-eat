@@ -25,6 +25,16 @@ namespace r4b_eat.Controllers
             _db = db;
         }
 
+        public IActionResult AddUporabnikAdmin()
+        {
+            return View();
+        }
+
+        public IActionResult PredmetiUredi()
+        {
+            return View();
+        }
+
         public IActionResult PredmetiAdd()
         {
             return View();

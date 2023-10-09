@@ -1,0 +1,84 @@
+﻿@model uporabnikiEntity
+
+<div class="form-body">
+    <div class="row">
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <h3>DODAJ ADMINA</h3>
+                    <p>Izpolni vsa polja!</p>
+                    <form class="requires-validation" asp-action="AddUporabnikAdmin" method="post">
+                        <div asp-validation-summary="All"></div>
+                        <div class="col-md-12">
+                            <input class="form-control" asp-for="ime" type="text" name="ime" placeholder="Ime" required>
+                            <div class="valid-feedback">Username field is valid!</div>
+                            <div class="invalid-feedback">Username field cannot be blank!</div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <input class="form-control" asp-for="priimek" type="text" name="priimek" placeholder="priimek" required>
+                            <div class="valid-feedback">Username field is valid!</div>
+                            <div class="invalid-feedback">Username field cannot be blank!</div>
+                        </div>
+
+                        <div class="col-md-12" style="margin-top:20px;">
+                            <input class="form-control" asp-for="starost" type="date" name="starost" placeholder="Datum Rojstva" required>
+                            <div class="valid-feedback">Username field is valid!</div>
+                            <div class="invalid-feedback">Username field cannot be blank!</div>
+                        </div>
+
+                        <div class="col-md-12" style="margin-bottom:10px;">
+                            <input class="form-control" asp-for="email" type="email" name="email" placeholder="E-mail naslov" required>
+                            <div class="valid-feedback">Email field is valid!</div>
+                            <div class="invalid-feedback">Email field cannot be blank!</div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <select asp-for="pravice" class="form-select mt-3" required>
+                                <option selected disabled value="">Pravice</option>
+                                <option value="u">DIJAK</option>
+                                <option value="c">PROFESOR</option>
+
+                            </select>
+                            <div class="valid-feedback">You selected a position!</div>
+                            <div class="invalid-feedback">Please select a position!</div>
+                        </div>
+
+
+                        <div class="col-md-12">
+
+                            <input class="form-control" asp-for="geslo" type="password" name="geslo" placeholder="Geslo" required>
+                            <div class="valid-feedback">Geslo je vredu</div>
+                            <div class="invalid-feedback">Geslo ne sme biti prazno</div>
+                        </div>
+                       <div class="col-md-12" style="margin-bottom:10px; font-size:20px; color:lightgrey;padding-left:15px;padding-top:30px;">Izbira predmetov </div>
+                        <div style="display:inline-block !important; margin-right: 10px;" class="col-md-12">
+                            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                            <label for="vehicle1"> I have a bike</label><br>
+                            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                            <label for="vehicle2"> I have a car</label><br>
+                            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                            <label for="vehicle3"> I have a boat</label><br>
+
+
+                        </div>
+
+                        <div id="displayData">
+
+                        </div>
+
+
+
+                        <div style="margin:30px;" class="form-button mt-3">
+                            <button style="margin-top:30px !important; background-color:grey !important; color:black !important;" class="btn btn-primary">Dodaj!</button>
+                        </div>
+
+
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
