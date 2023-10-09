@@ -786,11 +786,11 @@ body {
         font-size: 16px;
         border-radius: 5px;
         border: none;
-        background-color: lightcoral;
+        background-color: lightblue;
     }
 
     .modal-confirm .modal-header {
-        background-color: lightcoral;
+        background-color: lightblue;
         border-bottom: none;
         position: relative;
         text-align: center;
