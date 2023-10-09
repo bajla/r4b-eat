@@ -142,7 +142,7 @@ namespace r4b_eat.Controllers
                                 predmet.opis
 
                             };
-
+               
 
 
                 var result = query.ToList();
@@ -186,7 +186,7 @@ namespace r4b_eat.Controllers
 
             return RedirectToAction("Index", "Home");
 
-
+            
         }
 
         public IActionResult Ucenci()
@@ -309,8 +309,59 @@ namespace r4b_eat.Controllers
 
             string test = Request.Query["page"].ToString();
 
-            return View();
+            if (HttpContext.Session.GetString("userId") != null)
+            {
+                string id = Request.Query["id_uporabnika"].ToString();
+
+                int id_uporabnika = Convert.ToInt32(id);
+
+                var user = _db.uporabniki.Find(id_uporabnika);
+
+                if (user == null)
+                {
+
+                }
+                else
+                {
+                    _db.uporabniki.Remove(user);
+                }
+
+
+
+            }
+
+
+            return RedirectToAction(test);
         }
+
+        public IActionResult DeletePredmet()
+        {
+            if (HttpContext.Session.GetString("userId") != null)
+            {
+
+                string id = Request.Query["id_predmeta"].ToString();
+                int id_predmeta = Convert.ToInt32(id);
+
+                var predmet = _db.predmeti.Find(id_predmeta);
+
+
+                if (predmet == null)
+                {
+
+                }
+                else
+                {
+                    _db.predmeti.Remove(predmet);
+                }
+
+
+            }
+
+            return RedirectToAction("Predmeti");
+
+        }
+
+
 
 
     }

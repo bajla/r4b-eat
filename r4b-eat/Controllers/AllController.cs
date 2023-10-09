@@ -21,6 +21,27 @@ namespace r4b_eat.Controllers
 
         public IActionResult Profile()
         {
+            if (HttpContext.Session.GetString("userId") != null)
+            {
+                var user = _db.uporabniki.Find(Convert.ToInt32(HttpContext.Session.GetString("userID")));
+
+                return View(user);
+
+            }
+            else return RedirectToAction("Index", "Home");
+
+            
+        }
+
+        [HttpPost]
+        public IActionResult Profile(uporabnikiEntity uporabnik, IFormFile slika)
+        {
+            _db.uporabniki.Update(uporabnik);
+
+            using (var stream = new FileStream("", FileMode.Create))
+            {
+                await file.CopyToAsync(stream);
+            }
             return View();
         }
     }
