@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "c9JbLFpO538YroRYn0RgbiDsmq4+f6Ujo58MAryycfw=",
+  "Hash": "l851evRpCh4VJmi3i2kiWYGks92CoUpdTrFE9K57ETA=",
   "Source": "r4b-eat",
   "BasePath": "_content/r4b-eat",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/Admin.css"
+    },
+    {
+      "Identity": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/css/Dijak.css",
+      "SourceId": "r4b-eat",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/",
+      "BasePath": "_content/r4b-eat",
+      "RelativePath": "css/Dijak.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/Dijak.css"
     },
     {
       "Identity": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/css/site.css",

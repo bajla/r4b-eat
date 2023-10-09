@@ -1,41 +1,43 @@
-﻿<div class="form-body">
+﻿@model uporabnikiEntity
+
+<div class="form-body">
     <div class="row">
         <div class="form-holder">
             <div class="form-content">
                 <div class="form-items">
                     <h3>DODAJ UPORABNIKA</h3>
                     <p>Izpolni vsa polja!</p>
-                    <form class="requires-validation" novalidate>
-
+                    <form class="requires-validation" asp-action="AddUporabnik" method="post">
+                        <div asp-validation-summary="All"></div>
                         <div class="col-md-12">
-                            <input class="form-control" type="text" name="name" placeholder="FIRST NAME" required>
+                            <input class="form-control" asp-for="ime" type="text" name="ime" placeholder="Ime" required>
                             <div class="valid-feedback">Username field is valid!</div>
                             <div class="invalid-feedback">Username field cannot be blank!</div>
                         </div>
 
                         <div class="col-md-12">
-                            <input class="form-control" type="text" name="name" placeholder="LAST NAME" required>
+                            <input class="form-control" asp-for="priimek" type="text" name="priimek" placeholder="priimek" required>
                             <div class="valid-feedback">Username field is valid!</div>
                             <div class="invalid-feedback">Username field cannot be blank!</div>
                         </div>
 
                         <div class="col-md-12" style="margin-top:20px;">
-                            <input class="form-control" type="date" name="name" placeholder="Datum Rojstva" required>
+                            <input class="form-control" asp-for="starost" type="date" name="starost" placeholder="Datum Rojstva" required>
                             <div class="valid-feedback">Username field is valid!</div>
                             <div class="invalid-feedback">Username field cannot be blank!</div>
                         </div>
 
                         <div class="col-md-12" style="margin-bottom:10px;">
-                            <input class="form-control" type="email" name="email" placeholder="E-mail Address" required>
+                            <input class="form-control" asp-for="email" type="email" name="email" placeholder="E-mail naslov" required>
                             <div class="valid-feedback">Email field is valid!</div>
                             <div class="invalid-feedback">Email field cannot be blank!</div>
                         </div>
 
                         <div class="col-md-12">
-                            <select class="form-select mt-3" required>
+                            <select asp-for="pravice" class="form-select mt-3" required>
                                 <option selected disabled value="">Pravice</option>
-                                <option value="jweb">DIJAK</option>
-                                <option value="sweb">PROFESOR</option>
+                                <option value="u">DIJAK</option>
+                                <option value="c">PROFESOR</option>
 
                             </select>
                             <div class="valid-feedback">You selected a position!</div>
@@ -44,7 +46,7 @@
 
 
                         <div class="col-md-12">
-                            <input class="form-control" type="password" name="password" placeholder="Password" required>
+                            <input class="form-control" asp-for="geslo" type="password" name="geslo" placeholder="Geslo" required>
                             <div class="valid-feedback">Geslo je vredu</div>
                             <div class="invalid-feedback">Geslo ne sme biti prazno</div>
                         </div>
