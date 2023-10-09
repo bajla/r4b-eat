@@ -26,6 +26,7 @@ namespace r4b_eat.Models
     public class ucenciDisplayModel
     {
         public List<string> predmeti { get; set; }
+        public int id_uporabnika { get; set; }
         public string ime { get; set; }
         public string priimek { get; set; }
         public string email { get; set; }

@@ -64,7 +64,7 @@ namespace r4b_eat.Controllers
                             orderby uporabnik.ime ascending
                             select new
                             {
-                                
+                                uporabnik.id_uporabnika,
                                 uporabnik.ime,
                                 uporabnik.priimek,
                                 leftJoinPredmet.predmet,
@@ -79,6 +79,7 @@ namespace r4b_eat.Controllers
 
                 List<ucenciDisplayModel> model = new List<ucenciDisplayModel>();
 
+                int lastId = -1;
                 string lastIme = null;
                 string lastPriimek = null;
                 List<string> predmeti = new List<string>();
@@ -87,6 +88,7 @@ namespace r4b_eat.Controllers
                 {
                     if (lastIme == null)
                     {
+                        lastId = i.id_uporabnika;
                         lastIme = i.ime;
                         lastPriimek = i.priimek;
                         predmeti.Add(i.predmet);
@@ -101,7 +103,8 @@ namespace r4b_eat.Controllers
 
                     else if (lastIme != i.ime)
                     {
-                        model.Add(new ucenciDisplayModel { predmeti = new List<string>(predmeti), ime = lastIme, email = email, priimek = lastPriimek });
+                        model.Add(new ucenciDisplayModel { predmeti = new List<string>(predmeti), ime = lastIme, email = email, priimek = lastPriimek, id_uporabnika = lastId });
+                        lastId = i.id_uporabnika;
                         lastIme = i.ime;
                         lastPriimek = i.priimek;
                         email = i.email;
@@ -110,7 +113,7 @@ namespace r4b_eat.Controllers
                     }
                 }
 
-                model.Add(new ucenciDisplayModel { predmeti = new List<string>(predmeti), ime = lastIme, email = email, priimek = lastPriimek });
+                model.Add(new ucenciDisplayModel { predmeti = new List<string>(predmeti), ime = lastIme, email = email, priimek = lastPriimek, id_uporabnika = lastId });
 
 
                 return View(model);
@@ -132,6 +135,7 @@ namespace r4b_eat.Controllers
                             orderby predmet.predmet ascending, uporabnik.ime ascending
                             select new
                             {
+                                
                                 uporabnik.ime,
                                 uporabnik.priimek,
                                 predmet.predmet,
@@ -296,6 +300,14 @@ namespace r4b_eat.Controllers
                 return View();
 
             }
+
+            return View();
+        }
+
+        public IActionResult Deleteuser()
+        {
+
+            string test = Request.Query["page"].ToString();
 
             return View();
         }
