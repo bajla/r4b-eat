@@ -1095,9 +1095,11 @@ body {
 
 
 .predmetGrid {
+    margin-top:40px;
     display: grid;
-    grid-template-rows: auto 1fr 2fr;
-    grid-gap: 20px;
+    grid-template-rows: auto 1fr 2fr; /* Two rows: auto-sized title row and equally divided sections */
+    grid-template-columns: 1fr 1fr; /* Two columns for the sections */
+    grid-gap: 10px;
 }
 
 /* Style the instructions section */
@@ -1107,11 +1109,13 @@ body {
     border-bottom: 1px solid #ccc;
     overflow-y: auto; /* Add scrollbars if content exceeds the container height */
     text-align: center;
-    
+    grid-row: 1; /* Position in the first row */
+    grid-column: span 2;
 }
 
 /* Style the files section */
 .predmetFil {
+    place-items:center;
     background-color: #fff;
     padding: 20px;
     overflow-y: auto; /* Add scrollbars if content exceeds the container height */
