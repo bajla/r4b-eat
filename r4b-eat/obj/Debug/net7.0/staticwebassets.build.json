@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "liJSqj/EMkQgLdxWrzz/HjoXLEl+1ZRqQCHgqsN27tM=",
+  "Hash": "mwW9fc92YhQeSpVda9ApxommhFPXEcu+LNwHGGjFkuk=",
   "Source": "r4b-eat",
   "BasePath": "_content/r4b-eat",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/Dijak.css"
+    },
+    {
+      "Identity": "/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/css/Profesor.css",
+      "SourceId": "r4b-eat",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/",
+      "BasePath": "_content/r4b-eat",
+      "RelativePath": "css/Profesor.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/Profesor.css"
     },
     {
       "Identity": "/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/css/site.css",

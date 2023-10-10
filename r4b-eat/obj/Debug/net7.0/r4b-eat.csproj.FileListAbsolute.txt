@@ -117,3 +117,4 @@ C:/Users/x/Documents/GitHub/r4b-eat/r4b-eat/obj/Debug/net7.0/ref/r4b-eat.dll
 /Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/obj/Debug/net7.0/ref/r4b-eat.dll
 /Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/obj/Debug/net7.0/scopedcss/Views/Shared/_Layout2.cshtml.rz.scp.css
 /Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/obj/Debug/net7.0/scopedcss/Views/Shared/_Layout2.cshtml.rz.scp.css
+/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/obj/Debug/net7.0/scopedcss/Views/Shared/_Layout3.cshtml.rz.scp.css

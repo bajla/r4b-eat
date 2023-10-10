@@ -24,6 +24,7 @@
     <None Remove="Views\Admin\" />
     <None Remove="Views\All\" />
     <None Remove="Views\Dijak\" />
+    <None Remove="Views\Profesor\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
@@ -31,5 +32,6 @@
     <Folder Include="Views\Admin\" />
     <Folder Include="Views\All\" />
     <Folder Include="Views\Dijak\" />
+    <Folder Include="Views\Profesor\" />
   </ItemGroup>
 </Project>
