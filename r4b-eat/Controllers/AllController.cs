@@ -34,13 +34,13 @@ namespace r4b_eat.Controllers
         }
 
         [HttpPost]
-        public IActionResult Profile(uporabnikiEntity uporabnik, IFormFile slika)
+        public IActionResult Profile(uporabnikiEntity uporabnik, IFormFile fileName)
         {
             _db.uporabniki.Update(uporabnik);
 
-            using (var stream = new FileStream("", FileMode.Create))
+            using (var stream = new FileStream("~/slike/"+uporabnik.id_uporabnika+"png", FileMode.Create))
             {
-                await file.CopyToAsync(stream);
+                fileName.CopyToAsync(stream);
             }
             return View();
         }

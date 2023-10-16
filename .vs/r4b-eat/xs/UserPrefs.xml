@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{5BCC328F-B04F-4AEE-930E-AC16CFDF0204}|https">
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.r4b-eat PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="r4b-eat/Controllers/AdminController.cs">
     <Files>
       <File FileName="r4b-eat/Controllers/HomeController.cs" />
@@ -16,7 +16,7 @@
       <File FileName="r4b-eat/Views/_ViewImports.cshtml" />
       <File FileName="r4b-eat/Views/Shared/_ValidationScriptsPartial.cshtml" />
       <File FileName="r4b-eat/Views/Shared/_Layout1.cshtml" />
-      <File FileName="r4b-eat/Controllers/AdminController.cs" Line="206" Column="58" />
+      <File FileName="r4b-eat/Controllers/AdminController.cs" Line="1" Column="1" />
       <File FileName="r4b-eat/Views/Admin/Index.cshtml" />
       <File FileName="r4b-eat/wwwroot/css/site.css" />
       <File FileName="r4b-eat/Models/gradivaEntity.cs" />
@@ -31,6 +31,9 @@
       <File FileName="r4b-eat/Views/Admin/AddUporabnik.cshtml" />
       <File FileName="r4b-eat/Views/Dijak/Profil.cshtml" />
       <File FileName="r4b-eat/Views/Admin/Naloge.cshtml" />
+      <File FileName="r4b-eat/Views/All/Profile.cshtml" Line="32" Column="19" />
+      <File FileName="r4b-eat/Controllers/AllController.cs" Line="21" Column="1" />
+      <File FileName="r4b-eat/Controllers/DijakController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -41,14 +44,20 @@
                 <Node name="AdminController.cs" selected="True" />
               </Node>
               <Node name="Data" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Admin" expanded="True" />
+                <Node name="All" expanded="True" />
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.r4b-eat PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
