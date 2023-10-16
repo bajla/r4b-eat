@@ -11,20 +11,20 @@ using r4b_eat.Data;
 namespace r4b_eat.Controllers
 {
 
-	public class DijakController : Controller
+	public class ProfesorController : Controller
 	{
         private readonly ILogger<HomeController> _logger;
         private readonly ApplicationDbContext _db;
 
 
 
-        public DijakController(ILogger<HomeController> logger, ApplicationDbContext db)
+        public ProfesorController(ILogger<HomeController> logger, ApplicationDbContext db)
 		{
             _logger = logger;
             _db = db;
         }
 
-        public IActionResult PredmetiAdd()
+        public IActionResult Predmeti()
         {
             return View();
         }
@@ -40,7 +40,7 @@ namespace r4b_eat.Controllers
             return View();
         }
 
-        public IActionResult Predmeti()
+        public IActionResult Predmet()
         {
             return View();
         }
