@@ -83,3 +83,27 @@ showDataButton.addEventListener('click', function () {
     // Display the selected data in the display area
     displayData.textContent = `Selected Value: ${selectedValue}, Selected Text: ${selectedText}`;
 });
+
+
+
+
+///////////////////////// upload file
+
+const fileInput = document.getElementById('file-input');
+const uploadButton = document.getElementById('upload-button');
+const fileDisplay = document.getElementById('file-display');
+const uploadedImage = document.getElementById('uploaded-image');
+
+uploadButton.addEventListener('click', () => {
+    const file = fileInput.files[0];
+    if (file) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            uploadedImage.src = e.target.result;
+            fileDisplay.style.display = 'block';
+        };
+
+        reader.readAsDataURL(file);
+    }
+};
