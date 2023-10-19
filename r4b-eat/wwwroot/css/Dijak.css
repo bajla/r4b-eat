@@ -1084,11 +1084,50 @@ body {
 }
 
 .itemNav {
-    background-color: cyan;
-    border: 2px dotted black;
+    background-color: aliceblue;
+    border: 2px solid black;
     margin-left: 20px;
     margin-right: 20px;
 }
 li{
     margin-bottom:30px;
 }
+
+.mainDiv {
+    height: 1000px;
+    width: 1300px;
+    display: grid;
+    margin-left: 50px;
+    margin-right: 150px;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+.item{
+    background-color:burlywood;
+    border:2px solid grey;
+    border-radius: 20px;
+    padding:30px;
+}
+
+.item1{
+    grid-row-start:1;
+    grid-row-end:1;
+    grid-column-start:1;
+    grid-column-end:5;
+}
+.item2{
+    grid-row: 1/1;
+    grid-column:5/6;
+}
+
+.item3 {
+    grid-row: 2/4;
+    grid-column: 1/6;
+}
+
+.item2 {
+    grid-row: 4/6;
+    grid-column: 1/6;
+}
+
