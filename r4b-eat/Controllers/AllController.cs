@@ -5,6 +5,9 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using r4b_eat.Models;
 using r4b_eat.Data;
+using System.IO;
+using System.Web;
+
 namespace r4b_eat.Controllers
 {
 	public class AllController : Controller
@@ -23,7 +26,13 @@ namespace r4b_eat.Controllers
         {
             if (HttpContext.Session.GetString("userId") != null)
             {
-                var user = _db.uporabniki.Find(Convert.ToInt32(HttpContext.Session.GetString("userID")));
+                //Console.WriteLine(HttpContext.Session.GetString("userId"));
+                int i = int.Parse(HttpContext.Session.GetString("userId"));
+                var user = _db.uporabniki.Find(i);
+
+                
+
+                ViewBag.File = "~/Storage/ProfilePics/" + i + ".png";
 
                 return View(user);
 
@@ -36,13 +45,15 @@ namespace r4b_eat.Controllers
         [HttpPost]
         public IActionResult Profile(uporabnikiEntity uporabnik, IFormFile fileName)
         {
+            uporabnik.id_uporabnika = int.Parse(HttpContext.Session.GetString("userId"));
             _db.uporabniki.Update(uporabnik);
 
-            using (var stream = new FileStream("~/slike/"+uporabnik.id_uporabnika+"png", FileMode.Create))
+            
+            using (var stream = new FileStream("wwwroot/Storage/ProfilePics/" + uporabnik.id_uporabnika+".png", FileMode.Create))
             {
                 fileName.CopyToAsync(stream);
             }
-            return View();
+            return View(uporabnik);
         }
 
         [HttpPost]
