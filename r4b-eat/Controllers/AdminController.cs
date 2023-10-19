@@ -280,8 +280,23 @@ namespace r4b_eat.Controllers
 
         public IActionResult Gradiva()
         {
-            return View();
+
+            string predmet = Request.Query["predmet"].ToString();
+            if (predmet == null)
+            {
+                var predmeti = _db.gradiva.Select(p => p.predmeti).Distinct().ToList();
+                return View(predmeti);
+            }
+            else
+            {
+                var gradiva = _db.gradiva.Where(p => p.predmeti.predmet == predmet);
+
+                return View(gradiva);
+            }
+            
         }
+
+
 
         public IActionResult AddUporabnik()
         {

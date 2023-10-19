@@ -35,24 +35,25 @@
                                 <td class="col-3">
                                     <a href="#myModal-@modal" class="trigger-btn" data-toggle="modal">Predmeti</a>
                                 </td>
+                                <td>Starost</td>
                                 <td> <button>Uredi</button></td>
-                                <td> <button> <a  href="/Admin/Deleteuser?page=Ucitelji&id=">Odstrani</a></button></td>
+                                <td> <button> <a href="/Admin/Deleteuser?page=Ucitelji&id=">Odstrani</a></button></td>
                                 <td>
-                            <div id="myModal-@modal" class="modal fade">
-                                    <div class="modal-dialog modal-confirm">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                @foreach (var i in item.predmeti)
+                                    <div id="myModal-@modal" class="modal fade">
+                                        <div class="modal-dialog modal-confirm">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                    @foreach (var i in item.predmeti)
                                                     {
                                                         <p>@i</p>
 
                                                     }
 
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
                                 </td>
 
@@ -60,54 +61,6 @@
 
                                 modal++;
                             }
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>Otto</td>
-                            <td>
-                                <a href="#myModal" class="trigger-btn" data-toggle="modal">Predmeti</a>
-                            </td>
-                            <td>Starost</td>
-                            <td>
-                                <button class="button">Uredi</button>
-                            </td>
-                            <td>
-                                <button class="button">Izbrisi</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>Otto</td>
-                            <td>
-                                <a href="#myModal" class="trigger-btn" data-toggle="modal">Predmeti</a>
-                            </td>
-                            <td>Starost</td>
-                            <td>
-                                <button class="button">Uredi</button>
-                            </td>
-                            <td>
-                                <button class="button">Uredi</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>Otto</td>
-                            <td>
-                                <a href="#myModal" class="trigger-btn" data-toggle="modal">Predmeti</a>
-                            </td>
-                            <td>Starost</td>
-                            <td>
-                                <button class="button">Uredi</button>
-                            </td>
-                            <td>
-                                <button class="button">Uredi</button>
-                            </td>
-                        </tr>
                     </tbody>
                 </table>
                

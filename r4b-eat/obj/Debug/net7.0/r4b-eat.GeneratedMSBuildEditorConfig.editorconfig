@@ -20,6 +20,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vQWRkVXBvcmFibmlrLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/Views/Admin/AddUporabnikAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vQWRkVXBvcmFibmlrQWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/Views/Admin/Gradiva.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vR3JhZGl2YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -38,6 +42,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/Views/Admin/PredmetiAdd.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vUHJlZG1ldGlBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/Views/Admin/PredmetiUredi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vUHJlZG1ldGlVcmVkaS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/Views/Admin/Profil.cshtml]
@@ -64,6 +72,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlqYWsvUHJlZG1ldGkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/Views/Dijak/PredmetiAdd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlqYWsvUHJlZG1ldGlBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/Views/Dijak/Profil.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlqYWsvUHJvZmlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -78,6 +90,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/Views/Home/Registration.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9SZWdpc3RyYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/Views/Profesor/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZmVzb3IvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/Views/Profesor/Predmet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZmVzb3IvUHJlZG1ldC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/Views/Profesor/Predmeti.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZmVzb3IvUHJlZG1ldGkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/Views/Profesor/Profil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZmVzb3IvUHJvZmlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/Views/Shared/Error.cshtml]
@@ -107,3 +135,7 @@ build_metadata.AdditionalFiles.CssScope = b-xde0zg2wl8
 [/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/Views/Shared/_Layout2.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = b-e6qavhv9gl
+
+[/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/Views/Shared/_Layout3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-g4tewnvd33

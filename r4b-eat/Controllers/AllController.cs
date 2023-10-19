@@ -44,6 +44,14 @@ namespace r4b_eat.Controllers
             }
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Gradivo(gradivaEntity gradiva)
+        {
+
+            return View(gradiva);
+        }
+
     }
 }
 
