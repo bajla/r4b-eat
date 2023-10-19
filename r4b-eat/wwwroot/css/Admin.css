@@ -1197,6 +1197,8 @@ form .form-row .textarea {
     
     box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);
     margin-bottom:30px;
+    
+    flex-wrap:wrap;
 }
 
 .gradivaPred{
@@ -1209,6 +1211,7 @@ form .form-row .textarea {
    
     width:250px;
     height:170px;
+
 }
 
 .gradivaGrid {
