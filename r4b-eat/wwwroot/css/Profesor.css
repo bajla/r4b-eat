@@ -1095,28 +1095,67 @@ body {
 
 
 .predmetGrid {
-    margin-top:40px;
+    margin-left: 100px;
+    margin-top:90px;
     display: grid;
-    grid-template-rows: auto 1fr 2fr; /* Two rows: auto-sized title row and equally divided sections */
+    grid-template-rows: auto 1fr 2fr 2fr; /* Two rows: auto-sized title row and equally divided sections */
     grid-template-columns: 1fr 1fr; /* Two columns for the sections */
     grid-gap: 10px;
+    
 }
 
 /* Style the instructions section */
 .predmetIns {
-    background-color: #f0f0f0;
+    margin-top: 100px;
+    background-color: #B8B8E9;
     padding: 20px;
     border-bottom: 1px solid #ccc;
     overflow-y: auto; /* Add scrollbars if content exceeds the container height */
     text-align: center;
     grid-row: 1; /* Position in the first row */
     grid-column: span 2;
+    border-radius: 20px;
+    padding: 15px;
+    border: 2px solid black;
 }
 
 /* Style the files section */
 .predmetFil {
-    place-items:center;
-    background-color: #fff;
+    place-items: center;
+    background-color: #DFDFFC;
     padding: 20px;
     overflow-y: auto; /* Add scrollbars if content exceeds the container height */
+    border-radius: 20px;
+    padding: 15px;
+    border: 2px solid black;
+}
+
+.oddajaNalog {
+    grid-row: 2;
+    grid-column: 2;
+    background-color: #DFDFFC;
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    border: 2px solid black;
+}
+
+.overview {
+    grid-row: 3;
+    grid-column: span 2;
+    background-color: #DFDFFC;
+    border-radius: 20px;
+    padding: 15px;
+    border: 2px solid black;
+    height: 200px;
+    justify-items: center;
+    align-items: center;
+}
+
+.uploadFile {
+    border: 2px solid black;
+    justify-items: center;
+    align-items:center;
 }
