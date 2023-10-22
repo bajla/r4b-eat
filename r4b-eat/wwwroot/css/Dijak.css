@@ -1225,3 +1225,18 @@ li{
     background-color: #c7b198;
     box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.6);
 }
+.para {
+    background-color: #dfd3c3;
+    border:1px solid black;
+    border-radius:20px;
+    margin:10px;
+    display:block;
+    padding:20px;
+}
+.kljuc{
+    margin:20px;
+    text-align:center;
+}
+.lab{
+    display:block;
+}
