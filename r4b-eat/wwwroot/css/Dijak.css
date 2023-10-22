@@ -1185,13 +1185,43 @@ li{
     height: 150px;
     width: 300px;
     background-color: #dfd3c3;
-    border: 2px solid grey;
+    
     border: 1px solid grey;
     box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);
     transition: background-color 0.3s, box-shadow 0.3s;
     border-radius:10px;
 }
 .predmet:hover {
+    background-color: #c7b198;
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.6);
+}
+.predmetiOpisMain{
+    height:100%;
+    width:100%;
+    justify-content:center;
+    display:flex;
+    align-items:center;
+}
+.opisPredmeta {
+    height: auto;
+    width: 900px;
+    margin-left: 200px;
+    display: grid;
+    grid-template-rows: repeat(4, minmax(100px, auto)); /* Four rows, expand automatically */
+    grid-gap: 20px;
+    
+}
+.predmetki {
+    background-color: #dfd3c3;
+    width: 100%;
+    border: 1px solid grey;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
+    padding:10px;
+    text-align:center;
+}
+.predmetki:hover {
     background-color: #c7b198;
     box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.6);
 }
