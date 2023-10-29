@@ -107,3 +107,25 @@ uploadButton.addEventListener('click', () => {
         reader.readAsDataURL(file);
     }
 };
+
+
+// quote spreminjanje
+
+const textArray = [
+    "Text 1",
+    "Text 2",
+    "Text 3",
+    "Text 4"
+];
+
+const paragraph = document.getElementById("changing-text");
+let currentIndex = 0;
+
+function updateText() {
+    paragraph.textContent = textArray[currentIndex];
+    currentIndex = (currentIndex + 1) % textArray.length;
+}
+
+updateText(); // Initial call to set the text
+
+setInterval(updateText, 2000);
