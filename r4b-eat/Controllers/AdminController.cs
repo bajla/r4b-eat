@@ -217,7 +217,7 @@ namespace r4b_eat.Controllers
                             orderby uporabnik.ime ascending
                             select new
                             {
-                                
+                                uporabnik.id_uporabnika,
                                 uporabnik.ime,
                                 uporabnik.priimek,
                                 leftJoinPredmet.predmet,
@@ -232,6 +232,7 @@ namespace r4b_eat.Controllers
 
                 List<ucenciDisplayModel> model = new List<ucenciDisplayModel>();
 
+                int lastId = -1;
                 string lastIme = null;
                 string lastPriimek = null;
                 List<string> predmeti = new List<string>();
@@ -240,6 +241,7 @@ namespace r4b_eat.Controllers
                 {
                     if (lastIme == null)
                     {
+                        lastId = i.id_uporabnika;
                         lastIme = i.ime;
                         lastPriimek = i.priimek;
                         predmeti.Add(i.predmet);
@@ -255,6 +257,7 @@ namespace r4b_eat.Controllers
                     else if (lastIme != i.ime)
                     {
                         model.Add(new ucenciDisplayModel { predmeti = new List<string>(predmeti), ime = lastIme, email = email, priimek = lastPriimek });
+                        lastId = i.id_uporabnika;
                         lastIme = i.ime;
                         lastPriimek = i.priimek;
                         email = i.email;
@@ -263,7 +266,7 @@ namespace r4b_eat.Controllers
                     }
                 }
 
-                model.Add(new ucenciDisplayModel { predmeti = new List<string>(predmeti), ime = lastIme, email = email, priimek = lastPriimek });
+                model.Add(new ucenciDisplayModel {id_uporabnika = lastId, predmeti = new List<string>(predmeti), ime = lastIme, email = email, priimek = lastPriimek } );
 
 
                 return View(model);
@@ -329,18 +332,14 @@ namespace r4b_eat.Controllers
             return View();
         }
 
-        public IActionResult Deleteuser()
+        [HttpGet]
+        public IActionResult Deleteuser(string page, int id)
         {
-
-            string test = Request.Query["page"].ToString();
 
             if (HttpContext.Session.GetString("userId") != null)
             {
-                string id = Request.Query["id_uporabnika"].ToString();
 
-                int id_uporabnika = Convert.ToInt32(id);
-
-                var user = _db.uporabniki.Find(id_uporabnika);
+                var user = _db.uporabniki.Find(id);
 
                 if (user == null)
                 {
@@ -349,6 +348,7 @@ namespace r4b_eat.Controllers
                 else
                 {
                     _db.uporabniki.Remove(user);
+                    _db.SaveChanges();
                 }
 
 
@@ -356,7 +356,7 @@ namespace r4b_eat.Controllers
             }
 
 
-            return RedirectToAction(test);
+            return RedirectToAction(page);
         }
 
         public IActionResult DeletePredmet()

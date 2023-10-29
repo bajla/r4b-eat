@@ -1,11 +1,14 @@
 ﻿@model uporabnikiEntity
 
+@{
+   string datum = Model.starost.ToShortDateString();
+}
 
 <form method="post" asp-action="Profile" enctype="multipart/form-data">
     <div class="container rounded bg-white mt-5 mb-5">
         <div class="row">
             <div class="col-md-3 border-right">
-                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="~/Storage/ProfilePics/10.png"/><span class="font-weight-bold">Edogaru</span><span class="text-black-50">edogaru@mail.com.my</span><span> </span></div>
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="@ViewBag.File"/><span class="font-weight-bold">@Model.ime</span><span class="text-black-50">@Model.email</span><span> </span></div>
                 <input type="file" name="fileName" />
             </div>
             <div class="col-md-5 border-right">
@@ -18,7 +21,7 @@
                         <div class="col-md-6"><label  class="labels">Priimek</label><input asp-for="priimek" type="text" class="form-control" value="@Model.priimek" placeholder="@Model.priimek"></div>
                     </div>
                     <div class="row mt-3">
-                        <div class="col-md-12"><label class="labels">Datum rojstva</label><input asp-for="starost" type="date" class="form-control" placeholder="@Model.starost" value="@Model.starost"></div>
+                        <div class="col-md-12"><label class="labels">Datum rojstva</label><input asp-for="starost" type="date" class="form-control" placeholder="@Model.starost" value="@datum"></div>
                         <div style="margin-top:20px;" class="col-md-12"><label class="labels">Email ID</label><input asp-for="email" type="text" class="form-control" placeholder="a@gmail.com" value="@Model.email"></div>
                     </div>
                     <div class="row mt-4">

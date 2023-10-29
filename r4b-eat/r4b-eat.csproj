@@ -24,6 +24,7 @@
     <None Remove="Views\Admin\" />
     <None Remove="Views\All\" />
     <None Remove="Views\Dijak\" />
+    <None Remove="wwwroot\Storage\ProfilePics\10.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
@@ -34,12 +35,6 @@
     <Folder Include="wwwroot\Storage\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Remove="wwwroot\Storage\ProfilePics\0.png" />
-    <Content Remove="wwwroot\Storage\ProfilePics\10.png" />
     <Content Remove="wwwroot\Storage\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="wwwroot\Storage\ProfilePics\0.png" />
-    <None Include="wwwroot\Storage\ProfilePics\10.png" />
   </ItemGroup>
 </Project>

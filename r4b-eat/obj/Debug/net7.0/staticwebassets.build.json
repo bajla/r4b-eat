@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6OTVuO7aFMYoN4oOlnURjGDKr+5UtuG+fiZNdovgfCY=",
+  "Hash": "J66T6Fdq0fqtVUPdh2wMj6J4nO+LjtNoXhY07HpFcss=",
   "Source": "r4b-eat",
   "BasePath": "_content/r4b-eat",
   "Mode": "Default",
@@ -1188,6 +1188,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Identity": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/Storage/.DS_Store",
+      "SourceId": "r4b-eat",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/",
+      "BasePath": "_content/r4b-eat",
+      "RelativePath": "Storage/.DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Storage/.DS_Store"
+    },
+    {
+      "Identity": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/Storage/ProfilePics/10.png",
+      "SourceId": "r4b-eat",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/",
+      "BasePath": "_content/r4b-eat",
+      "RelativePath": "Storage/ProfilePics/10.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Storage/ProfilePics/10.png"
     }
   ]
 }
