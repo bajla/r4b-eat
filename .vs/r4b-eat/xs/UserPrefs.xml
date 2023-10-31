@@ -1,5 +1,11 @@
 ﻿<Properties StartupConfiguration="{5BCC328F-B04F-4AEE-930E-AC16CFDF0204}|https">
-  <MonoDevelop.Ide.Workbench ActiveDocument="r4b-eat/wwwroot/js/site.js">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.r4b-eat PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="r4b-eat/Views/Profesor/Predmet.cshtml">
     <Files>
       <File FileName="r4b-eat/Controllers/HomeController.cs" />
       <File FileName="r4b-eat/appsettings.json" />
@@ -12,51 +18,52 @@
       <File FileName="r4b-eat/Views/Home/Registration.cshtml" />
       <File FileName="r4b-eat/Views/_ViewImports.cshtml" />
       <File FileName="r4b-eat/Views/Shared/_ValidationScriptsPartial.cshtml" />
-      <File FileName="r4b-eat/Views/Shared/_Layout1.cshtml" Line="1" Column="1" />
+      <File FileName="r4b-eat/Views/Shared/_Layout1.cshtml" Line="32" Column="1" />
       <File FileName="r4b-eat/Controllers/AdminController.cs" />
       <File FileName="r4b-eat/Views/Admin/Index.cshtml" Line="1" Column="1" />
-      <File FileName="r4b-eat/wwwroot/css/site.css" />
+      <File FileName="r4b-eat/wwwroot/css/site.css" Line="21" Column="1" />
       <File FileName="r4b-eat/Models/gradivaEntity.cs" />
       <File FileName="r4b-eat/Models/nalogeEntity.cs" />
       <File FileName="r4b-eat/Models/opravljene_nalogeEntity.cs" />
       <File FileName="r4b-eat/Services/PasswordHelper.cs" />
       <File FileName="r4b-eat/Views/Admin/Predmeti.cshtml" />
-      <File FileName="r4b-eat/Views/Admin/Ucitelji.cshtml" />
-      <File FileName="r4b-eat/wwwroot/css/Admin.css" Line="1234" Column="34" />
-      <File FileName="r4b-eat/Views/Admin/Gradiva.cshtml" />
-      <File FileName="r4b-eat/Views/Admin/Ucenci.cshtml" />
-      <File FileName="r4b-eat/Views/Admin/Profil.cshtml" />
+      <File FileName="r4b-eat/Views/Admin/Ucitelji.cshtml" Line="47" Column="23" />
+      <File FileName="r4b-eat/wwwroot/css/Admin.css" Line="1057" Column="30" />
+      <File FileName="r4b-eat/Views/Admin/Gradiva.cshtml" Line="1" Column="1" />
+      <File FileName="r4b-eat/Views/Admin/Ucenci.cshtml" Line="41" Column="123" />
+      <File FileName="r4b-eat/Views/Admin/Profil.cshtml" Line="1" Column="1" />
       <File FileName="r4b-eat/wwwroot/js/site.js" Line="156" Column="10" />
       <File FileName="r4b-eat/Views/Admin/Naloge.cshtml" Line="24" Column="7" />
-      <File FileName="r4b-eat/Controllers/AllController.cs" />
+      <File FileName="r4b-eat/Controllers/AllController.cs" Line="28" Column="27" />
       <File FileName="r4b-eat/Models/loginModel.cs" />
       <File FileName="r4b-eat/Models/ErrorViewModel.cs" />
       <File FileName="r4b-eat/Views/Home/Index.cshtml" />
       <File FileName="r4b-eat/Views/Shared/_Layout1.cshtml.css" />
-      <File FileName="r4b-eat/Views/Shared/_Layout2.cshtml" />
+      <File FileName="r4b-eat/Views/Shared/_Layout2.cshtml" Line="1" Column="1" />
       <File FileName="r4b-eat/Views/Dijak/Predmeti.cshtml" />
       <File FileName="r4b-eat/Views/Shared/_Layout.cshtml.css" />
       <File FileName="r4b-eat/Views/Shared/_Layout2.cshtml.css" />
       <File FileName="r4b-eat/Properties/launchSettings.json" />
       <File FileName="r4b-eat/wwwroot/css/Dijak.css" />
-      <File FileName="r4b-eat/Views/Admin/AddUporabnik.cshtml" />
+      <File FileName="r4b-eat/Views/Admin/AddUporabnik.cshtml" Line="1" Column="1" />
       <File FileName="r4b-eat/Views/Dijak/Index.cshtml" />
       <File FileName="r4b-eat/Controllers/DijakController.cs" />
       <File FileName="r4b-eat/Views/Dijak/Profil.cshtml" />
-      <File FileName="r4b-eat/Views/All/Profile.cshtml" Line="20" Column="113" />
+      <File FileName="r4b-eat/Views/All/Profile.cshtml" Line="17" Column="1" />
       <File FileName="r4b-eat/Views/Admin/PredmetiAdd.cshtml" />
       <File FileName="r4b-eat/Views/Admin/PredmetiUredi.cshtml" />
-      <File FileName="r4b-eat/Views/Admin/AddUporabnikAdmin.cshtml" />
+      <File FileName="r4b-eat/Views/Admin/AddUporabnikAdmin.cshtml" Line="1" Column="1" />
       <File FileName="r4b-eat/Views/Dijak/PredmetiAdd.cshtml" />
       <File FileName="r4b-eat/Controllers/ProfesorController.cs" />
       <File FileName="r4b-eat/Views/Profesor/Predmeti.cshtml" />
-      <File FileName="r4b-eat/Views/Shared/_Layout3.cshtml" />
-      <File FileName="r4b-eat/Views/Profesor/Predmet.cshtml" Line="1" Column="1" />
-      <File FileName="r4b-eat/wwwroot/css/Profesor.css" Line="959" Column="17" />
+      <File FileName="r4b-eat/Views/Shared/_Layout3.cshtml" Line="1" Column="1" />
+      <File FileName="r4b-eat/Views/Profesor/Predmet.cshtml" Line="23" Column="14" />
+      <File FileName="r4b-eat/wwwroot/css/Profesor.css" Line="938" Column="19" />
       <File FileName="r4b-eat/Views/Dijak/Nadzorna.cshtml" />
       <File FileName="r4b-eat/Views/Dijak/PredmetiOpis.cshtml" />
-      <File FileName="r4b-eat/Views/Profesor/VseNaloge.cshtml" Line="11" Column="44" />
-      <File FileName="r4b-eat/Views/Profesor/Index.cshtml" Line="1" Column="1" />
+      <File FileName="r4b-eat/Views/Profesor/VseNaloge.cshtml" />
+      <File FileName="r4b-eat/Views/Profesor/Index.cshtml" />
+      <File FileName="r4b-eat/Views/All/SpremeniGeslo.cshtml" Line="6" Column="50" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -65,7 +72,8 @@
             <Node name="r4b-eat" expanded="True">
               <Node name="Controllers" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Admin" expanded="True" />
+                <Node name="All" expanded="True" />
+                <Node name="Profesor" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">
                 <Node name="css" expanded="True" />
@@ -77,11 +85,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.r4b-eat PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
 </Properties>
