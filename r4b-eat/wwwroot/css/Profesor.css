@@ -432,8 +432,11 @@ body {
     border: 1px solid #dd2476;
     color: rgba(250, 250, 250, 0.8);
     margin-bottom: 2rem;
+   
 }
-
+.cardTwo {
+    width: 23rem;
+}
 .btn {
     border: 5px solid;
     border-image-slice: 1;

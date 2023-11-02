@@ -104,6 +104,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9SZWdpc3RyYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/Views/Profesor/Gradiva.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZmVzb3IvR3JhZGl2YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/Views/Profesor/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZmVzb3IvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -122,6 +126,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/Views/Profesor/VseNaloge.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZmVzb3IvVnNlTmFsb2dlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/Views/Profesor/VsiDijaki.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZmVzb3IvVnNpRGlqYWtpLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/Views/Shared/Error.cshtml]
