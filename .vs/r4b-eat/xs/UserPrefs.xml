@@ -1,6 +1,12 @@
 ﻿<Properties StartupConfiguration="{5BCC328F-B04F-4AEE-930E-AC16CFDF0204}|https">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.r4b-eat PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="r4b-eat/Views/Profesor/Predmet.cshtml">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="r4b-eat/Views/Profesor/Gradiva.cshtml">
     <Files>
       <File FileName="r4b-eat/Controllers/HomeController.cs" />
       <File FileName="r4b-eat/appsettings.json" />
@@ -21,10 +27,10 @@
       <File FileName="r4b-eat/Models/nalogeEntity.cs" />
       <File FileName="r4b-eat/Models/opravljene_nalogeEntity.cs" />
       <File FileName="r4b-eat/Services/PasswordHelper.cs" />
-      <File FileName="r4b-eat/Views/Admin/Predmeti.cshtml" />
-      <File FileName="r4b-eat/Views/Admin/Ucitelji.cshtml" Line="47" Column="23" />
+      <File FileName="r4b-eat/Views/Admin/Predmeti.cshtml" Line="1" Column="1" />
+      <File FileName="r4b-eat/Views/Admin/Ucitelji.cshtml" />
       <File FileName="r4b-eat/wwwroot/css/Admin.css" />
-      <File FileName="r4b-eat/Views/Admin/Gradiva.cshtml" Line="7" Column="20" />
+      <File FileName="r4b-eat/Views/Admin/Gradiva.cshtml" />
       <File FileName="r4b-eat/Views/Admin/Ucenci.cshtml" />
       <File FileName="r4b-eat/Views/Admin/Profil.cshtml" />
       <File FileName="r4b-eat/wwwroot/js/site.js" />
@@ -34,7 +40,7 @@
       <File FileName="r4b-eat/Models/ErrorViewModel.cs" />
       <File FileName="r4b-eat/Views/Home/Index.cshtml" />
       <File FileName="r4b-eat/Views/Shared/_Layout1.cshtml.css" />
-      <File FileName="r4b-eat/Views/Shared/_Layout2.cshtml" />
+      <File FileName="r4b-eat/Views/Shared/_Layout2.cshtml" Line="1" Column="1" />
       <File FileName="r4b-eat/Views/Dijak/Predmeti.cshtml" />
       <File FileName="r4b-eat/Views/Shared/_Layout.cshtml.css" />
       <File FileName="r4b-eat/Views/Shared/_Layout2.cshtml.css" />
@@ -44,21 +50,22 @@
       <File FileName="r4b-eat/Views/Dijak/Index.cshtml" />
       <File FileName="r4b-eat/Controllers/DijakController.cs" />
       <File FileName="r4b-eat/Views/Dijak/Profil.cshtml" />
-      <File FileName="r4b-eat/Views/All/Profile.cshtml" Line="17" Column="1" />
-      <File FileName="r4b-eat/Views/Admin/PredmetiAdd.cshtml" Line="11" Column="1" />
+      <File FileName="r4b-eat/Views/All/Profile.cshtml" />
+      <File FileName="r4b-eat/Views/Admin/PredmetiAdd.cshtml" />
       <File FileName="r4b-eat/Views/Admin/PredmetiUredi.cshtml" />
       <File FileName="r4b-eat/Views/Admin/AddUporabnikAdmin.cshtml" />
       <File FileName="r4b-eat/Views/Dijak/PredmetiAdd.cshtml" />
-      <File FileName="r4b-eat/Controllers/ProfesorController.cs" />
-      <File FileName="r4b-eat/Views/Profesor/Predmeti.cshtml" />
-      <File FileName="r4b-eat/Views/Shared/_Layout3.cshtml" />
+      <File FileName="r4b-eat/Controllers/ProfesorController.cs" Line="60" Column="27" />
+      <File FileName="r4b-eat/Views/Profesor/Predmeti.cshtml" Line="46" Column="1" />
+      <File FileName="r4b-eat/Views/Shared/_Layout3.cshtml" Line="43" Column="21" />
       <File FileName="r4b-eat/Views/Profesor/Predmet.cshtml" Line="24" Column="34" />
-      <File FileName="r4b-eat/wwwroot/css/Profesor.css" />
+      <File FileName="r4b-eat/wwwroot/css/Profesor.css" Line="438" Column="18" />
       <File FileName="r4b-eat/Views/Dijak/Nadzorna.cshtml" />
       <File FileName="r4b-eat/Views/Dijak/PredmetiOpis.cshtml" />
-      <File FileName="r4b-eat/Views/Profesor/VseNaloge.cshtml" />
-      <File FileName="r4b-eat/Views/Profesor/Index.cshtml" />
+      <File FileName="r4b-eat/Views/Profesor/VseNaloge.cshtml" Line="24" Column="3" />
+      <File FileName="r4b-eat/Views/Profesor/Index.cshtml" Line="1" Column="1" />
       <File FileName="r4b-eat/Views/All/SpremeniGeslo.cshtml" />
+      <File FileName="r4b-eat/Views/Profesor/Gradiva.cshtml" Line="1" Column="15" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -67,9 +74,9 @@
             <Node name="r4b-eat" expanded="True">
               <Node name="Controllers" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Admin" expanded="True" />
                 <Node name="All" expanded="True" />
                 <Node name="Profesor" expanded="True" />
+                <Node name="Shared" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">
                 <Node name="css" expanded="True" />
@@ -81,10 +88,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>
