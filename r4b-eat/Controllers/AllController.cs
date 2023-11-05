@@ -7,6 +7,7 @@ using r4b_eat.Models;
 using r4b_eat.Data;
 using System.IO;
 using System.Web;
+using r4b_eat.Services;
 
 namespace r4b_eat.Controllers
 {
@@ -48,13 +49,20 @@ namespace r4b_eat.Controllers
             uporabnik.id_uporabnika = int.Parse(HttpContext.Session.GetString("userId"));
             Console.WriteLine(uporabnik.id_uporabnika + " " + uporabnik.ime + " " + uporabnik.priimek + " " + uporabnik.starost + " " + uporabnik
                 .pravice);
-            _db.uporabniki.Update(uporabnik);
+            var user = _db.uporabniki.Find(uporabnik.id_uporabnika);
+            user.ime = uporabnik.ime;
+            user.priimek = uporabnik.priimek;
+            user.starost = uporabnik.starost;
+            user.email = uporabnik.email;
+            if(uporabnik.geslo != null) user.geslo = PasswordHelper.HashPassword(uporabnik.geslo);
             _db.SaveChanges();
 
-            
-            using (var stream = new FileStream("wwwroot/Storage/ProfilePics/" + uporabnik.id_uporabnika+".png", FileMode.Create))
+            if (fileName != null)
             {
-                fileName.CopyTo(stream);
+                using (var stream = new FileStream("wwwroot/Storage/ProfilePics/" + uporabnik.id_uporabnika + ".png", FileMode.Create))
+                {
+                    fileName.CopyTo(stream);
+                }
             }
             return View(uporabnik);
         }

@@ -21,6 +21,7 @@ namespace r4b_eat.Models
         public List<string> ime { get; set; }
         public string predmet { get; set; }
         public string opis { get; set; }
+        public int id { get; set; }
     }
 
     public class ucenciDisplayModel
@@ -32,6 +33,13 @@ namespace r4b_eat.Models
         public string email { get; set; }
         public string datum_rojstva { get; set; }
     }
+
+    public class addUserDisplay
+    {
+        public uporabnikiEntity user { get; set; }
+        public List<predmetiEntity> predmeti { get; set; }
+    }
+
 
 
 }

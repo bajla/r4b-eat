@@ -11,8 +11,11 @@ namespace r4b_eat.Models
 		public int id_uporabnika { get; set; }
         public int id_predmeta { get; set; }
 
+		[ForeignKey("id_uporabnika")]
 		public uporabnikiEntity uporabnikiEntity { get; set; }
-		public predmetiEntity predmetiEntity { get; set; }
+
+        [ForeignKey("id_predmeta")]
+        public predmetiEntity predmetiEntity { get; set; }
     }
 }
 

@@ -6,8 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using r4b_eat.Models;
 using r4b_eat.Data;
 using r4b_eat.Services;
-
-
+using Microsoft.EntityFrameworkCore;
 
 namespace r4b_eat.Controllers
 {
@@ -25,20 +24,122 @@ namespace r4b_eat.Controllers
             _db = db;
         }
 
-        public IActionResult AddUporabnikAdmin()
+        [HttpGet]
+        public IActionResult AddUporabnik()
         {
-            return View();
+            
+            addUserDisplay addUser = new addUserDisplay();
+            addUser.predmeti = _db.predmeti.ToList();
+
+            uporabnikiEntity user = new uporabnikiEntity();
+            addUser.user=user;
+
+            return View(addUser);
         }
 
-        public IActionResult PredmetiUredi()
+        [HttpPost]
+        public IActionResult AddUporabnik(addUserDisplay userPredmeti, string[] subjects)
         {
-            return View();
+            if(userPredmeti != null)
+            {
+
+
+                userPredmeti.user.geslo = PasswordHelper.HashPassword(userPredmeti.user.geslo);
+                _db.uporabniki.Add(userPredmeti.user);
+                _db.SaveChanges();
+
+                var query = from uporabniki in _db.uporabniki
+                            where uporabniki.email == userPredmeti.user.email
+                            select new
+                            {
+                                uporabniki.id_uporabnika
+                            };
+
+                var result = query.ToList();
+                int id = result[0].id_uporabnika;
+                foreach (var item in subjects)
+                {
+                    _db.poucevanje.Add(new poucevanjeEntity { id_uporabnika = id, id_predmeta = Convert.ToInt32(item)});
+                }
+                _db.SaveChanges();
+
+
+            }
+
+            return RedirectToAction(userPredmeti.user.pravice=="c" ? "Ucitelji" : "Ucenci");
+        }
+
+        public IActionResult UrediUporabnik(int id)
+        {
+            
+            var user = _db.uporabniki.Find(id);
+
+            var query = from poucevanje in _db.poucevanje
+                        join predmeti in _db.predmeti
+                        on poucevanje.id_predmeta equals predmeti.id_predmeta
+                        where poucevanje.id_uporabnika == id
+                        select new predmetiEntity
+                        {
+                            id_predmeta = predmeti.id_predmeta,
+                            predmet = predmeti.predmet,
+                            krajsava = predmeti.krajsava,
+                            opis = predmeti.opis,
+                            kljuc = predmeti.kljuc
+                            
+                        };
+
+            var result = query.ToList();
+
+            addUserDisplay edituser = new addUserDisplay();
+            edituser.user = user;
+            edituser.predmeti = result;
+
+            ViewBag.predmetos = _db.predmeti.ToList();
+
+            return View(edituser);
+        }
+
+
+        public IActionResult PredmetiUredi(int id)
+        {
+            var predmetos = _db.predmeti.Find(id);
+            return View(predmetos);
+        }
+
+        [HttpPost]
+        public IActionResult PredmetiUredi(predmetiEntity predmetos, int id)
+        {
+
+            if (predmetos != null)
+            {
+
+                var predmeto = _db.predmeti.Find(predmetos.id_predmeta);
+                predmeto.kljuc = predmetos.kljuc;
+                predmeto.opis = predmetos.opis;
+                predmeto.krajsava = predmetos.krajsava;
+                predmeto.predmet = predmetos.predmet;
+                _db.SaveChanges();
+            }
+            return RedirectToAction("Predmeti");
         }
 
         public IActionResult PredmetiAdd()
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult PredmetiAdd(predmetiEntity predmetos)
+        {
+            if(predmetos != null)
+            {
+                _db.predmeti.Add(predmetos);
+                _db.SaveChanges();
+            }
+
+            return RedirectToAction("Predmeti");
+        }
+
 
         public IActionResult Profil()
         {
@@ -138,56 +239,71 @@ namespace r4b_eat.Controllers
 
             if (HttpContext.Session.GetString("userId") != null)
             {
-                var query = from poucevanje in _db.poucevanje
-                            join uporabnik in _db.uporabniki on poucevanje.id_uporabnika equals uporabnik.id_uporabnika
-                            join predmet in _db.predmeti on poucevanje.id_predmeta equals predmet.id_predmeta
-                            where uporabnik.pravice == "c"
-                            orderby predmet.predmet ascending, uporabnik.ime ascending
-                            select new
-                            {
-                                
-                                uporabnik.ime,
-                                uporabnik.priimek,
-                                predmet.predmet,
-                                predmet.opis
+         
+                var query4 = from predmeti in _db.predmeti
+                             join poucevanje in _db.poucevanje
+                             on predmeti.id_predmeta equals poucevanje.id_predmeta into predmetiLeftJoin
+                             from leftJoin in predmetiLeftJoin.DefaultIfEmpty()
+                             join uporabniki in _db.uporabniki
+                             on  leftJoin.id_uporabnika equals uporabniki.id_uporabnika into uporabniki 
+                             from uporabnik in uporabniki.DefaultIfEmpty()
+                             
 
-                            };
-               
+                             orderby predmeti.predmet ascending, uporabnik.ime ascending
+                             select new
+                             {
+                                 uporabnik.ime,
+                                 uporabnik.priimek,
+                                 uporabnik.pravice,
+                                 predmeti.predmet,
+                                 predmeti.opis,
+                                 predmeti.id_predmeta
+
+                             };
 
 
-                var result = query.ToList();
+
+
+
+                var result = query4.ToList();
+
+                Console.WriteLine(_db.predmeti.ToList().Last().predmet);
 
                 List<predmetiDisplayModel> model = new List<predmetiDisplayModel>();
+
 
                 string lastPredmet = null;
                 List<string> imena = new List<string>();
                 string opis = "";
+                int id = -1;
                 foreach (var i in result)
                 {
                     if (lastPredmet == null)
                     {
                         lastPredmet = i.predmet;
-                        imena.Add(i.ime + " " + i.priimek);
+                        if(i.pravice == "c")imena.Add(i.ime + " " + i.priimek);
                         opis = i.opis;
+                        id = i.id_predmeta;
                     }
 
                     else if (lastPredmet == i.predmet)
                     {
-                        imena.Add(i.ime + " " + i.priimek);
+                        if (i.pravice == "c")imena.Add(i.ime + " " + i.priimek);
 
                     }
 
                     else if (lastPredmet != i.predmet)
                     {
-                        model.Add(new predmetiDisplayModel { ime = new List<string>(imena), predmet = lastPredmet, opis = opis });
+                        model.Add(new predmetiDisplayModel { ime = new List<string>(imena), predmet = lastPredmet, opis = opis, id = id });
                         lastPredmet = i.predmet;
                         opis = i.opis;
                         imena.Clear();
-                        imena.Add(i.ime + " " + i.priimek);
+                        id = i.id_predmeta;
+                        if (i.pravice == "c")imena.Add(i.ime + " " + i.priimek);
                     }
                 }
 
-                model.Add(new predmetiDisplayModel { ime = new List<string>(imena), predmet = lastPredmet, opis = opis });
+                model.Add(new predmetiDisplayModel { ime = new List<string>(imena), predmet = lastPredmet, opis = opis, id = id });
 
 
                 return View(model);
@@ -256,7 +372,7 @@ namespace r4b_eat.Controllers
 
                     else if (lastIme != i.ime)
                     {
-                        model.Add(new ucenciDisplayModel { predmeti = new List<string>(predmeti), ime = lastIme, email = email, priimek = lastPriimek });
+                        model.Add(new ucenciDisplayModel { id_uporabnika = lastId, predmeti = new List<string>(predmeti), ime = lastIme, email = email, priimek = lastPriimek });
                         lastId = i.id_uporabnika;
                         lastIme = i.ime;
                         lastPriimek = i.priimek;
@@ -301,36 +417,34 @@ namespace r4b_eat.Controllers
 
 
 
-        public IActionResult AddUporabnik()
-        {
-            return View();
-        }
+        //[HttpPost]
+        //public IActionResult AddUporabnik(uporabnikiEntity uporabnik)
+        //{
+        //    if (HttpContext.Session.GetString("userId") != null)
+        //    {
 
-        [HttpPost]
-        public IActionResult AddUporabnik(uporabnikiEntity uporabnik)
-        {
-            if (HttpContext.Session.GetString("userId") != null)
-            {
-                if (ModelState.IsValid)
-                {
-                    if (_db.uporabniki.Any(s => s.email == uporabnik.email) == false)
-                    {
+        //            if (ModelState.IsValid)
+        //            {
+        //                if (_db.uporabniki.Any(s => s.email == uporabnik.email) == false)
+        //                {
 
-                        string gesloc = PasswordHelper.HashPassword(uporabnik.geslo);
-                        uporabnik.geslo = gesloc;
+        //                    string gesloc = PasswordHelper.HashPassword(uporabnik.geslo);
+        //                    uporabnik.geslo = gesloc;
 
-                        _db.uporabniki.Add(uporabnik);
-                        _db.SaveChanges();
-                        return RedirectToAction("Ucenci");
-                    }
+        //                    _db.uporabniki.Add(uporabnik);
+        //                    _db.SaveChanges();
+        //                    return RedirectToAction("Ucenci");
+        //                }
 
-                }
-                return View();
+        //            }
 
-            }
 
-            return View();
-        }
+        //        return View();
+
+        //    }
+
+        //    return View();
+        //}
 
         [HttpGet]
         public IActionResult Deleteuser(string page, int id)
@@ -359,15 +473,13 @@ namespace r4b_eat.Controllers
             return RedirectToAction(page);
         }
 
-        public IActionResult DeletePredmet()
+        public IActionResult DeletePredmet(int id)
         {
             if (HttpContext.Session.GetString("userId") != null)
             {
 
-                string id = Request.Query["id_predmeta"].ToString();
-                int id_predmeta = Convert.ToInt32(id);
 
-                var predmet = _db.predmeti.Find(id_predmeta);
+                var predmet = _db.predmeti.Find(id);
 
 
                 if (predmet == null)
@@ -377,6 +489,7 @@ namespace r4b_eat.Controllers
                 else
                 {
                     _db.predmeti.Remove(predmet);
+                    _db.SaveChanges();
                 }
 
 

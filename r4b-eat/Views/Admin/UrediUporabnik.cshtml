@@ -10,34 +10,45 @@
                     <form class="requires-validation" asp-action="AddUporabnik" method="post">
                         <div asp-validation-summary="All"></div>
                         <div class="col-md-12">
-                            <input class="form-control" asp-for="user.ime" type="text" placeholder="Ime" required>
+                            <input class="form-control" asp-for="user.ime" type="text" value="@Model.user.ime" placeholder="Ime" required>
                             <div class="valid-feedback">Username field is valid!</div>
                             <div class="invalid-feedback">Username field cannot be blank!</div>
                         </div>
 
                         <div class="col-md-12">
-                            <input class="form-control" asp-for="user.priimek" type="text" placeholder="priimek" required>
+                            <input class="form-control" asp-for="user.priimek" type="text" value="@Model.user.priimek" placeholder="priimek" required>
                             <div class="valid-feedback">Username field is valid!</div>
                             <div class="invalid-feedback">Username field cannot be blank!</div>
                         </div>
 
                         <div class="col-md-12" style="margin-top:20px;">
-                            <input class="form-control" asp-for="user.starost" type="date"  placeholder="Datum Rojstva" required>
+                            <input class="form-control" asp-for="user.starost" type="date" value="@Model.user.starost" placeholder="Datum Rojstva" required>
                             <div class="valid-feedback">Username field is valid!</div>
                             <div class="invalid-feedback">Username field cannot be blank!</div>
                         </div>
 
                         <div class="col-md-12" style="margin-bottom:10px;">
-                            <input class="form-control" asp-for="user.email" type="email" placeholder="E-mail naslov" required>
+                            <input class="form-control" asp-for="user.email" type="email" value="@Model.user.email" placeholder="E-mail naslov" required>
                             <div class="valid-feedback">Email field is valid!</div>
                             <div class="invalid-feedback">Email field cannot be blank!</div>
                         </div>
 
                         <div class="col-md-12">
                             <select asp-for="user.pravice" class="form-select mt-3" required>
-                                <option selected disabled value="">Pravice</option>
-                                <option value="c">PROFESOR</option>
-                                <option value="u">DIJAK</option>
+                                @if (Model.user.pravice == "c")
+                                {
+                                    <option disabled value="">Pravice</option>
+                                    <option selected value="c">PROFESOR</option>
+                                    <option value="u">DIJAK</option>
+
+                                }
+                                else if (Model.user.pravice == "u")
+                                {
+                                    <option disabled value="">Pravice</option>
+                                    <option value="c">PROFESOR</option>
+                                    <option selected value="u">DIJAK</option>
+
+                                }
                             </select>
                             <div class="valid-feedback">You selected a position!</div>
                             <div class="invalid-feedback">Please select a position!</div>
@@ -53,10 +64,32 @@
                        <div class="col-md-12" style="margin-bottom:10px; font-size:20px; color:lightgrey;padding-left:15px;padding-top:30px;">Izbira predmetov </div>
                        <div style="display:inline-block !important; margin-right: 10px;" class="col-md-12">
 
-                           @foreach(var i in Model.predmeti){
+                           @{
+                               List<predmetiEntity> predmetov = new List<predmetiEntity>();
+                               predmetov = ViewBag.predmetos;
+                               bool equals = false;
+                           }
+
+                           @foreach (var i in predmetov)
+                               {
 
 
-                               <input type="checkbox" name="subjects" value="@i.id_predmeta">
+                                   foreach (var temp in Model.predmeti)
+                                   {
+                                       if (temp.id_predmeta == i.id_predmeta) equals = true;
+                                   }
+
+                                   if (equals)
+                                   {
+                                   <input type="checkbox" name="subjects" checked value="@i.id_predmeta">
+                                   }
+                                   else
+                                   {
+                                   <input type="checkbox" name="subjects" value="@i.id_predmeta">
+                                   }
+
+                                   equals = false;
+
                                <label for="vehicle1"> @i.predmet </label><br>
 
 

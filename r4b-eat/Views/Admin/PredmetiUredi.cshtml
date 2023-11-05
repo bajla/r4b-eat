@@ -1,35 +1,33 @@
-﻿<div class="middleAdd">
+﻿@model predmetiEntity
+
+<div class="middleAdd">
     <div class="containerAdd">
         <div class="text">
             Uredi predmet
         </div>
-        <form action="#">
+        <form asp-action="PredmetiUredi" method="post">
             <div class="form-row">
                 <div class="input-data">
-                    <input type="text" required>
+                    <input hidden asp-for="id_predmeta" value="@Model.id_predmeta" />
+                    <input asp-for="predmet" type="text" value="@Model.predmet" required>
                     <div class="underline"></div>
                     <label for="">ime predmeta</label>
                 </div>
                 <div class="input-data">
-                    <input type="text" required>
+                    <input asp-for="krajsava" type="text" value="@Model.krajsava" required>
                     <div class="underline"></div>
                     <label for="">krajsava</label>
                 </div>
             </div>
             <div class="form-row">
                 <div class="input-data">
-                    <input type="text" required>
+                    <input asp-for="opis" type="text" value="@Model.opis" required>
                     <div class="underline"></div>
                     <label for="">opis</label>
                 </div>
-                <div class="input-data">
-                    <input type="text" required>
-                    <div class="underline"></div>
-                    <label for="">Profesorji</label>
-                </div>
             </div>
             <div class="input-data">
-                
+                @{ ViewBag.id = Model.id_predmeta; } 
                 <button style="width:100px;height:20px; margin-bottom:30px;" type="submit">Submit</button>
             </div>
         </form>

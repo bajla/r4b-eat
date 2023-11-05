@@ -5,7 +5,7 @@
     int modal = 0;
 
 }
-<a asp-area="" asp-controller="Admin" asp-action="AddUporabnik">  <i id="plus" class="gg-add"></i>  </a>
+<a href="/Admin/AddUporabnik?page=Ucenci">  <i id="plus" class="gg-add"></i>  </a>
 
 <div class="container py-5">
     <div class="row">
@@ -39,7 +39,7 @@
                                     <a href="#myModal-@modal" class="trigger-btn" data-toggle="modal">Predmeti</a>
                                 </td>
                                 <td>Starost</td>
-                                <td> <button>Uredi</button></td>
+                                <td> <button><a href="/Admin/UrediUporabnik?id=@item.id_uporabnika">Uredi</a></button></td>
                                 <td> <button><a href="/Admin/Deleteuser?page=Ucenci&id=@item.id_uporabnika">Odstrani</a></button></td>
 
                                 <td>

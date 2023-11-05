@@ -10,6 +10,7 @@ namespace r4b_eat.Models
             public string predmet { get; set; }
             public string krajsava { get; set; }
             public string? opis { get; set; }
+            public string? kljuc { get; set; }
 
         public ICollection<poucevanjeEntity> poucevanjeEntity { get; set; }
 

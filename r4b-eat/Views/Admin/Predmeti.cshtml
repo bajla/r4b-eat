@@ -18,8 +18,8 @@
                         }
                         
                         <p class="card-text">@item.opis</p>
-                        <a asp-area="" asp-controller="Admin" asp-action="PredmetiUredi" style="border:1px black solid !important;" class="btn mr-2">Uredi</a>
-                        <a style="border:1px black solid !important;" class="btn ">zbrisi</a>
+                        <a href="/Admin/PredmetiUredi?id=@item.id" style="border:1px black solid !important;" class="btn mr-2">Uredi</a>
+                        <a style="border:1px black solid !important;" href="/Admin/DeletePredmet?id=@item.id" class="btn ">zbrisi</a>
                     </div>
                 </div>
             </div>

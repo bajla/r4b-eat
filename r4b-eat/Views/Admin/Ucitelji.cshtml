@@ -1,5 +1,5 @@
 ﻿@model List<ucenciDisplayModel>
-<a asp-area="" asp-controller="Admin" asp-action="AddUporabnikAdmin">  <i id="plus" class="gg-add"></i>  </a>
+<a href="/Admin/AddUporabnik?page=Ucenci">  <i id="plus" class="gg-add"></i>  </a>
 
 @{
     int modal = 0;
@@ -36,7 +36,7 @@
                                     <a href="#myModal-@modal" class="trigger-btn" data-toggle="modal">Predmeti</a>
                                 </td>
                                 <td>Starost</td>
-                                <td> <button>Uredi</button></td>
+                                <td> <button><a href="/Admin/UrediUporabnik?id=@item.id_uporabnika">Uredi</a></button></td>
                                 <td> <button> <a href="/Admin/Deleteuser?page=Ucitelji&id=@item.id_uporabnika">Odstrani</a></button></td>
                                 <td>
                                     <div id="myModal-@modal" class="modal fade">

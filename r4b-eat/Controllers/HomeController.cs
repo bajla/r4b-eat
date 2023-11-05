@@ -68,6 +68,7 @@ public class HomeController : Controller
                 {
                     HttpContext.Session.SetString("userId", result[0].id_uporabnika.ToString());
                     HttpContext.Session.SetString("userRights", result[0].pravice.ToString());
+                    
                     return RedirectToAction("Index", "Admin");
                 }
 
