@@ -68,12 +68,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWxsL1NwcmVtZW5pR2VzbG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/Views/Dijak/Gradiva.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlqYWsvR3JhZGl2YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/Views/Dijak/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlqYWsvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/Views/Dijak/Nadzorna.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlqYWsvTmFkem9ybmEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/Views/Dijak/Naloge.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlqYWsvTmFsb2dlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/Views/Dijak/OddajaNaloge.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlqYWsvT2RkYWphTmFsb2dlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/Views/Dijak/Predmeti.cshtml]

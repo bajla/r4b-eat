@@ -1190,10 +1190,10 @@ li{
     transition: background-color 0.3s, box-shadow 0.3s;
     border-radius:10px;
 }
-.predmet:hover {
-    background-color: #c7b198;
-    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.6);
-}
+    .predmet:hover {
+        /*background-color: #c7b198;*/
+        box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.6);
+    }
 .predmetiOpisMain{
     height:100%;
     width:100%;
@@ -1208,6 +1208,7 @@ li{
     display: grid;
     grid-template-rows: repeat(4, minmax(100px, auto)); /* Four rows, expand automatically */
     grid-gap: 20px;
+    text-align:center;
     
 }
 .predmetki {
@@ -1219,9 +1220,14 @@ li{
     border-radius: 10px;
     padding:10px;
     text-align:center;
+    
+}
+.minHeight {
+    margin-top:30%;
+    min-height: 400px;
 }
 .predmetki:hover {
-    background-color: #c7b198;
+   
     box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.6);
 }
 .para {
@@ -1242,4 +1248,20 @@ li{
 
 .datotekeProstor{
     height:auto;
+}
+.null{
+    text-decoration:none;
+    color:black;
+
+}
+.null:hover{
+    color:black;
+}
+.submit{
+   
+    bottom:10px;
+}
+
+.form{
+    position:relative;
 }
