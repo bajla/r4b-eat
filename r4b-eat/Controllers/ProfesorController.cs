@@ -50,7 +50,23 @@ namespace r4b_eat.Controllers
             return View();
         }
 
+        public IActionResult VsiDijaki()
+        {
+            return View();
+        }
 
+        public IActionResult Gradiva()
+        {
+            return View();
+        }
+        public IActionResult GradivaAdd()
+        {
+            return View();
+        }
+        public IActionResult SpecificnaNaloga()
+        {
+            return View();
+        }
     }
 }
 

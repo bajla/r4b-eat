@@ -54,6 +54,21 @@ namespace r4b_eat.Controllers
         {
             return View();
         }
+
+        public IActionResult Gradiva()
+        {
+            return View();
+        }
+
+        public IActionResult Naloge()
+        {
+            return View();
+        }
+
+        public IActionResult OddajaNaloge()
+        {
+            return View();
+        }
     }
 }
 
