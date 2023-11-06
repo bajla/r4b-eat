@@ -26,6 +26,12 @@ namespace r4b_eat.Controllers
 
         [HttpGet]
         public IActionResult AddUporabnik()
+        public IActionResult GradivaPredmet()
+        {
+            return View();
+        }
+
+        public IActionResult AddUporabnikAdmin()
         {
             
             addUserDisplay addUser = new addUserDisplay();

@@ -208,7 +208,7 @@ input:-webkit-autofill:focus {
     border-bottom: 5px solid #95a4ff;
     -webkit-text-fill-color: #2A293E;
     -webkit-box-shadow: 0 0 0px 1000px #f8f4e5 inset;
-    transition: background-color 5000s ease-in-out 0s;
+    transition: background-color 5000s ease-in-out 0s;d
 }
 
 /*LOGIN end*/
@@ -1207,7 +1207,7 @@ form .form-row .textarea {
     position: relative;
     background-color: #447383;
     border-radius: 20px;
-    
+    height:auto;
     box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);
     margin-bottom:30px;
     
@@ -1223,7 +1223,7 @@ form .form-row .textarea {
     text-align:center;
    transition-duration:0.3s;
     width:250px;
-    height:170px;
+    height:100%;
 
 }
 
@@ -1272,4 +1272,15 @@ form .form-row .textarea {
         font-size:20px;
         margin-bottom:20px;
         width:170px;
+    }
+
+
+.null{
+    text-decoration:none;
+    color:black;
+
+}
+    .null:hover {
+        color: white;
+        text-decoration: none;
     }

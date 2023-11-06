@@ -887,9 +887,9 @@ body {
 
 .predmetGrid {
     margin-left: 100px;
-    margin-top:90px;
+    margin-top:15%;
     display: grid;
-    grid-template-rows: auto 1fr 2fr 2fr; /* Two rows: auto-sized title row and equally divided sections */
+    grid-template-rows: auto 1fr 2fr 2fr 1fr; /* Two rows: auto-sized title row and equally divided sections */
     grid-template-columns: 1fr 1fr; /* Two columns for the sections */
     grid-gap: 10px;
     
@@ -944,14 +944,17 @@ body {
     justify-items: center;
     align-items: center;
 }
+
 .oddaja {
-    grid-column: span 2;
+   
+   display:flex;
+    grid-row: span;
     background-color: #DFDFFC;
     border-radius: 20px;
     padding: 15px;
     border: 2px solid black;
-    height:90px;
-    justify-items: center;
+    height: 90px;
+    justify-content:center;
     align-items: center;
 }
 .uploadFile {
@@ -991,10 +994,11 @@ body {
     margin-left: 300px;
     justify-content: center;
     align-items: center;
+
 }
 .predmetni{
     border-radius:20px;
-    min-height:150px;
+    height:100%;
     width:400px;
     background-color:pink;
     padding:20px;
@@ -1019,4 +1023,47 @@ body {
 }
 .null:hover{
     color:black;
+}
+
+.centriran{
+   
+    justify-content:center;
+    align-items:center;
+}
+
+
+.containerji{
+    height:100%;
+    width:100%;
+    text-align:center;
+}
+
+.pad20{
+    padding-top:20px;
+}
+.block{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+}
+
+.padIn{
+    padding:10px;
+    margin-left:15px;
+    margin-right:15px;
+}
+
+.approve{
+    background-color:lightgreen !important;
+}
+
+.disapprove {
+    background-color: palevioletred !important;
+    margin-top:10px;
+}
+
+select{
+    font-size:20px;
+
 }
