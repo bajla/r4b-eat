@@ -11,18 +11,72 @@
             <p>fdasjfdlka</p>
         </div>
         <div class="predmetki">
-            <h2>gradiva</h2>
+            <h2>Gradiva</h2>
             <br />
-            <a class="null" asp-area="" asp-controller="Dijak" asp-action="Gradiva">
-                <h5>plac za gradiva</h5>
-            </a>
+            <table class="vseTabela tabelala">
+                <thead class="headin">
+                    <tr>
+                        <th class="vseTabelaHeadOne">#</th>
+                        <th class="vseTabelaHead">Ime</th>
+                        <th class="vseTabelaHead">Priimek</th>
+                        <th class="vseTabelaHead">Ime gradiva</th>
+                        <th class="vseTabelaHead">Ime Profesorja</th>
+                        <th class="vseTabelaHead">Odpri gradivo</th>
+
+
+                    </tr>
+                </thead>
+                <tbody class="vseTabela tabelala">
+                    <tr class="vseTabela tabelala">
+                        <td>1</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>potence</td>
+                        <td>marko</td>
+                        <td>
+                            <a class="null" asp-area="" asp-controller="Dijak" asp-action="Gradiva">
+                                <span class="bold"> ODPRI </span>
+                            </a>
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
+            </table>
         </div>
         <div class="predmetki">
-            <h2>naloge</h2>
+            <h2>Naloge</h2>
             <br />
-            <a class="null" asp-area="" asp-controller="Dijak" asp-action="Naloge">
-                 <div>plac za naloge</div>
-            </a>
+            <table class="vseTabela tabelala">
+                <thead class="headin">
+                    <tr>
+                        <th class="vseTabelaHeadOne">#</th>
+                        <th class="vseTabelaHead">Ime</th>
+                        <th class="vseTabelaHead">Priimek</th>
+                        <th class="vseTabelaHead">Rok</th>
+                        <th class="vseTabelaHead">Oddaj nalogo</th>
+
+
+                    </tr>
+                </thead>
+                <tbody class="vseTabela tabelala">
+                    <tr class="vseTabela tabelala">
+                        <td>1</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>datum</td>
+                        <td>
+                            <a class="null" asp-area="" asp-controller="Dijak" asp-action="OddajaNaloge">
+                                <span class="bold">ODDAJ NALOGO</span>
+                            </a>
+                        </td>
+
+                    </tr>
+                
+
+                </tbody>
+            </table>
         </div>
     </div>
     
