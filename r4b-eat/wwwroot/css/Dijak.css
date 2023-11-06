@@ -1102,6 +1102,7 @@ li{
     gap: 30px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    margin-top:13%;
 
 }
 .item {
@@ -1138,7 +1139,7 @@ li{
 }
 
 .item4 {
-    grid-row: span 2;
+    grid-row: span;
     grid-column:span 5;
     grid-row-gap: 0px !important;
     flex-wrap: wrap;
