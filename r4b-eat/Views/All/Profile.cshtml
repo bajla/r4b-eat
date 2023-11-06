@@ -1,33 +1,9 @@
 ﻿@model uporabnikiEntity
-﻿<div class="container rounded bg-white mt-5 mb-5">
-    <div class="rowm">
-        <div class="col-md-3 border-right">
-            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold">Edogaru</span><span class="text-black-50">edogaru@mail.com.my</span><span> </span></div>
-        </div>
-        <div class="col-md-5 border-right">
-            <div class="p-3 py-5">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h4 class="text-right">Profile Settings</h4>
-                </div>
-                <div class="rowm mt-2">
-                    <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder="Janez" value=""></div>
-                    <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="" placeholder="Novak"></div>
-                </div>
-                <div class="rowm mt-3">
-                    <div class="col-md-12"><label class="labels">Starost</label><input type="date" class="form-control" placeholder="12.5.2003" value=""></div>
-                    <div style="margin-top:20px;" class="col-md-12"><label class="labels">Email ID</label><input type="text" class="form-control" placeholder="a@gmail.com" value=""></div>
-                </div>
-                <div class="rowm mt-4">
-                    <div style="margin-top:10px;" class="col-md-12"><label class="labels">Pravice</label><input  class="form-control" placeholder="dijak/admin/profesor" value=""></div>
-                </div>
-                <div class="rowm mt-4">
-                    <div class="col-md-12"><a style="color:black;" asp-area="" asp-controller="All" asp-action="SpremeniGeslo">Spremeni geslo</a></div>
-
 
 
 <form method="post" asp-action="Profile" enctype="multipart/form-data">
     <div class="container rounded bg-white mt-5 mb-5">
-        <div class="row">
+        <div class="rowm">
             <div class="col-md-3 border-right">
                 <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="@ViewBag.File"/><span class="font-weight-bold">@Model.ime</span><span class="text-black-50">@Model.email</span><span> </span></div>
                 <input type="file" name="fileName" />
@@ -37,19 +13,19 @@
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <h4 class="text-right">Profile Settings</h4>
                     </div>
-                    <div class="row mt-2">
+                    <div class="rowm mt-2">
                         <div class="col-md-6"><label class="labels">Ime</label><input asp-for="ime" type="text" class="form-control" placeholder="@Model.ime" value="@Model.ime"></div>
                         <div class="col-md-6"><label class="labels">Priimek</label><input asp-for="priimek" type="text" class="form-control" value="@Model.priimek" placeholder="@Model.priimek"></div>
                     </div>
-                    <div class="row mt-3">
-                        <div class="col-md-12"><label class="labels">Datum rojstva</label><input asp-for="starost" type="date" class="form-control" placeholder="@Model.starost.ToString("yyyy-mm-dd")" value="@Model.starost.ToString("yyyy-mm-dd")"></div>
+                    <div class="rowm mt-3">
+                        <div class="col-md-12"><label class="labels">Datum rojstva</label><input asp-for="starost" type="date" class="form-control" placeholder="@Model.starost.ToString("yyyy-MM-dd")" value="@Model.starost.ToString("yyyy-MM-dd")"></div>
                         <div style="margin-top:20px;" class="col-md-12"><label class="labels">Email ID</label><input asp-for="email" type="text" class="form-control" placeholder="a@gmail.com" value="@Model.email"></div>
                     </div>
-                    <div class="row mt-4">
+                    <div class="rowm mt-4">
                         <div style="margin-top:10px;" class="col-md-12"><label class="labels">Pravice</label><input asp-for="pravice" type="text" class="form-control" placeholder="@Model.pravice" value="@Model.pravice" disabled></div>
                     </div>
                     <input hidden asp-for="id_uporabnika" value="@Model.id_uporabnika" />
-                    <div class="row mt-4">
+                    <div class="rowm mt-4">
                         <div style="margin-top:10px;" class="col-md-12"><label class="labels">Geslo</label><input type="text" class="form-control" placeholder="**********" value=""></div>
                     </div>
                     <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="submit">Save Profile</button></div>

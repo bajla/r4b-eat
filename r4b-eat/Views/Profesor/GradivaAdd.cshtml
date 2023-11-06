@@ -1,15 +1,22 @@
-﻿<form class="predmetGrid">
+﻿@model gradivaEntity
+
+@{
+    List<predmetiEntity> predmeti = new List<predmetiEntity>();
+    predmeti = ViewBag.predmeti;
+
+}
+<form class="predmetGrid" >
     
     <div class="predmetIns centriran">
         <h3>ime gradiva</h3>
-        <input type="text" required />
+        <input asp-for="ime" type="text" required />
 
 
     </div>
     
     <div class="predmetFil" style="text-align:center;">
         <h3>opis gradiva</h3>
-        <input type="text" required />
+        <input asp-for="opis" type="text" required />
     </div>
 
     <div class="oddajaNalog">
@@ -17,11 +24,18 @@
         <input type="file" />
     </div>
     <div class="oddaja">
-        <select name="cars" id="cars">
-            <option value="volvo">Predmet</option>
+        <select name="subjects" asp-for="id_predmeta">
+            @foreach (var i in predmeti)
+            {
+                <option value="@i.id_predmeta.">@i.predmet</option>
+
+            }
+
+
+            @*<option value="volvo">Predmet</option>
             <option value="saab">Mat</option>
             <option value="opel">Fiz</option>
-            <option value="audi">nevem</option>
+            <option value="audi">nevem</option>*@
         </select>
        
     </div>

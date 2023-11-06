@@ -14,7 +14,7 @@ namespace r4b_eat.Services
 
         static public string GetProfilePicture()
         {
-            
+            int id = 5;
 
             if (System.IO.File.Exists("/Storage/ProfilePics/" + id + ".png"))
             {

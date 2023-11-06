@@ -24,14 +24,13 @@ namespace r4b_eat.Controllers
             _db = db;
         }
 
-        [HttpGet]
-        public IActionResult AddUporabnik()
+        
         public IActionResult GradivaPredmet()
         {
             return View();
         }
 
-        public IActionResult AddUporabnikAdmin()
+        public IActionResult AddUporabnik()
         {
             
             addUserDisplay addUser = new addUserDisplay();

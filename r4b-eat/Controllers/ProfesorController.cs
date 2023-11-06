@@ -79,10 +79,20 @@ namespace r4b_eat.Controllers
         }
         public IActionResult GradivaAdd()
         {
-
+            ViewBag.predmeti = _db.predmeti.ToList();
 
             return View();
         }
+
+        [HttpPost]
+        public IActionResult GradivaAdd(gradivaEntity gradiva)
+        {
+            _db.gradiva.Add(gradiva);
+            _db.SaveChanges();
+
+            return RedirectToAction("Gradiva");
+        }
+
         public IActionResult SpecificnaNaloga()
         {
             return View();
