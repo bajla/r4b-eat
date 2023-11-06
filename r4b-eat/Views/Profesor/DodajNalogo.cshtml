@@ -1,0 +1,45 @@
+﻿@model nalogeEntity
+
+<form class="predmetGrid" asp-action="DodajNalogo" enctype="multipart/form-data">
+    <div class="predmetIns">
+        <!-- Instructions content goes here -->
+        <h2>Navodila za nalogo</h2>
+        <p>Vpisi potrebna navodila</p>
+        <input type="text" asp-for="navodilo_naloge" />
+    </div>
+    <!-- Files and content goes here -->
+    <div class="predmetFil">
+        <h2>Nalozi datoteko</h2>
+        <input class="uploadFile" type="file" name="file" id="file-input">
+
+
+    </div>
+
+    <div id="file-display" class="oddajaNalog">
+
+
+        <h2>Ime naloge</h2>
+        <input type="text" asp-for="ime_naloge" />
+        <br />
+        <h3>Rok naloge</h3>
+        <input type="date" class="form-control" placeholder="12.5.2003" asp-for="rok_naloge" value="">
+
+
+    </div>
+
+    <input hidden asp-for="id_predmeta" value="@ViewBag.idPredmeta" />
+    <div class="overview">
+
+        <button type="submit" style="margin-top:50px;">Submit Nalogo</button>
+    </div>
+
+</form>
+
+
+
+
+
+
+
+
+

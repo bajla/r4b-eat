@@ -42,6 +42,37 @@ namespace r4b_eat.Services
 
         }
 
+        static public string SaveGradivo(int id, IFormFile fileName)
+        {
+            string ext = Path.GetExtension(fileName.FileName);
+
+            if (fileName != null)
+            {
+                using (var stream = new FileStream("wwwroot/Storage/Gradiva/" + id + "" + ext, FileMode.Create))
+                {
+                    fileName.CopyTo(stream);
+                }
+            }
+
+
+            return "";
+        }
+
+        static public string SaveNaloga(int id, IFormFile fileName)
+        {
+            string ext = Path.GetExtension(fileName.FileName);
+
+            if (fileName != null)
+            {
+                using (var stream = new FileStream("wwwroot/Storage/Naloge/" + id + "" + ext, FileMode.Create))
+                {
+                    fileName.CopyTo(stream);
+                }
+            }
+
+            return "";
+        }
+
     }
 }
 

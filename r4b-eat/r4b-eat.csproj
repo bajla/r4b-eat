@@ -33,8 +33,12 @@
     <Folder Include="Views\All\" />
     <Folder Include="Views\Dijak\" />
     <Folder Include="wwwroot\Storage\" />
+    <Folder Include="wwwroot\Storage\Gradiva\" />
+    <Folder Include="wwwroot\Storage\Naloge\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\Storage\" />
+    <Content Remove="wwwroot\Storage\Gradiva\" />
+    <Content Remove="wwwroot\Storage\Naloge\" />
   </ItemGroup>
 </Project>

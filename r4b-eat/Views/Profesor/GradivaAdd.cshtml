@@ -5,7 +5,7 @@
     predmeti = ViewBag.predmeti;
 
 }
-<form class="predmetGrid" >
+<form class="predmetGrid" asp-action="GradivaAdd" enctype="multipart/form-data">
     
     <div class="predmetIns centriran">
         <h3>ime gradiva</h3>
@@ -21,28 +21,19 @@
 
     <div class="oddajaNalog">
         <h3>file</h3>
-        <input type="file" />
+        <input type="file" name="file" />
     </div>
     <div class="oddaja">
-        <select name="subjects" asp-for="id_predmeta">
-            @foreach (var i in predmeti)
-            {
-                <option value="@i.id_predmeta.">@i.predmet</option>
-
-            }
-
-
-            @*<option value="volvo">Predmet</option>
-            <option value="saab">Mat</option>
-            <option value="opel">Fiz</option>
-            <option value="audi">nevem</option>*@
-        </select>
         <div class="delitev">
-            <select name="cars" id="cars">
-                <option value="volvo">Predmet</option>
-                <option value="saab">Mat</option>
+            <select name="predmet">
+                @foreach (var i in predmeti)
+                {
+                    <option value="@i.id_predmeta">@i.predmet</option>
+
+                }
+                @*<option value="saab">Mat</option>
                 <option value="opel">Fiz</option>
-                <option value="audi">nevem</option>
+                <option value="audi">nevem</option>*@
             </select>
         </div>
         <div class="delitev delitev2">
@@ -50,7 +41,7 @@
                  <label>
                      Pomebno
                  </label>
-                 <input type="checkbox"/>
+                 <input value="pomembno" name="pomembno" type="checkbox"/>
 
              
         </div>
@@ -58,7 +49,7 @@
     </div>
     <div class="oddaja">
        
-        <button>submit</button>
+        <button type="submit">submit</button>
     </div>
 
 </form>

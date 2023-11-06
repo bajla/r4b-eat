@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace r4b_eat.Models
 {
@@ -11,11 +12,13 @@ namespace r4b_eat.Models
         public int id_uporabnika { get; set; }
         public string ime { get; set; }
         public string ime_datoteke { get; set; }
-        public string location_dat { get; set; }
 		public string? opis { get; set; }
         public char pomembno { get; set; }
 
+        [ForeignKey("id_uporabnika")]
         public uporabnikiEntity uporabniki { get; set; }
+
+        [ForeignKey("id_predmeta")]
         public predmetiEntity predmeti { get; set; }
     }
 }
