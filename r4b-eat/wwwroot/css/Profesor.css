@@ -884,7 +884,7 @@ body {
     background: #BA68C8;
     color: #fff;
     cursor: pointer;
-    border: solid 1px #BA68C8
+    border: solid 1px red;
 }
 
 
@@ -901,16 +901,16 @@ body {
 /* Style the instructions section */
 .predmetIns {
     margin-top: 100px;
-    background-color: #B8B8E9;
+    background-color: #DFDFFC;
     padding: 20px;
-    border-bottom: 1px solid #ccc;
+    
     overflow-y: auto; /* Add scrollbars if content exceeds the container height */
     text-align: center;
     grid-row: 1; /* Position in the first row */
     grid-column: span 2;
     border-radius: 20px;
     padding: 15px;
-    border: 2px solid black;
+    border: 2px solid red;
 }
 
 /* Style the files section */
@@ -920,8 +920,10 @@ body {
     padding: 20px;
     overflow-y: auto; /* Add scrollbars if content exceeds the container height */
     border-radius: 20px;
-    padding: 15px;
-    border: 2px solid black;
+    padding: 15%;
+    border: 2px solid red;
+    text-align: center;
+
 }
 
 .oddajaNalog {
@@ -933,7 +935,7 @@ body {
     text-align: center;
     justify-items: center;
     align-items: center;
-    border: 2px solid black;
+    border: 2px solid red;
 }
 
 .overview {
@@ -942,8 +944,8 @@ body {
     background-color: #DFDFFC;
     border-radius: 20px;
     padding: 15px;
-    border: 2px solid black;
-    height: 200px;
+    border: 2px solid red;
+    height: auto;
     justify-items: center;
     align-items: center;
 }
@@ -1014,7 +1016,7 @@ body {
     width: 400px;
     background-color: #DFDFFC;
     padding: 20px;
-    border: 2px black solid;
+    border: 2px red solid;
     box-shadow: 5px 5px 8px;
 }
 
