@@ -57,10 +57,30 @@ namespace r4b_eat.Controllers
 
         public IActionResult Gradiva()
         {
-            return View();
+
+            int id = Convert.ToInt32(HttpContext.Session.GetString("userId"));
+
+            var query = from gradiva in _db.gradiva
+                        where gradiva.id_uporabnika == id
+                        select new gradivaEntity
+                        {
+                            id_gradiva = gradiva.id_gradiva,
+                            id_uporabnika = gradiva.id_uporabnika,
+                            id_predmeta = gradiva.id_predmeta,
+                            ime = gradiva.ime,
+                            opis = gradiva.opis,
+                            pomembno = gradiva.pomembno
+                        };
+            var result = query.ToList();
+
+
+
+            return View(result);
         }
         public IActionResult GradivaAdd()
         {
+
+
             return View();
         }
         public IActionResult SpecificnaNaloga()

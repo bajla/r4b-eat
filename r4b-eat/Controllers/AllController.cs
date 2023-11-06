@@ -31,9 +31,8 @@ namespace r4b_eat.Controllers
                 int i = int.Parse(HttpContext.Session.GetString("userId"));
                 var user = _db.uporabniki.Find(i);
 
-                
 
-                ViewBag.File = "/Storage/ProfilePics/" + i + ".png";
+                ViewBag.File = FileHelper.GetProfilePicture(i);
 
                 return View(user);
 

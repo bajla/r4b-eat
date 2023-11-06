@@ -43,27 +43,32 @@ namespace r4b_eat.Controllers
             if(userPredmeti != null)
             {
 
-
-                userPredmeti.user.geslo = PasswordHelper.HashPassword(userPredmeti.user.geslo);
-                _db.uporabniki.Add(userPredmeti.user);
-                _db.SaveChanges();
-
-                var query = from uporabniki in _db.uporabniki
-                            where uporabniki.email == userPredmeti.user.email
-                            select new
-                            {
-                                uporabniki.id_uporabnika
-                            };
-
-                var result = query.ToList();
-                int id = result[0].id_uporabnika;
-                foreach (var item in subjects)
+                if (CheckIfEmailExist(userPredmeti.user.email))
                 {
-                    _db.poucevanje.Add(new poucevanjeEntity { id_uporabnika = id, id_predmeta = Convert.ToInt32(item)});
+                    userPredmeti.user.geslo = PasswordHelper.HashPassword(userPredmeti.user.geslo);
+                    _db.uporabniki.Add(userPredmeti.user);
+                    _db.SaveChanges();
+
+                    var query = from uporabniki in _db.uporabniki
+                                where uporabniki.email == userPredmeti.user.email
+                                select new
+                                {
+                                    uporabniki.id_uporabnika
+                                };
+
+                    var result = query.ToList();
+                    int id = result[0].id_uporabnika;
+                    foreach (var item in subjects)
+                    {
+                        _db.poucevanje.Add(new poucevanjeEntity { id_uporabnika = id, id_predmeta = Convert.ToInt32(item) });
+                    }
+                    _db.SaveChanges();
+
                 }
-                _db.SaveChanges();
-
-
+                else
+                {
+                    ViewBag.error = "email ze obstaja";
+                }
             }
 
             return RedirectToAction(userPredmeti.user.pravice=="c" ? "Ucitelji" : "Ucenci");
@@ -99,6 +104,67 @@ namespace r4b_eat.Controllers
             return View(edituser);
         }
 
+        [HttpPost]
+        public IActionResult UrediUporabnik(addUserDisplay userPredmeti, string[] subjects)
+        {
+
+            var user = _db.uporabniki.Find(userPredmeti.user.id_uporabnika);
+            user.ime = userPredmeti.user.ime;
+            user.priimek = userPredmeti.user.priimek;
+            user.email = userPredmeti.user.email;
+            if (userPredmeti.user.geslo != null) user.geslo = PasswordHelper.HashPassword(userPredmeti.user.geslo);
+            user.starost = userPredmeti.user.starost;
+
+            _db.SaveChanges();
+
+
+            var query = from poucevanje in _db.poucevanje
+                        join predmeti in _db.predmeti
+                        on poucevanje.id_predmeta equals predmeti.id_predmeta
+                        where poucevanje.id_uporabnika == userPredmeti.user.id_uporabnika
+                        select new predmetiEntity
+                        {
+                            id_predmeta = predmeti.id_predmeta,
+                            predmet = predmeti.predmet,
+                            krajsava = predmeti.krajsava,
+                            opis = predmeti.opis,
+                            kljuc = predmeti.kljuc
+
+                        };
+            var result = query.ToList();
+
+
+            List<int> oznaceniPredmeti = new List<int>();
+            foreach (var i in subjects) oznaceniPredmeti.Add(Convert.ToInt32(i));
+            List<int> shranjeniPredmeti = new List<int>();
+            foreach (var i in result) shranjeniPredmeti.Add(i.id_predmeta);
+
+            var dodaj = oznaceniPredmeti.Except(shranjeniPredmeti).ToList();
+            foreach (var i in dodaj)
+            {
+                _db.poucevanje.Add(new poucevanjeEntity { id_uporabnika = userPredmeti.user.id_uporabnika, id_predmeta = i});
+            }
+            _db.SaveChanges();
+
+            var zbrisi = shranjeniPredmeti.Except(oznaceniPredmeti).ToList();
+            foreach (var i in zbrisi)
+            {
+                var query1 = from poucevanje in _db.poucevanje
+                             where poucevanje.id_predmeta == i
+                             where poucevanje.id_uporabnika == userPredmeti.user.id_uporabnika
+                             select new poucevanjeEntity
+                             {
+                                 id_poucevanje = poucevanje.id_poucevanje,
+                                 id_uporabnika = poucevanje.id_uporabnika,
+                                 id_predmeta = poucevanje.id_predmeta
+                             };
+                var predmet = query1.ToList();
+                _db.poucevanje.Remove(predmet.Last());
+            }
+            _db.SaveChanges();
+
+            return RedirectToAction("Ucenci");
+        }
 
         public IActionResult PredmetiUredi(int id)
         {
@@ -417,35 +483,6 @@ namespace r4b_eat.Controllers
 
 
 
-        //[HttpPost]
-        //public IActionResult AddUporabnik(uporabnikiEntity uporabnik)
-        //{
-        //    if (HttpContext.Session.GetString("userId") != null)
-        //    {
-
-        //            if (ModelState.IsValid)
-        //            {
-        //                if (_db.uporabniki.Any(s => s.email == uporabnik.email) == false)
-        //                {
-
-        //                    string gesloc = PasswordHelper.HashPassword(uporabnik.geslo);
-        //                    uporabnik.geslo = gesloc;
-
-        //                    _db.uporabniki.Add(uporabnik);
-        //                    _db.SaveChanges();
-        //                    return RedirectToAction("Ucenci");
-        //                }
-
-        //            }
-
-
-        //        return View();
-
-        //    }
-
-        //    return View();
-        //}
-
         [HttpGet]
         public IActionResult Deleteuser(string page, int id)
         {
@@ -500,7 +537,19 @@ namespace r4b_eat.Controllers
         }
 
 
+        public bool CheckIfEmailExist(string email)
+        {
+            var query = from uporabniki in _db.uporabniki
+                        where uporabniki.email == email
+                        select new
+                        {
+                            uporabniki.id_uporabnika
+                        };
+            var result = query.ToList();
 
+            if(result.Count() == 0) return false;
+            else return true;
+        }
 
     }
 }

@@ -5,11 +5,12 @@
         <div class="form-holder">
             <div class="form-content">
                 <div class="form-items">
-                    <h3>Dodaj Ucitelja</h3>
+                    <h3>Uredi Ucitelja</h3>
                     <p>Izpolni vsa polja!</p>
-                    <form class="requires-validation" asp-action="AddUporabnik" method="post">
+                    <form class="requires-validation" asp-action="UrediUporabnik" method="post">
                         <div asp-validation-summary="All"></div>
                         <div class="col-md-12">
+                            <input asp-for="user.id_uporabnika" value="@Model.user.id_uporabnika" hidden />
                             <input class="form-control" asp-for="user.ime" type="text" value="@Model.user.ime" placeholder="Ime" required>
                             <div class="valid-feedback">Username field is valid!</div>
                             <div class="invalid-feedback">Username field cannot be blank!</div>
@@ -22,7 +23,7 @@
                         </div>
 
                         <div class="col-md-12" style="margin-top:20px;">
-                            <input class="form-control" asp-for="user.starost" type="date" value="@Model.user.starost" placeholder="Datum Rojstva" required>
+                            <input class="form-control" asp-for="user.starost" type="date" value="@Model.user.starost.ToString("yyyy-MM-dd")" placeholder="Datum Rojstva" required>
                             <div class="valid-feedback">Username field is valid!</div>
                             <div class="invalid-feedback">Username field cannot be blank!</div>
                         </div>
@@ -57,7 +58,7 @@
 
                         <div class="col-md-12">
 
-                            <input class="form-control" asp-for="user.geslo" type="password" placeholder="Geslo" required>
+                            <input class="form-control" asp-for="user.geslo" type="password" placeholder="Geslo">
                             <div class="valid-feedback">Geslo je vredu</div>
                             <div class="invalid-feedback">Geslo ne sme biti prazno</div>
                         </div>
