@@ -1,19 +1,29 @@
-﻿<a asp-area="" asp-controller="Dijak" asp-action="PredmetiAdd">  <i id="plus" class="gg-add"></i>  </a>
-<div class="predmetiMain">
+﻿@model List<predmetiEntity>
 
-       <a asp-area="" asp-controller="Dijak" asp-action="PredmetiOpis">
-           <div class="predmet">Math</div>
-       </a>
-       <a asp-area="" asp-controller="Dijak" asp-action="PredmetiOpis">
-           <div class="predmet">Science</div>
-       </a>
-       <a asp-area="" asp-controller="Dijak" asp-action="PredmetiOpis">
-           <div class="predmet">History</div>
-       </a>
-       <a asp-area="" asp-controller="Dijak" asp-action="PredmetiOpis">
-           <div class="predmet">English</div>
-       </a>
-       <a asp-area="" asp-controller="Dijak" asp-action="PredmetiOpis">
-           <div class="predmet">Art</div>
-       </a>
+<a asp-area="" asp-controller="Dijak" asp-action="PredmetiAdd">  <i id="plus" class="gg-add"></i>  </a>
+
+
+<div class="predmetiMain">
+    @foreach (var i in Model)
+    {
+        <a href="/Dijak/PredmetiOpis?id=@i.id_predmeta">
+            <div class="predmet">@i.predmet <br/> @i.krajsava</div>
+        </a>
+
+    }
+    @*<a asp-area="" asp-controller="Dijak" asp-action="PredmetiOpis">
+        <div class="predmet">Math</div>
+    </a>
+    <a asp-area="" asp-controller="Dijak" asp-action="PredmetiOpis">
+        <div class="predmet">Science</div>
+    </a>
+    <a asp-area="" asp-controller="Dijak" asp-action="PredmetiOpis">
+        <div class="predmet">History</div>
+    </a>
+    <a asp-area="" asp-controller="Dijak" asp-action="PredmetiOpis">
+        <div class="predmet">English</div>
+    </a>
+    <a asp-area="" asp-controller="Dijak" asp-action="PredmetiOpis">
+        <div class="predmet">Art</div>
+    </a>*@
 </div>

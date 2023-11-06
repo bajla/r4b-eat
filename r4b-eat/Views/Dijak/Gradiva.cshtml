@@ -1,12 +1,14 @@
-﻿<div class="predmetiOpisMain">
+﻿@model gradivaEntity
+
+<div class="predmetiOpisMain">
     <div class="opisPredmeta">
-        <h1 >Ime Gradiva</h1>
+        
         <div class="predmetki">
-            <h2 style="margin-bottom:30px;">ime predmeta</h2>
-            <h5>Profesor</h5>
+            <h1 >@Model.ime</h1>
+            <h5>@Model.opis</h5>
             <br />
-            <p> opis kaj je to</p>
-            <p>file</p>
+            
+            <p> <a href="@ViewBag.file" download > @Model.ime_datoteke </a> </p>
         </div>
         
 

@@ -1,19 +1,31 @@
-﻿<div class="predmetiOpisMain">
+﻿@model oddajaNalogeDisplay
+
+<div class="predmetiOpisMain">
     <div class="opisPredmeta">
         <div class="predmetki minHeight">
-            <h2>ime predmeta</h2>
-            <h5>Profesor</h5>
-            <h6>Rok</h6>
-            <h6>NAVODILA</h6>
-            <a href="#"></a>
+            <h2>@Model.naloga.ime_naloge</h2>
+            <h5>Profesor: @Model.profesor</h5>
+            <h6>Rok oddaje: @Model.naloga.rok_naloge.ToString("yyyy-MM-dd")</h6>
+            <h6>NAVODILA: <br /> @Model.naloga.navodilo_naloge </h6>
+            <a href="@ViewBag.file" download> Prilozen dokument</a>
             <br />
             <br />
-            <form class="formiran">
-                
-                
-                <p>oddaj file</p>
-                <input type="file" required />
-                <button class="submit">Submit</button>
+            <hr />
+            <form class="formiran" asp-action="OddajaNaloge" enctype="multipart/form-data">
+
+                <input hidden asp-for="opravljena.id_naloge" value="@Model.naloga.id_naloge" />
+                <p>Oddaj Nalogo</p>
+                <input type="file" required name="file" />
+
+                @if (ViewBag.locked == "true")
+                    {
+                        <button disabled class="submit" type="submit">Submit</button>
+                    }
+                    else
+                    {
+                        <button class="submit" type="submit">Submit</button>
+                    }
+
             </form>
         </div>
        

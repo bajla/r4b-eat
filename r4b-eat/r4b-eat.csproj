@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>r4b_eat</RootNamespace>
@@ -35,10 +35,12 @@
     <Folder Include="wwwroot\Storage\" />
     <Folder Include="wwwroot\Storage\Gradiva\" />
     <Folder Include="wwwroot\Storage\Naloge\" />
+    <Folder Include="wwwroot\Storage\Oddaja\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\Storage\" />
     <Content Remove="wwwroot\Storage\Gradiva\" />
     <Content Remove="wwwroot\Storage\Naloge\" />
+    <Content Remove="wwwroot\Storage\Oddaja\" />
   </ItemGroup>
 </Project>

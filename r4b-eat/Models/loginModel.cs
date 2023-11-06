@@ -40,6 +40,20 @@ namespace r4b_eat.Models
         public List<predmetiEntity> predmeti { get; set; }
     }
 
+    public class predmetiOpisDisplay
+    {
+        public predmetiEntity predmet { get; set; }
+        public List<gradivaEntity> gradiva { get; set; }
+        public List<nalogeEntity> naloge { get; set; }
+    }
+
+    public class oddajaNalogeDisplay
+    {
+        public nalogeEntity naloga { get; set; }
+        public string profesor { get; set; }
+        public opravljene_nalogeEntity opravljena { get; set; }
+
+    }
 
 
 }

@@ -109,3 +109,5 @@
 /Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/obj/Debug/net6.0/r4b-eat.genruntimeconfig.cache
 /Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/obj/Debug/net6.0/ref/r4b-eat.dll
 /Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/obj/Debug/net6.0/scopedcss/Views/Shared/_Layout2.cshtml.rz.scp.css
+/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/obj/Debug/net6.0/scopedcss/Views/Shared/_Layout2.cshtml.rz.scp.css
+/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/obj/Debug/net6.0/scopedcss/Views/Shared/_Layout3.cshtml.rz.scp.css
