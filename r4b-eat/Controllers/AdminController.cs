@@ -25,6 +25,11 @@ namespace r4b_eat.Controllers
             _db = db;
         }
 
+        public IActionResult GradivaPredmet()
+        {
+            return View();
+        }
+
         public IActionResult AddUporabnikAdmin()
         {
             return View();
