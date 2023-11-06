@@ -887,7 +887,7 @@ body {
 
 .predmetGrid {
     margin-left: 100px;
-    margin-top:90px;
+    margin-top:15%;
     display: grid;
     grid-template-rows: auto 1fr 2fr 2fr; /* Two rows: auto-sized title row and equally divided sections */
     grid-template-columns: 1fr 1fr; /* Two columns for the sections */
@@ -991,6 +991,7 @@ body {
     margin-left: 300px;
     justify-content: center;
     align-items: center;
+
 }
 .predmetni{
     border-radius:20px;
@@ -1020,3 +1021,10 @@ body {
 .null:hover{
     color:black;
 }
+
+.centriran{
+   
+    justify-content:center;
+    align-items:center;
+}
+
