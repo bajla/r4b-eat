@@ -23,6 +23,18 @@ namespace r4b_eat.Controllers
             _db = db;
         }
 
+        public IActionResult Odjava()
+        {
+            HttpContext.Session.Remove("userId");
+            HttpContext.Session.Remove("userRights");
+
+            
+            return RedirectToAction("Index", "Home");
+
+        }
+
+
+
         //!!! uredi ter spoliraj shranjevanje podatkov v pod. bazo 
         public IActionResult Profile()
         {

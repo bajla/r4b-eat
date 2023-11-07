@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CGus3dinGkARDqDUhg/DOkYy4bl42B2H6zGqJCXeclQ=",
+  "Hash": "sv4jjDWA1GjQu0ZYYNP8vevir4vXCslyem+duuy2KPQ=",
   "Source": "r4b-eat",
   "BasePath": "_content/r4b-eat",
   "Mode": "Default",
@@ -1256,6 +1256,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/Storage/Gradiva/3.html"
+    },
+    {
+      "Identity": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/Storage/Gradiva/4.doc",
+      "SourceId": "r4b-eat",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/",
+      "BasePath": "_content/r4b-eat",
+      "RelativePath": "Storage/Gradiva/4.doc",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Storage/Gradiva/4.doc"
     },
     {
       "Identity": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/Storage/Naloge/2.html",

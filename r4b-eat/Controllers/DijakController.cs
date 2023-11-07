@@ -35,9 +35,9 @@ namespace r4b_eat.Controllers
 
             addPredmetDisplay display = new addPredmetDisplay();
 
-            var query = from poucevanje in _db.poucevanje
-                        join predmeti in _db.predmeti
-                        on poucevanje.id_predmeta equals predmeti.id_predmeta
+            var query = from 
+                         predmeti in _db.predmeti
+                        
                
                         select new predmetiEntity
                         {

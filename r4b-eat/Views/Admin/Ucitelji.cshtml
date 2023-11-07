@@ -19,23 +19,22 @@
                             <th scope="col">Priimek</th>
                             <th scope="col">E-mail</th>
                             <th scope="col">Predmeti</th>
-                            <th scope="col">Datum Rojstva</th>
                             <th scope="col">Uredi</th>
                             <th scope="col">Izbrisi</th>
                         </tr>
                     </thead>
                     <tbody>
+                        @{ int count = 1;}
                         @foreach (var item in Model)
                         {
                             <tr>
-                                <th scope="row" class="col-3">1</th>
+                                <th scope="row" class="col-3">@count</th>
                                 <td class="col-3">@item.ime</td>
                                 <td class="col-3">@item.priimek</td>
                                 <td class="col-3">@item.email</td>
                                 <td class="col-3">
                                     <a href="#myModal-@modal" class="trigger-btn" data-toggle="modal">Predmeti</a>
                                 </td>
-                                <td>Starost</td>
                                 <td> <button><a href="/Admin/UrediUporabnik?id=@item.id_uporabnika">Uredi</a></button></td>
                                 <td> <button> <a href="/Admin/Deleteuser?page=Ucitelji&id=@item.id_uporabnika">Odstrani</a></button></td>
                                 <td>
@@ -58,7 +57,7 @@
                                 </td>
 
                             </tr>
-
+                                count++;
                                 modal++;
                             }
                     </tbody>

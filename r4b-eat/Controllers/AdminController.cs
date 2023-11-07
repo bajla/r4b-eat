@@ -265,7 +265,7 @@ namespace r4b_eat.Controllers
         {
             if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
             if (CheckPriviliges() == "c") return RedirectToAction("Index", "Profesor");
-            else if(CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
 
             return View();
 
@@ -281,74 +281,74 @@ namespace r4b_eat.Controllers
 
 
             var query = from uporabnik in _db.uporabniki
-                            join poucevanje in _db.poucevanje
-                            on uporabnik.id_uporabnika equals poucevanje.id_uporabnika into joinedPoucevanje
-                            from leftJoinPoucevanje in joinedPoucevanje.DefaultIfEmpty()
-                            join predmet in _db.predmeti
-                            on leftJoinPoucevanje != null ? leftJoinPoucevanje.id_predmeta : (int?)null equals predmet.id_predmeta into joinedPredmet
-                            from leftJoinPredmet in joinedPredmet.DefaultIfEmpty()
+                        join poucevanje in _db.poucevanje
+                        on uporabnik.id_uporabnika equals poucevanje.id_uporabnika into joinedPoucevanje
+                        from leftJoinPoucevanje in joinedPoucevanje.DefaultIfEmpty()
+                        join predmet in _db.predmeti
+                        on leftJoinPoucevanje != null ? leftJoinPoucevanje.id_predmeta : (int?)null equals predmet.id_predmeta into joinedPredmet
+                        from leftJoinPredmet in joinedPredmet.DefaultIfEmpty()
 
-                            where uporabnik.pravice == "c"
-                            orderby uporabnik.ime ascending
-                            select new
-                            {
-                                uporabnik.id_uporabnika,
-                                uporabnik.ime,
-                                uporabnik.priimek,
-                                leftJoinPredmet.predmet,
-                                uporabnik.email
+                        where uporabnik.pravice == "c"
+                        orderby uporabnik.ime ascending
+                        select new
+                        {
+                            uporabnik.id_uporabnika,
+                            uporabnik.ime,
+                            uporabnik.priimek,
+                            leftJoinPredmet.predmet,
+                            uporabnik.email
 
-                            };
-
-
-
-                var result = query.ToList();
+                        };
 
 
-                List<ucenciDisplayModel> model = new List<ucenciDisplayModel>();
 
-                int lastId = -1;
-                string lastIme = null;
-                string lastPriimek = null;
-                List<string> predmeti = new List<string>();
-                string email = "";
-                foreach (var i in result)
+            var result = query.ToList();
+
+
+            List<ucenciDisplayModel> model = new List<ucenciDisplayModel>();
+
+            int lastId = -1;
+            string lastIme = null;
+            string lastPriimek = null;
+            List<string> predmeti = new List<string>();
+            string email = "";
+            foreach (var i in result)
+            {
+                if (lastIme == null)
                 {
-                    if (lastIme == null)
-                    {
-                        lastId = i.id_uporabnika;
-                        lastIme = i.ime;
-                        lastPriimek = i.priimek;
-                        predmeti.Add(i.predmet);
-                        email = i.email;
-                    }
+                    lastId = i.id_uporabnika;
+                    lastIme = i.ime;
+                    lastPriimek = i.priimek;
+                    predmeti.Add(i.predmet);
+                    email = i.email;
+                }
 
-                    else if (lastIme == i.ime)
-                    {
-                        predmeti.Add(i.predmet);
+                else if (lastIme == i.ime)
+                {
+                    predmeti.Add(i.predmet);
 
-                    }
+                }
 
-                    else if (lastIme != i.ime)
-                    {
-                        model.Add(new ucenciDisplayModel { predmeti = new List<string>(predmeti), ime = lastIme, email = email, priimek = lastPriimek, id_uporabnika = lastId });
-                        lastId = i.id_uporabnika;
-                        lastIme = i.ime;
-                        lastPriimek = i.priimek;
-                        email = i.email;
-                        predmeti.Clear();
-                        predmeti.Add(i.predmet);
-                    }
-
-                model.Add(new ucenciDisplayModel { predmeti = new List<string>(predmeti), ime = lastIme, email = email, priimek = lastPriimek, id_uporabnika = lastId });
-
-
-                return View(model);
-
+                else if (lastIme != i.ime)
+                {
+                    model.Add(new ucenciDisplayModel { predmeti = new List<string>(predmeti), ime = lastIme, email = email, priimek = lastPriimek, id_uporabnika = lastId });
+                    lastId = i.id_uporabnika;
+                    lastIme = i.ime;
+                    lastPriimek = i.priimek;
+                    email = i.email;
+                    predmeti.Clear();
+                    predmeti.Add(i.predmet);
+                }
             }
 
-            return RedirectToAction("Index", "Home");
+            model.Add(new ucenciDisplayModel { predmeti = new List<string>(predmeti), ime = lastIme, email = email, priimek = lastPriimek, id_uporabnika = lastId });
+
+
+            return View(model);
+
         }
+    
+
 
         public IActionResult Predmeti()
         {

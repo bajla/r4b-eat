@@ -435,7 +435,7 @@ body {
     color:black;
     box-shadow:3px 5px 5px grey;
     height:100%;
-   
+   margin-bottom:30px;
 }
 .cardTwo {
     width: 23rem;
@@ -1093,4 +1093,9 @@ select{
 
 .spaceBottom{
     margin-bottom:40px;
+}
+
+.linki{
+    margin-bottom:30px;
+    text-align:center;
 }

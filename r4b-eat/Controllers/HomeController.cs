@@ -98,7 +98,7 @@ public class HomeController : Controller
     [HttpPost]
     public IActionResult Registration(uporabnikiEntity uporabnik)
     {
-        uporabnik.pravice = "c";
+        uporabnik.pravice = "u";
         if (ModelState.IsValid)
         {
             if (_db.uporabniki.Any(s=> s.email == uporabnik.email.ToLower()) == false)
