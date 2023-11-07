@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FV9h2uTB0WaHpztNSywkMMP/60RRvhYNntCaPrNGA3c=",
+  "Hash": "Pc31KrzSnk9oVsBdus6TvLX6xfbG/7AM3xibVTck2o0=",
   "Source": "r4b-eat",
   "BasePath": "_content/r4b-eat",
   "Mode": "Default",
@@ -1258,6 +1258,23 @@
       "OriginalItemSpec": "wwwroot/Storage/Gradiva/3.html"
     },
     {
+      "Identity": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/Storage/Gradiva/4.doc",
+      "SourceId": "r4b-eat",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/",
+      "BasePath": "_content/r4b-eat",
+      "RelativePath": "Storage/Gradiva/4.doc",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Storage/Gradiva/4.doc"
+    },
+    {
       "Identity": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/Storage/Naloge/2.html",
       "SourceId": "r4b-eat",
       "SourceType": "Discovered",
@@ -1307,6 +1324,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/Storage/Naloge/4.html"
+    },
+    {
+      "Identity": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/Storage/Oddaja/3.txt",
+      "SourceId": "r4b-eat",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/",
+      "BasePath": "_content/r4b-eat",
+      "RelativePath": "Storage/Oddaja/3.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Storage/Oddaja/3.txt"
+    },
+    {
+      "Identity": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/Storage/Oddaja/4.html",
+      "SourceId": "r4b-eat",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/",
+      "BasePath": "_content/r4b-eat",
+      "RelativePath": "Storage/Oddaja/4.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Storage/Oddaja/4.html"
     },
     {
       "Identity": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/Storage/Oddaja/9.pdf",

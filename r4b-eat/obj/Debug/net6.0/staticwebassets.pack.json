@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets/Storage/Gradiva/3.html"
     },
     {
+      "Id": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/Storage/Gradiva/4.doc",
+      "PackagePath": "staticwebassets/Storage/Gradiva/4.doc"
+    },
+    {
       "Id": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/Storage/Naloge/2.html",
       "PackagePath": "staticwebassets/Storage/Naloge/2.html"
     },
@@ -35,6 +39,14 @@
     {
       "Id": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/Storage/Naloge/4.html",
       "PackagePath": "staticwebassets/Storage/Naloge/4.html"
+    },
+    {
+      "Id": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/Storage/Oddaja/3.txt",
+      "PackagePath": "staticwebassets/Storage/Oddaja/3.txt"
+    },
+    {
+      "Id": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/Storage/Oddaja/4.html",
+      "PackagePath": "staticwebassets/Storage/Oddaja/4.html"
     },
     {
       "Id": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/Storage/Oddaja/9.pdf",
