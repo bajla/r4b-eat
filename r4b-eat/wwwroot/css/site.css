@@ -346,3 +346,61 @@ input:-webkit-autofill:focus {
 *
 */
 
+.animationText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+    .animationText span {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 210px;
+        display: inline-block;
+        opacity: 0;
+        transform: translate(-155px,0) scale(0.4);
+        animation: animate 4s infinite;
+    }
+
+        .animationText span:nth-of-type(2) {
+            animation-delay: 0.05s;
+        }
+
+        .animationText span:nth-of-type(3) {
+            animation-delay: 0.1s;
+        }
+
+        .animationText span:nth-of-type(4) {
+            animation-delay: 0.15s;
+        }
+
+        .animationText span:nth-of-type(5) {
+            animation-delay: 0.20s;
+        }
+
+        .animationText span:nth-of-type(6) {
+            animation-delay: 0.25s;
+        }
+
+
+@keyframes animate {
+
+    40% {
+        transform: translate(50px,0) scale(.7);
+        opacity: 1;
+    }
+
+
+    80% {
+        transform: translate(0) scale(2);
+        opacity: 0;
+    }
+
+
+
+    100% {
+        transform: translate(0) scale(1);
+        opacity: 1;
+    }
+}

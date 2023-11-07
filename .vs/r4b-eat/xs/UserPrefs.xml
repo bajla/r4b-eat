@@ -1,7 +1,10 @@
 ﻿<Properties StartupConfiguration="{5BCC328F-B04F-4AEE-930E-AC16CFDF0204}|https">
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="r4b-eat/Controllers/DijakController.cs">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="r4b-eat/Views/Admin/UrediUporabnik.cshtml">
     <Files>
       <File FileName="r4b-eat/Controllers/HomeController.cs" />
       <File FileName="r4b-eat/Program.cs" />
@@ -16,16 +19,16 @@
       <File FileName="r4b-eat/Views/Shared/_Layout1.cshtml" />
       <File FileName="r4b-eat/Controllers/AdminController.cs" />
       <File FileName="r4b-eat/Views/Admin/Index.cshtml" />
-      <File FileName="r4b-eat/wwwroot/css/site.css" />
+      <File FileName="r4b-eat/wwwroot/css/site.css" Line="406" Column="2" />
       <File FileName="r4b-eat/Models/gradivaEntity.cs" />
       <File FileName="r4b-eat/Models/nalogeEntity.cs" />
       <File FileName="r4b-eat/Models/opravljene_nalogeEntity.cs" />
       <File FileName="r4b-eat/Services/PasswordHelper.cs" />
       <File FileName="r4b-eat/Models/loginModel.cs" />
       <File FileName="r4b-eat/Views/Admin/Predmeti.cshtml" />
-      <File FileName="r4b-eat/Views/Admin/Ucenci.cshtml" />
+      <File FileName="r4b-eat/Views/Admin/Ucenci.cshtml" Line="53" Column="63" />
       <File FileName="r4b-eat/Models/predmetiEntity.cs" />
-      <File FileName="r4b-eat/Views/Admin/Ucitelji.cshtml" />
+      <File FileName="r4b-eat/Views/Admin/Ucitelji.cshtml" Line="49" Column="63" />
       <File FileName="r4b-eat/Views/Dijak/Profil.cshtml" />
       <File FileName="r4b-eat/Views/Admin/Naloge.cshtml" />
       <File FileName="r4b-eat/Views/All/Profile.cshtml" />
@@ -40,7 +43,7 @@
       <File FileName="r4b-eat/Views/Admin/PredmetiUredi.cshtml" />
       <File FileName="r4b-eat/Views/Admin/Gradiva.cshtml" />
       <File FileName="r4b-eat/Models/ErrorViewModel.cs" />
-      <File FileName="r4b-eat/Views/Admin/UrediUporabnik.cshtml" />
+      <File FileName="r4b-eat/Views/Admin/UrediUporabnik.cshtml" Line="7" Column="32" />
       <File FileName="r4b-eat/Views/Profesor/VseNaloge.cshtml" />
       <File FileName="r4b-eat/Views/Profesor/Predmeti.cshtml" />
       <File FileName="r4b-eat/Views/Profesor/Gradiva.cshtml" />
@@ -62,6 +65,8 @@
       <File FileName="r4b-eat/Properties/launchSettings.json" />
       <File FileName="r4b-eat/wwwroot/css/Profesor.css" />
       <File FileName="r4b-eat/Views/Shared/_Layout3.cshtml" />
+      <File FileName="r4b-eat/wwwroot/css/Admin.css" Line="413" Column="18" />
+      <File FileName="r4b-eat/Views/Home/Index.cshtml" Line="13" Column="7" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -69,16 +74,12 @@
           <Node name="r4b-eat">
             <Node name="r4b-eat" selected="True">
               <Node name="Controllers" expanded="True" />
-              <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Dijak" expanded="True" />
-                <Node name="Profesor" expanded="True" />
+                <Node name="Admin" expanded="True" />
+                <Node name="Home" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">
                 <Node name="css" expanded="True" />
-                <Node name="Storage" expanded="True">
-                  <Node name="Oddaja" expanded="True" />
-                </Node>
               </Node>
             </Node>
           </Node>
@@ -86,9 +87,6 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.r4b-eat PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
