@@ -1,26 +1,32 @@
-﻿<div style="margin-top:10%;" class="predmetiOpisMain">
+﻿@model addPredmetDisplay
+
+<div style="margin-top:10%;" class="predmetiOpisMain">
     <div class="opisPredmeta">
         <div style="font-size:20px;" class="predmetki">
             <div style="margin-top:20px;">
-                <form action="/action_page.php">
+                <form asp-action="PredmetiAdd" >
                     <label for="cars">Izberi predmet:</label>
-                    <select name="cars" id="cars">
-                        <option value="volvo">Predmet1</option>
+                    <select name="predmet">
+                        @foreach (var i in Model.predmeti)
+                        {
+                            <option value="@i.id_predmeta">@i.predmet</option>
+                        }
+                        @*<option value="volvo">Predmet1</option>
                         <option value="saab">predmet2</option>
                         <option value="opel">Predmet3</option>
-                        <option value="audi">predmet4</option>
+                        <option value="audi">predmet4</option>*@
                     </select>
                     <br><br>
+                    <input asp-for="kljuc" class="kljuc" type="text" placeholder="Kljuc" />
+                    <button style="margin-top:50px;" type="submit" class="button">Dodaj</button>
 
                 </form>
             </div>
-            
+
             <div style="width:96%;">
-                <input class="kljuc" type="text" placeholder="Kljuc" />
             </div>
-            <button style="margin-top:50px;" class="button">Dodaj</button>
         </div>
-       
+
     </div>
-   
+
 </div>

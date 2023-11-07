@@ -1,25 +1,28 @@
-﻿<div class="predmetniGrid">
+﻿
+@model List<nalogeEntity>
+
+<div class="predmetniGrid">
+
+    @foreach (var i in Model)
+        {
+
+
     <div class="predmetni predmet1">
-        <a class="null" asp-area="" asp-controller="Profesor" asp-action="VsiDijaki">
+        <a class="null" href="/Profesor/Naloga?id=@i.id_naloge">
             <div>
                 <h3>
-                    ime naloge
+                    ime naloge: @i.ime_naloge
                 </h3>
             </div>
             <div>
                 <h5>
-                    opis naloge
+                    navodilo naloge: @i.navodilo_naloge
                 </h5>
-                <p>
-                    sdajfklsad
-                </p>
-            </div>
-            <div>
-                file
             </div>
         </a>
     </div>
-    <div class="predmetni predmet2">
+        }
+    @*<div class="predmetni predmet2">
         <a class="null" asp-area="" asp-controller="Profesor" asp-action="VsiDijaki">
             <div>
                 <h3>
@@ -52,7 +55,7 @@
             file
         </div>
             </a>
-    </div>
+    </div>*@
 </div>
 
     

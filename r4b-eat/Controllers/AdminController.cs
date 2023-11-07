@@ -11,33 +11,40 @@ using Microsoft.EntityFrameworkCore;
 namespace r4b_eat.Controllers
 {
 
-	public class AdminController : Controller
-	{
+    public class AdminController : Controller
+    {
         private readonly ILogger<HomeController> _logger;
         private readonly ApplicationDbContext _db;
 
 
 
         public AdminController(ILogger<HomeController> logger, ApplicationDbContext db)
-		{
+        {
             _logger = logger;
             _db = db;
         }
 
-        
+
         public IActionResult GradivaPredmet()
         {
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "c") return RedirectToAction("Index", "Profesor");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
+
             return View();
         }
 
         public IActionResult AddUporabnik()
         {
-            
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "c") return RedirectToAction("Index", "Profesor");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
+
             addUserDisplay addUser = new addUserDisplay();
             addUser.predmeti = _db.predmeti.ToList();
 
             uporabnikiEntity user = new uporabnikiEntity();
-            addUser.user=user;
+            addUser.user = user;
 
             return View(addUser);
         }
@@ -45,7 +52,12 @@ namespace r4b_eat.Controllers
         [HttpPost]
         public IActionResult AddUporabnik(addUserDisplay userPredmeti, string[] subjects)
         {
-            if(userPredmeti != null)
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "c") return RedirectToAction("Index", "Profesor");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
+
+
+            if (userPredmeti != null)
             {
 
                 if (CheckIfEmailExist(userPredmeti.user.email))
@@ -76,12 +88,16 @@ namespace r4b_eat.Controllers
                 }
             }
 
-            return RedirectToAction(userPredmeti.user.pravice=="c" ? "Ucitelji" : "Ucenci");
+            return RedirectToAction(userPredmeti.user.pravice == "c" ? "Ucitelji" : "Ucenci");
         }
 
         public IActionResult UrediUporabnik(int id)
         {
-            
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "c") return RedirectToAction("Index", "Profesor");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
+
+
             var user = _db.uporabniki.Find(id);
 
             var query = from poucevanje in _db.poucevanje
@@ -95,7 +111,7 @@ namespace r4b_eat.Controllers
                             krajsava = predmeti.krajsava,
                             opis = predmeti.opis,
                             kljuc = predmeti.kljuc
-                            
+
                         };
 
             var result = query.ToList();
@@ -112,6 +128,10 @@ namespace r4b_eat.Controllers
         [HttpPost]
         public IActionResult UrediUporabnik(addUserDisplay userPredmeti, string[] subjects)
         {
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "c") return RedirectToAction("Index", "Profesor");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
+
 
             var user = _db.uporabniki.Find(userPredmeti.user.id_uporabnika);
             user.ime = userPredmeti.user.ime;
@@ -147,7 +167,7 @@ namespace r4b_eat.Controllers
             var dodaj = oznaceniPredmeti.Except(shranjeniPredmeti).ToList();
             foreach (var i in dodaj)
             {
-                _db.poucevanje.Add(new poucevanjeEntity { id_uporabnika = userPredmeti.user.id_uporabnika, id_predmeta = i});
+                _db.poucevanje.Add(new poucevanjeEntity { id_uporabnika = userPredmeti.user.id_uporabnika, id_predmeta = i });
             }
             _db.SaveChanges();
 
@@ -173,6 +193,11 @@ namespace r4b_eat.Controllers
 
         public IActionResult PredmetiUredi(int id)
         {
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "c") return RedirectToAction("Index", "Profesor");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
+
+
             var predmetos = _db.predmeti.Find(id);
             return View(predmetos);
         }
@@ -180,6 +205,10 @@ namespace r4b_eat.Controllers
         [HttpPost]
         public IActionResult PredmetiUredi(predmetiEntity predmetos, int id)
         {
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "c") return RedirectToAction("Index", "Profesor");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
+
 
             if (predmetos != null)
             {
@@ -196,13 +225,23 @@ namespace r4b_eat.Controllers
 
         public IActionResult PredmetiAdd()
         {
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "c") return RedirectToAction("Index", "Profesor");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
+
+
             return View();
         }
 
         [HttpPost]
         public IActionResult PredmetiAdd(predmetiEntity predmetos)
         {
-            if(predmetos != null)
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "c") return RedirectToAction("Index", "Profesor");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
+
+
+            if (predmetos != null)
             {
                 _db.predmeti.Add(predmetos);
                 _db.SaveChanges();
@@ -214,27 +253,34 @@ namespace r4b_eat.Controllers
 
         public IActionResult Profil()
         {
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "c") return RedirectToAction("Index", "Profesor");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
+
+
             return View();
         }
 
         public IActionResult Index()
         {
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "c") return RedirectToAction("Index", "Profesor");
+            else if(CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
 
-            if (HttpContext.Session.GetString("userId") != null)
-            {
-                return View();
-            }
+            return View();
 
-            return RedirectToAction("Index", "Home");
-            
+
         }
 
         public IActionResult Ucitelji()
         {
-            if (HttpContext.Session.GetString("userId") != null)
-            {
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "c") return RedirectToAction("Index", "Profesor");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
 
-                var query = from uporabnik in _db.uporabniki
+
+
+            var query = from uporabnik in _db.uporabniki
                             join poucevanje in _db.poucevanje
                             on uporabnik.id_uporabnika equals poucevanje.id_uporabnika into joinedPoucevanje
                             from leftJoinPoucevanje in joinedPoucevanje.DefaultIfEmpty()
@@ -293,7 +339,6 @@ namespace r4b_eat.Controllers
                         predmeti.Clear();
                         predmeti.Add(i.predmet);
                     }
-                }
 
                 model.Add(new ucenciDisplayModel { predmeti = new List<string>(predmeti), ime = lastIme, email = email, priimek = lastPriimek, id_uporabnika = lastId });
 
@@ -303,22 +348,27 @@ namespace r4b_eat.Controllers
             }
 
             return RedirectToAction("Index", "Home");
-    }
+        }
 
         public IActionResult Predmeti()
         {
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "c") return RedirectToAction("Index", "Profesor");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
+
+
 
             if (HttpContext.Session.GetString("userId") != null)
             {
-         
+
                 var query4 = from predmeti in _db.predmeti
                              join poucevanje in _db.poucevanje
                              on predmeti.id_predmeta equals poucevanje.id_predmeta into predmetiLeftJoin
                              from leftJoin in predmetiLeftJoin.DefaultIfEmpty()
                              join uporabniki in _db.uporabniki
-                             on  leftJoin.id_uporabnika equals uporabniki.id_uporabnika into uporabniki 
+                             on leftJoin.id_uporabnika equals uporabniki.id_uporabnika into uporabniki
                              from uporabnik in uporabniki.DefaultIfEmpty()
-                             
+
 
                              orderby predmeti.predmet ascending, uporabnik.ime ascending
                              select new
@@ -352,14 +402,14 @@ namespace r4b_eat.Controllers
                     if (lastPredmet == null)
                     {
                         lastPredmet = i.predmet;
-                        if(i.pravice == "c")imena.Add(i.ime + " " + i.priimek);
+                        if (i.pravice == "c") imena.Add(i.ime + " " + i.priimek);
                         opis = i.opis;
                         id = i.id_predmeta;
                     }
 
                     else if (lastPredmet == i.predmet)
                     {
-                        if (i.pravice == "c")imena.Add(i.ime + " " + i.priimek);
+                        if (i.pravice == "c") imena.Add(i.ime + " " + i.priimek);
 
                     }
 
@@ -370,7 +420,7 @@ namespace r4b_eat.Controllers
                         opis = i.opis;
                         imena.Clear();
                         id = i.id_predmeta;
-                        if (i.pravice == "c")imena.Add(i.ime + " " + i.priimek);
+                        if (i.pravice == "c") imena.Add(i.ime + " " + i.priimek);
                     }
                 }
 
@@ -383,11 +433,16 @@ namespace r4b_eat.Controllers
 
             return RedirectToAction("Index", "Home");
 
-            
+
         }
 
         public IActionResult Ucenci()
         {
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "c") return RedirectToAction("Index", "Profesor");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
+
+
 
             if (HttpContext.Session.GetString("userId") != null)
             {
@@ -453,7 +508,7 @@ namespace r4b_eat.Controllers
                     }
                 }
 
-                model.Add(new ucenciDisplayModel {id_uporabnika = lastId, predmeti = new List<string>(predmeti), ime = lastIme, email = email, priimek = lastPriimek } );
+                model.Add(new ucenciDisplayModel { id_uporabnika = lastId, predmeti = new List<string>(predmeti), ime = lastIme, email = email, priimek = lastPriimek });
 
 
                 return View(model);
@@ -465,11 +520,20 @@ namespace r4b_eat.Controllers
 
         public IActionResult Naloge()
         {
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "c") return RedirectToAction("Index", "Profesor");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
+
+
             return View();
         }
 
         public IActionResult Gradiva()
         {
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "c") return RedirectToAction("Index", "Profesor");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
+
 
             string predmet = Request.Query["predmet"].ToString();
             if (predmet == null)
@@ -483,7 +547,7 @@ namespace r4b_eat.Controllers
 
                 return View(gradiva);
             }
-            
+
         }
 
 
@@ -491,11 +555,12 @@ namespace r4b_eat.Controllers
         [HttpGet]
         public IActionResult Deleteuser(string page, int id)
         {
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "c") return RedirectToAction("Index", "Profesor");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
 
-            if (HttpContext.Session.GetString("userId") != null)
-            {
 
-                var user = _db.uporabniki.Find(id);
+            var user = _db.uporabniki.Find(id);
 
                 if (user == null)
                 {
@@ -509,7 +574,6 @@ namespace r4b_eat.Controllers
 
 
 
-            }
 
 
             return RedirectToAction(page);
@@ -517,11 +581,12 @@ namespace r4b_eat.Controllers
 
         public IActionResult DeletePredmet(int id)
         {
-            if (HttpContext.Session.GetString("userId") != null)
-            {
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "c") return RedirectToAction("Index", "Profesor");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
 
 
-                var predmet = _db.predmeti.Find(id);
+            var predmet = _db.predmeti.Find(id);
 
 
                 if (predmet == null)
@@ -535,7 +600,6 @@ namespace r4b_eat.Controllers
                 }
 
 
-            }
 
             return RedirectToAction("Predmeti");
 
@@ -552,10 +616,17 @@ namespace r4b_eat.Controllers
                         };
             var result = query.ToList();
 
-            if(result.Count() == 0) return false;
+            if (result.Count() == 0) return false;
             else return true;
         }
 
+        public string CheckPriviliges()
+        {
+            return HttpContext.Session.GetString("userRights");
+        }
+
     }
+
 }
+
 

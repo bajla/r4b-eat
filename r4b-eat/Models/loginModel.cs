@@ -55,6 +55,36 @@ namespace r4b_eat.Models
 
     }
 
+    public class partialNalogeDisplay
+    {
+        public int id_oddaje { get; set; }
+        public int id_naloge { get; set; }
+        public string ime { get; set; }
+        public string priimek { get; set; }
+        public string datoteka { get; set; }
+        public char odziv { get; set; }
+    }
+
+    public class izdelavaNalogeDisplay
+    {
+        public nalogeEntity naloga { get; set; }
+        public List<partialNalogeDisplay> oddaje { get; set; }
+    }
+
+
+    public class nadzornaDisplay
+    {
+        public List<gradivaEntity> gradiva { get; set; }
+        public List<nalogeEntity> naloge { get; set; }
+    }
+
+    public class addPredmetDisplay
+    {
+        public List<predmetiEntity> predmeti { get; set; }
+        public string kljuc { get; set; }
+    }
+
+
 
 }
 

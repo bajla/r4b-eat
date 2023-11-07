@@ -1,14 +1,13 @@
-﻿<div class="containerji">
+﻿@model izdelavaNalogeDisplay
+
+<div class="containerji">
     <div class="card" style="margin-top: 20px; margin-left: 100px; background-color: #DFDFFC !important; ">
         
-        <h2 class="pad20">Potence</h2>
-        <hr  />
-        <h3>Ime Profesor</h3>
-        <p> opis naloge</p>
+        <h3>Ime Naloge: @Model.naloga.ime_naloge</h3>
+        <p> Navodilo Naloge: @Model.naloga.navodilo_naloge</p>
         <div class="block">
-            <h4 class="padIn">Naloge ustvarjena:</h4>
-            <h5 class="padIn">rok naloge:</h5>
-            <p class="padIn">File: <a href="#"></a></p>
+            <h5 class="padIn">Rok Naloge: @Model.naloga.rok_naloge.ToString("yyyy-MM-dd")</h5>
+            <p class="padIn"><a href="@ViewBag.file" download >Prilozena datoteka</a></p>
         </div>
     </div>
     <div style="margin-top: 20px; margin-left: 100px; background-color: #DFDFFC !important; " class="card mb-4">
@@ -27,14 +26,50 @@
                         <th class="vseTabelaHeadOne">#</th>
                         <th class="vseTabelaHead">Ime</th>
                         <th class="vseTabelaHead">Priimek</th>
-                        <th class="vseTabelaHead">Rok Oddaje</th>
-                        <th class="vseTabelaHead">Odločitev</th>
+                        <th class="vseTabelaHead">Datoteka</th>
+                        <th class="vseTabelaHead">Ocena</th>
 
 
                     </tr>
                 </thead>
                 <tbody class="vseTabela">
+                    @foreach (var i in Model.oddaje)
+                        {
+
+
                     <tr class="vseTabela">
+                        <th>1</th>
+                        <td>@i.ime</td>
+                        <td>@i.priimek</td>
+                        <td> <a href="@i.datoteka" download>Datoteka</a> </td>
+
+                        @if (i.odziv == '\0')
+                        {
+
+
+                            <td>
+                                <button class="approve">
+                                    <a href="/Profesor/PotrdiNalogo?id=@i.id_oddaje&naloga=@i.id_naloge">Potrdi</a>
+                                </button>
+                                <button class="disapprove">
+                                    <a href="/Profesor/OvrziNalogo?id=@i.id_oddaje&naloga=@i.id_naloge">Ovrži</a>
+                                </button>
+                            </td>
+                        }
+                        else if (i.odziv == 'd')
+                        {
+
+
+                            <td>Potrjena</td>
+                        }
+                        else
+                        {
+                            <td>Ovrzena</td>
+
+                        }
+                    </tr>
+                        }
+                    @*<tr class="vseTabela">
                         <th>1</th>
                         <td>Mark</td>
                         <td>Otto</td>
@@ -78,22 +113,7 @@
                             </button>
                         </td>
 
-                    </tr>
-                    <tr class="vseTabela">
-                        <th>1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>datuk</td>
-                        <td>
-                            <button class="approve">
-                                Potrdi
-                            </button>
-                            <button class="disapprove">
-                                Ovrži
-                            </button>
-                        </td>
-
-                    </tr>
+                    </tr>*@
 
 
                 </tbody>

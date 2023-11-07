@@ -5,51 +5,24 @@
 
 <div style="margin-left:90px !important; " class="container mx-auto mt-4">
     <div class="row">
-        <div class="col-md-4">
-            <div class="card cardTwo">
 
-                <div class="card-body">
-                    <h5 class="card-title">Ime Gradiva</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Opis:</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. fdjaklfjsdkafjksdlfjakljfdkasjfsdkfjakljfeoiqhferfhuehfiuperwhferwufherpwhfieuwohferuwhfierwuhfreiuohfewuhfouriwehfbdskjvcsdncqiwj</p>
+        @foreach (var i in Model)
+            {
 
-                    <br />
-                    <a href="#"></a>
-                    <button>Delete</button>
-                </div>
-            </div>
-        </div>
 
         <div class="col-md-4">
             <div class="card cardTwo">
 
                 <div class="card-body">
-                    <h5 class="card-title">Ime Gradiva</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Opis:</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. fdjaklfjsdkafjksdlfjakljfdkasjfsdkfjakljfeoiqhferfhuehfiuperwhferwufherpwhfieuwohferuwhfierwuhfreiuohfewuhfouriwehfbdskjvcsdncqiwj</p>
-
+                    <h5 class="card-title">Ime: @i.ime</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Opis: @i.opis</h6>
                     <br />
-                    <a href="#"></a>
-                    <button >Delete</button>
+                    <a href="@i.ime_datoteke" download>Prilozena Datoteka</a>
+                    <button> <a href="/Profesor/GradivoOdstrani?id=@i.id_gradiva" >Delete</a> </button>
                 </div>
             </div>
         </div>
-
-        <div class="col-md-4">
-            <div class="card cardTwo">
-
-                <div class="card-body">
-                    <h5 class="card-title">Ime Gradiva</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Opis:</h6>
-                    <p class="card-text">Some quick example text to buioiqhferfhuehfiuperwhferwufherpwhfieuwohferuwhfierwuhfreiuohfewuhfouriwehfbdskjvcsdncqiwj</p>
-
-                    <br />
-                    <a href="#"></a>
-                    <button>Delete</button>
-                </div>
-            </div>
-        </div>
-
+            }
 
 
 

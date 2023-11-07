@@ -27,6 +27,11 @@ namespace r4b_eat.Controllers
 
         public IActionResult Predmeti()
         {
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "a") return RedirectToAction("Index", "Admin");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
+
+
             int id = Convert.ToInt32(HttpContext.Session.GetString("userId"));
 
             var query = from poucevanje in _db.poucevanje
@@ -49,17 +54,32 @@ namespace r4b_eat.Controllers
 
         public IActionResult Index()
         {
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "a") return RedirectToAction("Index", "Admin");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
+
+
             return View();
         }
 
 
         public IActionResult Profil()
         {
+
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "a") return RedirectToAction("Index", "Admin");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
+
+
             return View();
         }
 
         public IActionResult DodajNalogo(int id)
         {
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "a") return RedirectToAction("Index", "Admin");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
+
 
             ViewBag.idPredmeta = id;
             return View();
@@ -68,6 +88,11 @@ namespace r4b_eat.Controllers
         [HttpPost]
         public IActionResult DodajNalogo(nalogeEntity naloga, IFormFile file)
         {
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "a") return RedirectToAction("Index", "Admin");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
+
+
             int id = Convert.ToInt32(HttpContext.Session.GetString("userId"));
             naloga.id_uporabnika = id;
 
@@ -91,18 +116,65 @@ namespace r4b_eat.Controllers
 
 
 
-        public IActionResult VseNaloge()
+        public IActionResult VseNaloge(int id)
         {
-            return View();
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "a") return RedirectToAction("Index", "Admin");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
+
+
+            int idu = Convert.ToInt32(HttpContext.Session.GetString("userId"));
+
+            var result = _db.naloge.Where(e => e.id_predmeta == id)
+                                   .Where(r => r.id_uporabnika == idu).ToList();
+                
+            return View(result);
         }
 
-        public IActionResult VsiDijaki()
+        public IActionResult Naloga(int id)
         {
-            return View();
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "a") return RedirectToAction("Index", "Admin");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
+
+
+            izdelavaNalogeDisplay display = new izdelavaNalogeDisplay();
+
+            display.naloga = _db.naloge.Find(id);
+            var query = from oddaja in _db.opravljene_Naloge
+                        join uporabniki in _db.uporabniki
+                        on oddaja.id_uporabnika equals uporabniki.id_uporabnika
+                        where oddaja.id_naloge == id
+                        select new partialNalogeDisplay
+                        {
+                            id_oddaje = oddaja.id_opravljeno,
+                            id_naloge = oddaja.id_naloge,
+                            ime = uporabniki.ime,
+                            priimek = uporabniki.priimek,
+                            odziv = oddaja.odziv
+                        };
+            var result = query.ToList();
+
+            int temp = 0;
+            foreach(var i in result)
+            {
+                result[temp].datoteka = FileHelper.FindFile("wwwroot/Storage/Oddaja", i.id_oddaje.ToString());
+                temp++;
+            }
+
+            ViewBag.file = FileHelper.FindFile("wwwroot/Storage/Naloge", id.ToString());
+
+            display.oddaje = result;
+
+            return View(display);
         }
 
         public IActionResult Gradiva()
         {
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "a") return RedirectToAction("Index", "Admin");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
+
 
             int id = Convert.ToInt32(HttpContext.Session.GetString("userId"));
 
@@ -119,12 +191,22 @@ namespace r4b_eat.Controllers
                         };
             var result = query.ToList();
 
-
+            int temp = 0;
+            foreach(var i in result)
+            {
+                result[temp].ime_datoteke = FileHelper.FindFile("wwwroot/Storage/Gradiva", i.id_gradiva.ToString());
+                temp++;
+            }
 
             return View(result);
         }
         public IActionResult GradivaAdd()
         {
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "a") return RedirectToAction("Index", "Admin");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
+
+
             ViewBag.predmeti = _db.predmeti.ToList();
 
             return View();
@@ -133,6 +215,11 @@ namespace r4b_eat.Controllers
         [HttpPost]
         public IActionResult GradivaAdd(gradivaEntity gradiva, IFormFile file, string predmet,string pomembno)
         {
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "a") return RedirectToAction("Index", "Admin");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
+
+
             if (pomembno == "pomembno") gradiva.pomembno = 'd';
             else gradiva.pomembno = 'n';
 
@@ -162,8 +249,65 @@ namespace r4b_eat.Controllers
 
         public IActionResult SpecificnaNaloga()
         {
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "a") return RedirectToAction("Index", "Admin");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
+
+
             return View();
         }
+
+        public IActionResult GradivoOdstrani(int id)
+        {
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "a") return RedirectToAction("Index", "Admin");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
+
+
+            var gradivo =_db.gradiva.Find(id);
+
+            _db.gradiva.Remove(gradivo);
+            _db.SaveChanges();
+
+            return RedirectToAction("Gradiva");
+        }
+
+        public IActionResult PotrdiNalogo(int id, int naloga)
+        {
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "a") return RedirectToAction("Index", "Admin");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
+
+
+            var oddaja = _db.opravljene_Naloge.Find(id);
+            oddaja.odziv = 'd';
+            _db.SaveChanges();
+
+            return Redirect("/Profesor/Naloga?id="+naloga);
+        }
+
+        public IActionResult OvrziNalogo(int id, int naloga)
+        {
+            if (HttpContext.Session.GetString("userId") == null) return RedirectToAction("Index", "Home");
+            if (CheckPriviliges() == "a") return RedirectToAction("Index", "Admin");
+            else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
+
+
+            var oddaja = _db.opravljene_Naloge.Find(id);
+            oddaja.odziv = 'n';
+            _db.SaveChanges();
+
+            return Redirect("/Profesor/Naloga?id=" + naloga);
+
+        }
+
+        public string CheckPriviliges()
+        {
+            return HttpContext.Session.GetString("userRights");
+        }
+
+
+
     }
 }
 

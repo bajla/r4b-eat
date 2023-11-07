@@ -1,4 +1,6 @@
-﻿<div class="mainDiv">
+﻿@model nadzornaDisplay
+
+<div class="mainDiv">
        
     <div class="item item3">
         <h1 style="width:100%; margin-bottom:30px;">
@@ -13,27 +15,28 @@
                 <tr>
                     <th class="vseTabelaHeadOne">#</th>
                     <th class="vseTabelaHead">Ime gradiva</th>
-                    <th class="vseTabelaHead">Ime Profesorja</th>
                     <th class="vseTabelaHead">Opis</th>
-                    <th class="vseTabelaHead">Predmet</th>
                     <th class="vseTabelaHead">Odpri gradivo</th>
                 </tr>
             </thead>
             <tbody class="vseTabela tabelala">
+
+                @foreach (var i in Model.gradiva)
+                    {
+
+
                 <tr class="vseTabela tabelala">
                     <td>1</td>
-                    <td>potence</td>
-                    <td>marko</td>
-                    <td>glavno za mat</td>
-                    <td>Matematika</td>
+                    <td>@i.ime</td>
+                    <td>@i.opis</td>
                     <td>
-                        <a class="null" asp-area="" asp-controller="Dijak" asp-action="Gradiva">
+                        <a class="null" href="/Dijak/Gradiva?id=@i.id_gradiva">
                             <span class="bold"> ODPRI </span>
                         </a>
                     </td>
 
                 </tr>
-
+                    }
 
             </tbody>
         </table>
@@ -48,27 +51,29 @@
                 <tr>
                     <th class="vseTabelaHeadOne">#</th>
                     <th class="vseTabelaHead">Naloga</th>
-                    <th class="vseTabelaHead">Profesor</th>
-                    <th class="vseTabelaHead">Opis</th>
-                    <th class="vseTabelaHead">Predmet</th>
+                    <th class="vseTabelaHead">Navodilo</th>
                     <th class="vseTabelaHead">Oddaja</th>
                 </tr>
             </thead>
             <tbody class="vseTabela tabelala">
+
+                @foreach (var i in Model.naloge)
+                    {
+
+
                 <tr class="vseTabela tabelala">
                     <td>1</td>
-                    <td>ime</td>
-                    <td>jako</td>
-                    <td>opisovanje narave</td>
+                    <td>@i.ime_naloge</td>
+                    <td>@i.navodilo_naloge</td>
                     <td>naravoslovje</td>
                     <td>
-                        <a class="null" asp-area="" asp-controller="Dijak" asp-action="OddajaNaloge">
+                        <a class="null" href="/Dijak/OddajaNaloge?id=@i.id_naloge">
                             <span class="bold">ODDAJ NALOGO</span>
                         </a>
                     </td>
 
                 </tr>
-
+                    }
 
             </tbody>
         </table>

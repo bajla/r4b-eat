@@ -64,17 +64,23 @@ public class HomeController : Controller
             
             if(result != null)
             {
-                if (PasswordHelper.VerifyPassword(login.geslo, result[0].geslo))
+                try
                 {
-                    HttpContext.Session.SetString("userId", result[0].id_uporabnika.ToString());
-                    HttpContext.Session.SetString("userRights", result[0].pravice.ToString());
-                    HttpContext.Session.SetString("userIme", result[0].ime.ToString());
-                    //HttpContext.Session.SetString("userPr;
+                    if (PasswordHelper.VerifyPassword(login.geslo, result[0].geslo))
+                    {
+                        HttpContext.Session.SetString("userId", result[0].id_uporabnika.ToString());
+                        HttpContext.Session.SetString("userRights", result[0].pravice.ToString());
+                        HttpContext.Session.SetString("userIme", result[0].ime.ToString());
+                        //HttpContext.Session.SetString("userPr;
 
 
-                    return RedirectToAction("Index", "Admin");
+                        return RedirectToAction("Index", "Admin");
+                    }
                 }
-
+                catch(Exception ex)
+                {
+                    
+                }
             }
         }
 
@@ -95,13 +101,13 @@ public class HomeController : Controller
         uporabnik.pravice = "c";
         if (ModelState.IsValid)
         {
-            if (_db.uporabniki.Any(s=> s.email == uporabnik.email) == false)
+            if (_db.uporabniki.Any(s=> s.email == uporabnik.email.ToLower()) == false)
             {
                 
                 string gesloc = PasswordHelper.HashPassword(uporabnik.geslo);
                 uporabnik.geslo = gesloc;
 
-                
+                uporabnik.email = uporabnik.email.ToLower();
 
                 _db.uporabniki.Add(uporabnik);
                 _db.SaveChanges();
