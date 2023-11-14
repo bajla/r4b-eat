@@ -953,6 +953,7 @@ body {
     width:40%;
     margin-inline:20px;
     
+    
 }
 
 .delitev2 {
@@ -966,7 +967,7 @@ body {
     background-color: #DFDFFC;
     border-radius: 20px;
     padding: 15px;
-    border: 2px solid black;
+    border: 2px solid red;
     height: 90px;
     justify-content:center;
     align-items: center;

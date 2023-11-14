@@ -408,10 +408,10 @@ body {
 }
 
 .card {
-  background-color:darkgrey;
-  border: 1px solid #dd2476;
-  color: rgba(250, 250, 250, 0.8);
-  margin-bottom: 2rem;
+    background-color: #DFDFFC;
+    border: 1px solid #dd2476;
+    color:black;
+    margin-bottom: 2rem;
 }
 
 .btn {
