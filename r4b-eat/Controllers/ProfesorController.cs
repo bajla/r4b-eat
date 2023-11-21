@@ -144,6 +144,8 @@ namespace r4b_eat.Controllers
             var query = from oddaja in _db.opravljene_Naloge
                         join uporabniki in _db.uporabniki
                         on oddaja.id_uporabnika equals uporabniki.id_uporabnika
+                        join naloge in _db.naloge
+                        on oddaja.id_naloge equals naloge.id_naloge
                         where oddaja.id_naloge == id
                         select new partialNalogeDisplay
                         {
@@ -151,14 +153,17 @@ namespace r4b_eat.Controllers
                             id_naloge = oddaja.id_naloge,
                             ime = uporabniki.ime,
                             priimek = uporabniki.priimek,
-                            odziv = oddaja.odziv
+                            odziv = oddaja.odziv,
+                            naloga = naloge.ime_naloge
                         };
             var result = query.ToList();
+
 
             int temp = 0;
             foreach(var i in result)
             {
                 result[temp].datoteka = FileHelper.FindFile("wwwroot/Storage/Oddaja", i.id_oddaje.ToString());
+                result[temp].imeDat = i.priimek + " " + i.ime + " - " + i.naloga + FileHelper.GetExtension(result[temp].datoteka);
                 temp++;
             }
 
@@ -179,15 +184,15 @@ namespace r4b_eat.Controllers
             int id = Convert.ToInt32(HttpContext.Session.GetString("userId"));
 
             var query = from gradiva in _db.gradiva
+                        join predmeti in _db.predmeti
+                        on gradiva.id_predmeta equals predmeti.id_predmeta
                         where gradiva.id_uporabnika == id
-                        select new gradivaEntity
+                        select new gradivaDisplay
                         {
                             id_gradiva = gradiva.id_gradiva,
-                            id_uporabnika = gradiva.id_uporabnika,
-                            id_predmeta = gradiva.id_predmeta,
                             ime = gradiva.ime,
                             opis = gradiva.opis,
-                            pomembno = gradiva.pomembno
+                            predmet = predmeti.predmet
                         };
             var result = query.ToList();
 
@@ -206,8 +211,16 @@ namespace r4b_eat.Controllers
             if (CheckPriviliges() == "a") return RedirectToAction("Index", "Admin");
             else if (CheckPriviliges() == "u") return RedirectToAction("Index", "Dijak");
 
+            int id = Convert.ToInt32(HttpContext.Session.GetString("userId"));
 
-            ViewBag.predmeti = _db.predmeti.ToList();
+
+            var result = (from predmeti in _db.predmeti
+                          join poucevanje in _db.poucevanje
+                          on predmeti.id_predmeta equals poucevanje.id_predmeta
+                          where poucevanje.id_uporabnika == id
+                          select predmeti).ToList();
+
+            ViewBag.predmeti = result;
 
             return View();
         }

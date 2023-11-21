@@ -1,4 +1,4 @@
-﻿@model List<gradivaEntity>
+﻿@model List<gradivaDisplay>
 <a asp-area="" asp-controller="Profesor" asp-action="GradivaAdd">  <i id="plus" class="gg-add"></i>  </a>
 
 
@@ -16,11 +16,12 @@
                 <div class="card-body">
                     <h5 class="card-title">Ime: @i.ime</h5>
                     <h6 class="card-subtitle mb-2 text-muted">Opis: @i.opis</h6>
+                    <h6 class="card-subtitle mb-2 text-muted">Predmet: @i.predmet</h6>
                     <br />
                     <div class="linki">
                         <a href="@i.ime_datoteke" download>Prilozena Datoteka</a>
                     </div>
-                    <button> <a href="/Profesor/GradivoOdstrani?id=@i.id_gradiva" >Delete</a> </button>
+                    <button> <a href="/Profesor/GradivoOdstrani?id=@i.id_gradiva">Delete</a> </button>
                 </div>
             </div>
         </div>

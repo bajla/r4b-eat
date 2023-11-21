@@ -63,6 +63,8 @@ namespace r4b_eat.Models
         public string priimek { get; set; }
         public string datoteka { get; set; }
         public char odziv { get; set; }
+        public string naloga { get; set; }
+        public string imeDat { get; set; }
     }
 
     public class izdelavaNalogeDisplay
@@ -84,6 +86,14 @@ namespace r4b_eat.Models
         public string kljuc { get; set; }
     }
 
+    public class gradivaDisplay
+    {
+        public string ime { get; set; }
+        public string opis { get; set; }
+        public string ime_datoteke { get; set; }
+        public string predmet { get; set; }
+        public int id_gradiva { get; set; }
+    }
 
 
 }

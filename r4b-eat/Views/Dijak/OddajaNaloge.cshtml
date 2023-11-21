@@ -18,13 +18,14 @@
                 <input type="file" required name="file" />
 
                 @if (ViewBag.locked == "true")
-                    {
-                        <button class="submit" type="submit">Ponovna Oddaja</button>
-                    }
-                    else
-                    {
-                        <button class="submit" type="submit">Oddaja</button>
-                    }
+                {
+                    <p>@ViewBag.odziv</p>
+                    <button class="submit" type="submit">Ponovna Oddaja</button>
+                }
+                else
+                {
+                    <button class="submit" type="submit">Oddaja</button>
+                }
 
             </form>
         </div>

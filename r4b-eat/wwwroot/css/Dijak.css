@@ -1102,7 +1102,7 @@ li{
     gap: 30px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    margin-top:13%;
+    margin-top:1%;
 
 }
 .item {
@@ -1197,6 +1197,7 @@ li{
         box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.6);
     }
 .predmetiOpisMain{
+    margin-top:5%;
     height:100%;
     width:100%;
     justify-content:center;

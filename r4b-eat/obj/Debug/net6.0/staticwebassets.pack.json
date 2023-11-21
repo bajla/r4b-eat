@@ -29,6 +29,10 @@
       "PackagePath": "staticwebassets/Storage/Gradiva/4.doc"
     },
     {
+      "Id": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/Storage/Gradiva/5.txt",
+      "PackagePath": "staticwebassets/Storage/Gradiva/5.txt"
+    },
+    {
       "Id": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/Storage/Naloge/2.html",
       "PackagePath": "staticwebassets/Storage/Naloge/2.html"
     },
@@ -41,12 +45,20 @@
       "PackagePath": "staticwebassets/Storage/Naloge/4.html"
     },
     {
+      "Id": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/Storage/Naloge/5.doc",
+      "PackagePath": "staticwebassets/Storage/Naloge/5.doc"
+    },
+    {
       "Id": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/Storage/Oddaja/3.txt",
       "PackagePath": "staticwebassets/Storage/Oddaja/3.txt"
     },
     {
       "Id": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/Storage/Oddaja/4.html",
       "PackagePath": "staticwebassets/Storage/Oddaja/4.html"
+    },
+    {
+      "Id": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/Storage/Oddaja/5.png",
+      "PackagePath": "staticwebassets/Storage/Oddaja/5.png"
     },
     {
       "Id": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/Storage/Oddaja/9.pdf",
@@ -59,6 +71,10 @@
     {
       "Id": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/Storage/ProfilePics/10.png",
       "PackagePath": "staticwebassets/Storage/ProfilePics/10.png"
+    },
+    {
+      "Id": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/Storage/ProfilePics/7.png",
+      "PackagePath": "staticwebassets/Storage/ProfilePics/7.png"
     },
     {
       "Id": "/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/wwwroot/Storage/ProfilePics/default.png",

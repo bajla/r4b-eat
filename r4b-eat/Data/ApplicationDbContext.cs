@@ -18,21 +18,6 @@ namespace r4b_eat.Data
         public DbSet<nalogeEntity> naloge { get; set; }
         public DbSet<opravljene_nalogeEntity> opravljene_Naloge { get; set; }
 
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    // Configure relationships using Fluent API
-        //    modelBuilder.Entity<poucevanjeEntity>()
-        //        .HasMany(e => e.)
-
-        //    modelBuilder.Entity<Poucevanje>()
-        //        .HasRequired(p => p.Predmet)
-        //        .WithMany()
-        //        .HasForeignKey(p => p.IdPredmeta);
-
-        //    // Configure other relationships here...
-
-        //    base.OnModelCreating(modelBuilder);
-        //}
     }
 }
 

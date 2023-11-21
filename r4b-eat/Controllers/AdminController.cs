@@ -60,7 +60,7 @@ namespace r4b_eat.Controllers
             if (userPredmeti != null)
             {
 
-                if (CheckIfEmailExist(userPredmeti.user.email))
+                if (!CheckIfEmailExist(userPredmeti.user.email))
                 {
                     userPredmeti.user.geslo = PasswordHelper.HashPassword(userPredmeti.user.geslo);
                     _db.uporabniki.Add(userPredmeti.user);
@@ -188,7 +188,8 @@ namespace r4b_eat.Controllers
             }
             _db.SaveChanges();
 
-            return RedirectToAction("Ucenci");
+            if (userPredmeti.user.pravice == "c") return RedirectToAction("Ucitelji");
+            else return RedirectToAction("Ucenci");
         }
 
         public IActionResult PredmetiUredi(int id)

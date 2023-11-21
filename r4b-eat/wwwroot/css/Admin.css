@@ -412,6 +412,8 @@ body {
     border: 1px solid #dd2476;
     color: black;
     margin-bottom: 2rem;
+    min-height:240px;
+    border-radius:15px;
 }
 
 .btn {

@@ -35,25 +35,12 @@ namespace r4b_eat.Controllers
 
             addPredmetDisplay display = new addPredmetDisplay();
 
-            var query = from 
-                         predmeti in _db.predmeti
-                        
-               
-                        select new predmetiEntity
-                        {
-                            id_predmeta = predmeti.id_predmeta,
-                            predmet = predmeti.predmet,
-                            krajsava = predmeti.krajsava,
-                            opis = predmeti.opis,
-                            kljuc = predmeti.kljuc
-
-                        };
-            var result = query.Distinct().ToList();
 
             var query1 = from poucevanje in _db.poucevanje
                         join predmeti in _db.predmeti
                         on poucevanje.id_predmeta equals predmeti.id_predmeta
                         where poucevanje.id_uporabnika == id
+                        
 
                         select new predmetiEntity
                         {
@@ -66,9 +53,26 @@ namespace r4b_eat.Controllers
                         };
             var result1 = query1.ToList();
 
-            var razlika = result.Except(result1).ToList();
+            var query = from
+            predmeti in _db.predmeti
+            where !result1.Contains(predmeti)
 
-            display.predmeti = razlika;
+                        select new predmetiEntity
+                        {
+                            id_predmeta = predmeti.id_predmeta,
+                            predmet = predmeti.predmet,
+                            krajsava = predmeti.krajsava,
+                            opis = predmeti.opis,
+                            kljuc = predmeti.kljuc
+
+                        };
+
+            var result = query.Distinct().ToList();
+
+
+            //var razlika = result.Except(result1).ToList();
+
+            display.predmeti = result;
 
             return View(display);
         }
@@ -88,6 +92,7 @@ namespace r4b_eat.Controllers
             if (display.kljuc == predmetos.kljuc)
             {
                 _db.poucevanje.Add(new poucevanjeEntity { id_predmeta = Convert.ToInt32(predmet) , id_uporabnika = id});
+                _db.SaveChanges();
             }
 
             return RedirectToAction("Predmeti");
@@ -279,7 +284,7 @@ namespace r4b_eat.Controllers
             if (result1.Count() != 0)
             {
                 ViewBag.locked = "true";
-                ViewBag.odziv = result1.Last().odziv;
+                ViewBag.odziv = result1.Last().odziv == 'd' ? "Potrjena" : "Ovrzena";
             }
             else ViewBag.locked = "false";
 

@@ -12,20 +12,8 @@ namespace r4b_eat.Services
 		}
 
 
-        static public string GetProfilePicture()
-        {
-            int id = 5;
 
-            if (System.IO.File.Exists("/Storage/ProfilePics/" + id + ".png"))
-            {
-                return "/Storage/ProfilePics/" + id + ".png";
-            }
-            else
-            {
-                return "/Storage/ProfilePics/default.png";
-            }
-
-        }
+        
 
 
 
@@ -89,6 +77,17 @@ namespace r4b_eat.Services
             return "";
         }
 
+        static public string GetExtension(string url)
+        {
+
+            // Get the filename from the URL
+            string fileName = Path.GetFileName(url);
+
+            // Get the file extension from the filename
+            string fileExtension = Path.GetExtension(fileName);
+
+            return fileExtension;
+        }
 
         public static string FindFile(string directoryPath, string fileName)
         {

@@ -111,3 +111,4 @@
 /Users/eliostante/Documents/GitHub/r4b-eat/r4b-eat/obj/Debug/net6.0/scopedcss/Views/Shared/_Layout2.cshtml.rz.scp.css
 /Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/obj/Debug/net6.0/scopedcss/Views/Shared/_Layout2.cshtml.rz.scp.css
 /Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/obj/Debug/net6.0/scopedcss/Views/Shared/_Layout3.cshtml.rz.scp.css
+/Users/aneyvaishnav/Documents/GitHub/r4b-eat/r4b-eat/obj/Debug/net6.0/scopedcss/Views/Shared/_Layout4.cshtml.rz.scp.css
